@@ -10,22 +10,41 @@
             <div class="introductionContainer">
 
                 <div class="logoContainer">
-                    <img src="assets/hero/logo-icon.png" alt="logo">
+                    <img [src]="logoHovered ? 'assets/hero/logo-icon.png' : 'assets/hero/logo-icon-hover.png'" 
+                    alt="logo" (mouseenter)="logoHovered=true" (mouseleave)="logoHovered=false">
+
                     <p>M.Sinner</p>
                     <div>developer</div>
                 </div>
 
-                <p>Martin Sinner</p>
-                <div>FRONTEND DEVELOPER</div>
-                <img src="assets/hero/arrow-down.png" alt="arrow-down">
+                <div class="nameContainer">
+                    <p>Martin Sinner</p>
+                    <div>FRONTEND DEVELOPER</div>
+                </div>
+
+
+
+                <div class="arrowDown">
+                    <img [src]="arrowHovered ? 'assets/hero/arrow-down-hover.png':'assets/hero/arrow-down.png'"
+                        alt="arrow-down" (mouseenter)="arrowHovered=true" (mouseleave)="arrowHovered=false">
+                </div>
             </div>
         </div>
 
 
         <div class="socialMediaContainer">
-            <img src="assets/hero/email-button.png" alt="email">
-            <img src="assets/hero/github-button.png" alt="github">
-            <img src="assets/hero/linkedin-button.png" alt="linkedin">
+            <img [src]="emailHovered ? 'assets/hero/email-hover.png' :'assets/hero/email-button.png'" alt="email"
+                (mouseenter)="emailHovered = true" (mouseleave)="emailHovered = false">
+
+
+            <img [src]="githubHovered ? 'assets/hero/github-hover.png' : 'assets/hero/github-button.png'" alt="github"
+                (mouseenter)="githubHovered = true" (mouseleave)="githubHovered = false">
+
+            <img [src]="linkedinHovered ? 'assets/hero/linkedin-hover.png' : 'assets/hero/linkedin-button.png'"
+                alt="linkedin" (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
         </div>
+
+
+
     </div>
 </div>

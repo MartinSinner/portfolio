@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent {
+  emailHovered = false;
+  githubHovered = false;
+  linkedinHovered = false;
 
+  arrowHovered = false;
+  logoHovered = false;
 }
