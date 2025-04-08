@@ -1,0 +1,70 @@
+.whyMeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    >h1 {
+        font-size: 60px;
+        font-weight: 400;
+        color: #89BCD9;
+    }
+}
+
+.aboutMeIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.iconContainer {
+    display: grid;
+    grid-template-columns: 48px 280px 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 16px 32px;
+
+
+    >img {
+        width: 48px;
+
+
+    }
+}
+
+.title {
+    font-size: 20px;
+    color: #F8F5EC;
+    font-weight: 400;
+    font-family: 'Josefin';
+    white-space: nowrap;
+    margin: 0;
+
+    >span {
+        color: #89BCD9 !important;
+        font-weight: 500;
+    }
+}
+
+.description {
+    flex-wrap: wrap;
+    font-size: 16px;
+    color: #d6d6d6;
+    font-weight: 300;
+    margin-top: 4px;
+    max-width: 480px;
+}
+
+.letsTalkButton {
+    transition: transform 0.3s ease-out, filter 0.3s ease-out;
+
+    &:hover{
+        transform: scale(1.1);
+            filter: brightness(1.2);
+            cursor: pointer;
+    }
+}
