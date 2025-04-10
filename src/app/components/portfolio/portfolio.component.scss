@@ -1,0 +1,148 @@
+.portfolioSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    >h1 {
+        font-size: 60px;
+        font-weight: 400;
+        color: #89BCD9;
+    }
+}
+
+.projectContainer {
+    width: 100vw;
+}
+
+.projectTitle {
+    display: flex;
+    gap: 54px;
+    margin-left: 100px;
+
+    >p {
+        font-size: 30px;
+        font-weight: 500;
+        font-family: 'Josefin';
+        color: #89BCD9;
+        padding: 30px 30px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+
+    >p:first-child {
+        background-color: #2D383F;
+        color: #F8F5EC;
+    }
+}
+
+.projectDescription {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2D383F;
+    height: clamp(70vh, 85vh, 100vh);
+    padding-left: 100px;
+    padding-right: 100px;
+    color: #F8F5EC;
+
+}
+
+.projectDescriptionLeft,
+.projectDescriptionRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    gap: 30px;
+}
+
+.descriptionRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.descriptionContainer {
+    margin-bottom: 24px;
+    font-family: 'Josefin';
+
+    >h3 {
+        font-size: clamp(20px, 2vw, 28px);
+        font-weight: 400;
+
+    }
+
+    >p {
+        font-size: clamp(14px, 1.5vw, 18px);
+        font-weight: 350;
+        margin-top: 8px;
+
+    }
+}
+
+.projectDescriptionRight {
+    font-family: 'Josefin';
+    gap: 20px !important;
+
+    >h3 {
+        font-weight: 400;
+    }
+
+    >img {
+        width: clamp(300px, 35vw, 700px);
+        height: auto;
+    }
+}
+
+.technologyIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 54px;
+    margin-top: 24px;
+
+
+    >button {
+        padding: 13px 30px 13px 30px;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 400;
+        transition: transform 0.3s ease-out, filter 0.3s ease-out
+    }
+
+    >button:first-child {
+        background-color: #89BCD9;
+        color: #262E34;
+        border: none;
+
+        &:first-child:hover {
+            background-color: #F8F5EC !important;
+            cursor: pointer;
+            transform: scale(1.1);
+            filter: brightness(1.2);
+            
+        }
+    }
+
+    >button:last-child {
+        background-color: #2D383F;
+        border: 2px solid #89BCD9;
+        color: #89BCD9;
+
+        &:last-child:hover {
+            background-color: #3F464A;
+            cursor: pointer;
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+    }
+
+
+}
