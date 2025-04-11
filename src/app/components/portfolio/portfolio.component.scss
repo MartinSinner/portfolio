@@ -14,6 +14,7 @@
 
 .projectContainer {
     width: 100vw;
+    margin-top: 100px;
 }
 
 .projectTitle {
@@ -29,23 +30,34 @@
         padding: 30px 30px;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
-    }
+        transition: background-color 0.6s ease, color 0.6s ease;
 
-    >p:first-child {
-        background-color: #2D383F;
-        color: #F8F5EC;
+        &.active {
+            background-color: #2D383F;
+            color: #F8F5EC;
+            animation: fadeMorph 0.6s ease-in-out;
+        }
+
+        &:hover {
+            color: #F8F5EC;
+            cursor: pointer;
+        }
     }
 }
 
+
+
+
 .projectDescription {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     background-color: #2D383F;
-    height: clamp(70vh, 85vh, 100vh);
+    height: clamp(70vh, 85vh, 90vh);
     padding-left: 100px;
     padding-right: 100px;
     color: #F8F5EC;
+    padding-top: 80px;
 
 }
 
@@ -56,6 +68,7 @@
     align-items: center;
     max-width: 600px;
     gap: 30px;
+    flex: 1;
 }
 
 .descriptionRow {
@@ -78,6 +91,7 @@
         font-size: clamp(14px, 1.5vw, 18px);
         font-weight: 350;
         margin-top: 8px;
+        line-height: 30px;
 
     }
 }
@@ -93,6 +107,10 @@
     >img {
         width: clamp(300px, 35vw, 700px);
         height: auto;
+        border-radius: 30px;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid #444;
     }
 }
 
@@ -101,10 +119,25 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+
+    >img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+
 }
+
+.smallIcon {
+    width: 40px; 
+    height: auto;
+}
+
+
 
 .actionButtons {
     display: flex;
+    align-items: center;
     gap: 54px;
     margin-top: 24px;
 
@@ -127,7 +160,7 @@
             cursor: pointer;
             transform: scale(1.1);
             filter: brightness(1.2);
-            
+
         }
     }
 
@@ -143,6 +176,23 @@
             filter: brightness(1.2);
         }
     }
+}
 
+.fadeIn {
+    animation: fadeMorph 0.6s ease-in-out both;
+}
 
+@keyframes fadeMorph {
+    0% {
+        opacity: 0;
+        filter: blur(10px) contrast(1.2);
+        
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0) contrast(1);
+
+       
+    }
 }
