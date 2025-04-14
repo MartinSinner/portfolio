@@ -1,1 +1,20 @@
-<p>reference works!</p>
+<div class="referenceSection">
+
+    <h1>Need a teamplayer? Here what my colleagues said about me</h1>
+    <div class="referenceWrapper">
+        <div class="referenceCard" *ngFor="let ref of reference">
+            <img *ngFor="let shape of ref.shape" [src]="'assets/reference/' + shape" alt="reference shape">
+
+
+            <div class="referenceInfo">
+                <h3>{{ ref.title }}</h3>
+                <p class="refProject">
+                    <span>Project </span>
+                    <span>{{ref.project}}</span>
+                <p class="refDescription">{{ref.description}}</p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
