@@ -1,0 +1,185 @@
+.contactMeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    >h1 {
+        color: #89BCD9;
+        font-size: 60px;
+        font-weight: 400;
+    }
+}
+
+.contactInformation {
+    display: grid;
+    grid-template-columns: 500px 280px 1fr;
+    align-items: flex-start;
+    gap: 60px;
+    color: #F8F5EC;
+    font-family: 'Josefin';
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    >p {
+        font-weight: 350;
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
+.contactDates {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.contactMail,
+.contactPhone {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    >p {
+        white-space: nowrap;
+
+    }
+}
+
+.contactForm {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Josefin';
+    gap: 24px;
+
+}
+
+.contactNameMail {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+
+.formGroup {
+    >label {
+        display: flex;
+        color: #89BCD9;
+        font-size: 14px;
+        margin-bottom: 12px;
+        padding-left: 15px;
+    }
+
+    >input {
+        width: 445px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: #262E34;
+        border: 1px solid #89BCD9;
+        font-size: 18px;
+        color: #F8F5EC;
+        padding: 0 20px;
+
+        &:focus {
+            outline: none;
+            background-color: #323F48;
+        }
+
+        &::placeholder {
+            color: #6c8fa0;
+        }
+    }
+}
+
+
+.contactMessage {
+    >label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #89BCD9;
+        font-size: 14px;
+        padding-left: 15px;
+    }
+
+    >textarea {
+        margin-top: 12px;
+        width: 911px !important;
+        height: 164px !important;
+        border-radius: 30px;
+        background-color: #262E34;
+        border: 1px solid #89BCD9;
+        resize: none;
+        padding: 16px 20px;
+        font-size: 18px;
+        color: #F8F5EC;
+        line-height: 1.6;
+        font-family: 'Josefin';
+
+        &:focus {
+            outline: none;
+            background-color: #323F48;
+        }
+
+        &::placeholder {
+            color: #6c8fa0;
+            opacity: 0.7;
+        }
+    }
+
+}
+
+.contactPivacyPolicy {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    >p {
+        font-size: 14px;
+        color: #F8F5EC;
+
+        >span {
+            color: #89BCD9;
+            text-decoration: underline;
+        }
+    }
+}
+
+.errorText {
+    color: #E44C36 !important;
+    font-size: 14px;
+    margin-top: 55px;
+    margin-left: 32px;
+    position: absolute;
+    font-family: 'Josefin';
+}
+
+input.error, textarea.error {
+    border: 2px solid #E44C36  !important;
+    outline: none;
+}
+
+label.error {
+    color: #E44C36 !important ;
+}
+
+.contactMeButton {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 24px;
+
+    >button {
+        padding: 13px 30px;
+        border-radius: 30px;
+        background-color: #262E34;
+        border: solid 2px #8F9190;
+        color: #8F9190;
+    }
+}
