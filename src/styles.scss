@@ -51,3 +51,30 @@ body {
   max-width: 1600px;
 
 }
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: clamp(16px, 5vw, 64px) !important;
+
+
+  >img {
+      width: clamp(40px, 5vw, 56px) !important;
+      height: clamp(30px, 4vw, 38px) !important;
+  }
+
+  >p {
+      color: #F8F5EC;
+      font-size: clamp(10px, 1.3vw, 14px) !important;
+      text-align: center;
+  }
+
+  >div {
+      color: #262E34;
+      margin-bottom: 0px !important;
+      font-size: clamp(10px, 1.3vw, 14px) !important;
+      font-weight: 300 !important;
+  }
+
+}

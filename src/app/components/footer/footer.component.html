@@ -1,9 +1,28 @@
-<div class="footerSection">
+<footer class="footerSection">
 
     <div class="contactInfo">
-        <p>Martin Sinner</p>
-        <p>Impressum</p>
+        <p>Legal Notice</p>
+        <p>© Martin Sinner 2025</p>
     </div>
 
-    <div class="socialMediaFooter"></div>
-</div>
+    <div class="logoContainer">
+        <img src="assets/navbar/logonav.png" alt="">
+        <p>M.Sinner</p>
+        <div>developer</div>
+    </div>
+
+    <div class="socialMediaFooter">
+        <img 
+        [src]="gitHovered ? 'assets/footer/githubfooterres.png' : 'assets/footer/githubfooter.png'" alt="github"
+        (mouseenter)="gitHovered = true" (mouseleave)="gitHovered = false">
+
+        <img 
+        [src]="mailHovered ? 'assets/footer/mailfooterres.png' : 'assets/footer/mailfooter.png'" alt="github"
+        (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false">
+
+        <img 
+        [src]="linkedinHovered ? 'assets/footer/infooterres.png' : 'assets/footer/infooter.png'" alt="github"
+        (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
+
+    </div>
+</footer>
