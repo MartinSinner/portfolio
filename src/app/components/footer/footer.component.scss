@@ -16,12 +16,18 @@ footer {
     font-size: 18px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 12px;
+}
+
+.logoContainer {
+    margin-left: 0 !important;
 }
 
 .socialMediaFooter {
     margin-top: 50px;
     display: flex;
+    justify-content: center;
     gap: 16px;
 
     >img {
