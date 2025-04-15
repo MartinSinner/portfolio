@@ -1,6 +1,14 @@
 <div class="contactMeSection">
+    
+    <div class="arrowUp">
+        <img 
+        [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
+        (mouseenter)="hover = true" (mouseleave)="hover=false"
+        >
+    </div>
     <h1>Contact me</h1>
 
+    
 
     <div class="contactInformation">
 

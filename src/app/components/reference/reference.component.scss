@@ -23,6 +23,15 @@
     display: grid;
     place-items: center;
     position: relative;
+
+    >img {
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+        &.hovered {
+            filter: blur(1px) brightness(1.0);
+            transform: scale(1.05);
+        }
+    }
 }
 
 .referenceInfo {
@@ -34,7 +43,7 @@
     align-items: center;
     color: #F8F5EC;
     text-align: center;
-    
+
 
 
     >h3 {

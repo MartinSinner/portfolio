@@ -22,6 +22,7 @@ export class ContactComponent {
   privacyAccepted = false;
   showError = false;
   hover = false;
+  
 
 
 

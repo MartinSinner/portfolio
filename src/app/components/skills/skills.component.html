@@ -18,19 +18,24 @@
 
         </div>
 
-        <div class="skillAddition">
-            <img src="assets/skills/Ellipse 25.png" alt="">
+        <div (mouseenter)="shapeHovered = true" (mouseleave)="shapeHovered = false">
+            <div class="skillAddition">
+                <img
+                [ngClass]="{ 'hovered': shapeHovered }"  
+                [src]="shapeHovered ? 'assets/skills/ellipse-hover.png' : 'assets/skills/ellipse-default.png'"
+                alt="ellipse">
 
-            <div class="currentlyLearning">
-                <p class="learningTitle">I am currently learning</p>
-                <div class="learningIcons">
-                    <img src="assets/skills/react -vue.png" alt="">
+                <div class="currentlyLearning">
+                    <p class="learningTitle">I am currently learning</p>
+                    <div class="learningIcons">
+                        <img src="assets/skills/react -vue.png" alt="">
+                    </div>
+                    <p class="learningText">
+                        I'm currently diving into React and Vue – not because I have to,
+                        but because I want to. Learning new technologies keeps me motivated,
+                        sharp, and ready to tackle any frontend challenge.
+                    </p>
                 </div>
-                <p class="learningText">
-                    I'm currently diving into React and Vue – not because I have to,  
-                    but because I want to. Learning new technologies keeps me motivated,  
-                    sharp, and ready to tackle any frontend challenge.
-                </p>
             </div>
         </div>
 

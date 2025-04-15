@@ -3,8 +3,20 @@
 
         <div class="mainPart">
             <div class="pictureContainer">
-                <img class="profilePicture" src="assets/img/breit.png" alt="profilepicture">
-                <img id="background" class="backgroundShape" src="assets/hero/shape.png">
+                <img 
+                class="profilePicture"
+                 src="assets/img/breit.png" 
+                 alt="profilepicture"
+                 (mouseenter)="shapeHovered = true" 
+                 (mouseleave)="shapeHovered = false">
+
+                <img  
+                class="backgroundShape"
+                [ngClass]="{ 'hovered': shapeHovered }" 
+                [src]="shapeHovered ? 'assets/hero/shape-hover.png' : 'assets/hero/shape.png'"
+                alt="background shape"
+                >
+
             </div>
 
             <div class="introductionContainer">

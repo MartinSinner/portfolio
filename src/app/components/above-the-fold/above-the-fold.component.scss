@@ -23,6 +23,8 @@
         width: clamp(500px, 40vw, 700px);
         height: auto;
         position: absolute;
+        z-index: 2;
+        
 
     }
 
@@ -30,6 +32,15 @@
         width: clamp(280px, 38vw, 600px);
         height: clamp(280px, 38vw, 600px);
         margin-bottom: clamp(-40px, -5vw, -90px);
+        opacity: 1;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        position: relative;
+        z-index: 1;
+
+        &.hovered {
+            filter: blur(1px) brightness(1.2);
+            transform: scale(1.05);
+        }
     }
 }
 

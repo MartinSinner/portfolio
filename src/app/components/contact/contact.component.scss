@@ -3,12 +3,27 @@
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+    position: relative;
 
     >h1 {
         color: #89BCD9;
         font-size: 60px;
         font-weight: 400;
     }
+}
+
+.arrowUp {
+    position: absolute;
+    display: flex;
+    right: 180px;
+    top: 10px;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+
+
 }
 
 .contactInformation {
@@ -146,7 +161,11 @@
 
         >span {
             color: #89BCD9;
-            text-decoration: underline;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -160,13 +179,14 @@
     font-family: 'Josefin';
 }
 
-input.error, textarea.error {
-    border: 2px solid #E44C36  !important;
+input.error,
+textarea.error {
+    border: 2px solid #E44C36 !important;
     outline: none;
 }
 
 label.error {
-    color: #E44C36 !important ;
+    color: #E44C36 !important;
 }
 
 .contactMeButton {
