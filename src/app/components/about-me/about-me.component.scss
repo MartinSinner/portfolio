@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 100px;
 
     >h1 {
@@ -10,6 +10,10 @@
         font-weight: 400;
         color: #89BCD9;
     }
+}
+
+#whyMe {
+    scroll-margin-top: 100px;
 }
 
 .aboutMeIcons {

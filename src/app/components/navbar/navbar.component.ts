@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  isScrolled = false;
 
-}
+
+  ngOnInit() {
+    window.addEventListener('scroll', this.checkScroll, true);
+  }
+
+  checkScroll = () => {
+    this.isScrolled = window.scrollY > 750; 
+  };
+} 

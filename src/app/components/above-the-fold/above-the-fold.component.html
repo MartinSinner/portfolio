@@ -3,27 +3,20 @@
 
         <div class="mainPart">
             <div class="pictureContainer">
-                <img 
-                class="profilePicture"
-                 src="assets/img/breit.png" 
-                 alt="profilepicture"
-                 (mouseenter)="shapeHovered = true" 
-                 (mouseleave)="shapeHovered = false">
+                <img class="profilePicture" src="assets/img/breit.png" alt="profilepicture"
+                    (mouseenter)="shapeHovered = true" (mouseleave)="shapeHovered = false">
 
-                <img  
-                class="backgroundShape"
-                [ngClass]="{ 'hovered': shapeHovered }" 
-                [src]="shapeHovered ? 'assets/hero/shape-hover.png' : 'assets/hero/shape.png'"
-                alt="background shape"
-                >
+                <img class="backgroundShape" [ngClass]="{ 'hovered': shapeHovered }"
+                    [src]="shapeHovered ? 'assets/hero/shape-hover.png' : 'assets/hero/shape.png'"
+                    alt="background shape">
 
             </div>
 
             <div class="introductionContainer">
 
                 <div class="logoContainer">
-                    <img [src]="logoHovered ? 'assets/hero/logo-icon.png' : 'assets/hero/logo-icon-hover.png'" 
-                    alt="logo" (mouseenter)="logoHovered=true" (mouseleave)="logoHovered=false">
+                    <img [src]="logoHovered ? 'assets/hero/logo-icon.png' : 'assets/hero/logo-icon-hover.png'"
+                        alt="logo" (mouseenter)="logoHovered=true" (mouseleave)="logoHovered=false">
 
                     <p>M.Sinner</p>
                     <div>developer</div>
@@ -45,15 +38,20 @@
 
 
         <div class="socialMediaContainer">
-            <img [src]="emailHovered ? 'assets/hero/mailhover.svg' :'assets/hero/mail.png'" alt="email"
-                (mouseenter)="emailHovered = true" (mouseleave)="emailHovered = false">
+            <a href="mailto:martin.sinner.dev@gmail.com">
+                <img [src]="emailHovered ? 'assets/hero/mailhover.svg' :'assets/hero/mail.png'" alt="email"
+                    (mouseenter)="emailHovered = true" (mouseleave)="emailHovered = false">
+            </a>
 
+            <a href="https://github.com/MartinSinner" target="_blank">
+                <img [src]="githubHovered ? 'assets/hero/githubhover.svg' : 'assets/hero/git.png'" alt="github"
+                    (mouseenter)="githubHovered = true" (mouseleave)="githubHovered = false">
+            </a>
 
-            <img [src]="githubHovered ? 'assets/hero/githubhover.svg' : 'assets/hero/git.png'" alt="github"
-                (mouseenter)="githubHovered = true" (mouseleave)="githubHovered = false">
-
-            <img [src]="linkedinHovered ? 'assets/hero/inhover.svg' : 'assets/hero/in.png'"
-                alt="linkedin" (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
+            <a href="https://www.linkedin.com/in/martin-sinner" target="_blank">
+                <img [src]="linkedinHovered ? 'assets/hero/inhover.svg' : 'assets/hero/in.png'" alt="linkedin"
+                    (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
+            </a>
         </div>
 
 
