@@ -19,15 +19,12 @@
 .arrowUp {
     position: absolute;
     display: flex;
-    right: 180px;
+    right: clamp(30px, 10vw, 180px);    
     top: 10px;
 
     &:hover{
         cursor: pointer;
     }
-
-
-
 }
 
 .contactInformation {
@@ -205,5 +202,28 @@ label.error {
         background-color: #262E34;
         border: solid 2px #8F9190;
         color: #8F9190;
+    }
+}
+
+@media (max-width:1125px) {
+    .contactInformation {
+        grid-template-columns: 345px 250px 1fr;
+    }
+
+    .contactForm {
+        align-items: center;
+    }
+
+    .formGroup {
+        >input {
+            width: 360px;
+        }
+    }
+
+    .contactMessage {
+        >textarea {
+            width: 748px !important;
+        }
+        
     }
 }

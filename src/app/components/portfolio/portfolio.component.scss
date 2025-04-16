@@ -31,7 +31,7 @@
         font-weight: 500;
         font-family: 'Josefin';
         color: #89BCD9;
-        padding: 30px 30px;
+        padding: 30px 30px; //padding 16px 22px ->
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
         transition: background-color 0.6s ease, color 0.6s ease;
@@ -133,7 +133,7 @@
 }
 
 .smallIcon {
-    width: 40px; 
+    width: 40px;
     height: auto;
 }
 
@@ -190,13 +190,34 @@
     0% {
         opacity: 0;
         filter: blur(10px) contrast(1.2);
-        
+
     }
 
     100% {
         opacity: 1;
         filter: blur(0) contrast(1);
 
-       
+
     }
+}
+
+
+
+@media (max-width:1125px) {
+
+    .projectTitle {
+        gap: 22px;
+        margin-left: 60px;
+
+        >p {
+            font-size: 24px;
+            padding: 16px 20px;
+        }
+    }
+
+    .projectDescription {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
 }

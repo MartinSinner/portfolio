@@ -5,7 +5,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 420px;
+    gap: clamp(160px, 20vw, 420px);
     background-color: #89BCD9;
 }
 
