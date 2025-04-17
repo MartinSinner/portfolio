@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -9,6 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent {
+
+  enableHover = true;
+
   emailHovered = false;
   githubHovered = false;
   linkedinHovered = false;
@@ -17,4 +20,24 @@ export class AboveTheFoldComponent {
   logoHovered = false;
 
   shapeHovered = false;
+  profilePicture = 'assets/img/breit.png';
+
+  ngOnInit() {
+    this.updateSettings();
+  }
+
+  @HostListener('window:resize', [])
+  onResize(){
+    this.updateSettings();
+  }
+
+  updateSettings(){
+    if (window.innerWidth <= 783) {
+      this.profilePicture = 'assets/img/breit2.png';
+      this.enableHover = false;
+    } else {
+      this.profilePicture = 'assets/img/breit.png';
+      this.enableHover = true;
+    }
+  }
 }
