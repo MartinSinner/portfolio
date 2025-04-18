@@ -1,4 +1,5 @@
 <div class="pageWrapper">
+
     <div class="headerMobile">
         <div class="logoContainer">
             <img src="assets/hero/logo-icon.svg" alt="">
@@ -6,23 +7,31 @@
             <div>developer</div>
         </div>
 
-        <div class="burgerBar">
-            <img src="assets/hero/bar.png" alt="">
+        <div class="burgerBar" (click)="toggleOverlay()">
+            <img *ngIf="!isOverlayOpen" src="assets/hero/bar.png" alt="menu-icon">
+            <img *ngIf="isOverlayOpen" src="assets/hero/close.png" alt="close-icon">
         </div>
     </div>
+
+
     <div class="heroSection">
         
+        <div class="mobileView" *ngIf="isOverlayOpen" [ngClass]="{ 'fade-in': isOverlayOpen }">
+            <app-navbar></app-navbar>
+        </div>
+
+
 
 
         <div class="mainPart">
             <div class="pictureContainer">
 
-                <img class="profilePicture" [src]="profilePicture" alt="profilepicture"
+                <img class="profilePicture" [src]="profilePicture" *ngIf="!isOverlayOpen" alt="profilepicture"
                     (mouseenter)="enableHover && (shapeHovered = true)"
                     (mouseleave)="enableHover && (shapeHovered = false)">
 
 
-                <img class="backgroundShape" [ngClass]="{ 'hovered': shapeHovered }" [src]="
+                <img class="backgroundShape" [ngClass]="{ 'hovered': shapeHovered }" *ngIf="!isOverlayOpen" [src]="
                     shapeHovered 
                     ? 'assets/hero/shape-hover.png' 
                     : 'assets/hero/shape-mobile.png'" alt="background shape">

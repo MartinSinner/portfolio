@@ -79,3 +79,40 @@ body {
   }
 
 }
+
+
+.desktopView {
+  display: block ;
+}
+
+.mobileView {
+  display: none;
+}
+
+
+@media (max-width: 783px) {
+  .desktopView {
+      display: none !important;
+  }
+
+  .mobileView {
+      display: block !important;
+  }
+
+  @keyframes fadeInSmooth {
+    1% {
+      opacity: 0;
+      
+    }
+    
+    100% {
+      opacity: 1;
+      
+    }
+  }
+  
+  .fade-in {
+    animation: fadeInSmooth 0.3s ease-out;
+  }
+  
+}

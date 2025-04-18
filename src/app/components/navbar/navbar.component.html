@@ -1,4 +1,18 @@
-<nav [class.scrolled] ="isScrolled">
+<div class="mobileNavbar">
+    <img src="assets/navbar/navbar-mobile.svg" alt="navbar-mobile">
+    <div class="navbar">
+        <a href="#whyMe">Why me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <div class="languageSwitch">
+            <p>DE</p>
+            <p>EN</p>
+        </div>
+    </div>
+</div>
+
+<nav [class.scrolled]="isScrolled">
     <div class="logoContainer">
         <img src="assets/navbar/logonav.png" alt="">
         <p>M.Sinner</p>

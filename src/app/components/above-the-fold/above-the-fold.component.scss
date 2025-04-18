@@ -100,11 +100,10 @@
         text-align: center;
         font-weight: 300;
     }
-
 }
 
-.nameContainer {
 
+.nameContainer {
     >p {
 
         font-size: clamp(36px, 6vw, 110px);
@@ -121,6 +120,7 @@
     }
 }
 
+
 .arrowDown {
     display: flex;
     margin-top: clamp(80px, 5vw, 160px);
@@ -132,7 +132,6 @@
         &:hover {
             cursor: pointer;
         }
-
     }
 }
 
@@ -152,20 +151,21 @@
                 cursor: pointer;
             }
         }
-
     }
 }
 
 @media (max-width:783px) {
-
     .heroSection {
         justify-content: center;
-       
+        height: auto;
+
     }
+
 
     .mainPart {
         justify-content: flex-start;
     }
+
 
     .headerMobile {
         display: flex;
@@ -173,8 +173,8 @@
         >.logoContainer {
             display: flex !important;
             margin-left: 8px !important;
-            
-            
+
+
 
             >img {
                 width: 70px !important;
@@ -192,12 +192,22 @@
         }
     }
 
+
     .burgerBar {
         >img {
             width: 45px;
             height: 45px;
+
+            transition: transform 0.3s ease-out, filter 0.3s ease-out;
+
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(1.2);
+                cursor: pointer;
+            }
         }
     }
+
 
     .mainPart {
         flex-direction: column;
@@ -205,20 +215,20 @@
         gap: 20px;
     }
 
+
     .pictureContainer {
         position: relative;
-        width: 420px;
-        height: 358px;
+        width: 485px;
+        height: 420px;
         margin: 0;
 
         >.backgroundShape {
-            width: 100%;
+            width: 75%;
             height: 100%;
             object-fit: cover;
             position: absolute;
             top: 0;
-            left: 0;
-            clip-path: ellipse(50% 46% at 50% 50%);
+            clip-path: ellipse(50% 45% at 50% 50%);
             z-index: 1;
         }
 
@@ -227,16 +237,18 @@
             height: 100%;
             object-fit: cover;
             position: absolute;
-            top: -14px;
+            top: -12px;
             left: 0;
-            clip-path: ellipse(52% 50% at 50% 50%);
+            clip-path: ellipse(38% 48% at 50% 50%);
             z-index: 2;
         }
     }
 
+
     .socialMediaContainer {
         display: none;
     }
+
 
     .logoContainer {
         display: none;
@@ -245,6 +257,7 @@
 
     .nameContainer {
         text-align: center;
+
         >p {
             font-size: 72px;
         }
@@ -253,6 +266,7 @@
             font-size: 32px;
         }
     }
+
 
     .arrowDown {
         margin-top: 30px;
@@ -266,17 +280,14 @@
 
 
 @media (max-width:475px) {
-
-    
-
     .headerMobile {
         display: flex;
 
         >.logoContainer {
             display: flex !important;
             margin-left: 8px !important;
-            
-            
+
+
 
             >img {
                 width: 60px !important;
@@ -319,6 +330,7 @@
 
     .nameContainer {
         text-align: center;
+
         >p {
             font-size: 54px;
         }
@@ -330,7 +342,7 @@
 }
 
 @media (max-width:380px) {
-   
+
 
     .pictureContainer {
         >.profilePicture {
@@ -351,6 +363,7 @@
 
     .nameContainer {
         text-align: center;
+
         >p {
             font-size: 48px;
         }

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 100px;
 
     >h1 {
@@ -22,26 +22,22 @@
     align-items: center;
     justify-content: flex-start;
     gap: 40px;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .iconContainer {
     display: grid;
-    grid-template-columns: 48px 280px 1fr;
+    grid-template-columns: 
+    clamp(315px, 45vw, 500px)   
+    clamp(250px, 25vw, 380px)   
+    1fr; ;
     align-items: center;
-    gap: 60px;
+    gap: 24px;
     padding: 16px 32px;
-
-
-    >img {
-        width: 48px;
-
-
-    }
 }
 
 .title {
-    font-size: 20px;
+    font-size: clamp(18px, 2.2vw, 28px);
     color: #F8F5EC;
     font-weight: 400;
     font-family: 'Josefin';
@@ -56,7 +52,7 @@
 
 .description {
     flex-wrap: wrap;
-    font-size: 16px;
+    font-size: clamp(16px, 1.8vw, 22px);
     color: #d6d6d6;
     font-weight: 300;
     margin-top: 4px;
@@ -66,9 +62,60 @@
 .letsTalkButton {
     transition: transform 0.3s ease-out, filter 0.3s ease-out;
 
-    &:hover{
+    &:hover {
         transform: scale(1.1);
-            filter: brightness(1.2);
-            cursor: pointer;
+        filter: brightness(1.2);
+        cursor: pointer;
     }
 }
+
+.iconTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    >img {
+        width: clamp(28px, 5vw, 48px);
+    }
+}
+
+@media (max-width: 783px) {
+    .aboutMeIcons {
+        gap: 40px;
+    }
+    
+    .iconContainer {
+        display: flex;
+        flex-direction: column;
+
+        
+    }
+
+    .iconTitle {
+        display: flex;
+        align-items: center;
+
+        
+
+        >img {
+            width: clamp(30px, 9vw, 48px) !important;
+        }
+    }
+
+    .title {
+       
+        font-size: clamp(18px, 5.2vw, 28px) !important;
+    
+    }
+
+    .description {
+        text-align: center;
+        font-size: clamp(14px, 3.8vw, 22px) !important;
+    }
+
+    .letsTalkButton {
+        display: none;
+    }
+}
+
+

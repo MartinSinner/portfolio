@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
-export class AboveTheFoldComponent {
 
+export class AboveTheFoldComponent {
+  isOverlayOpen = false;
   enableHover = true;
 
   emailHovered = false;
@@ -27,11 +29,11 @@ export class AboveTheFoldComponent {
   }
 
   @HostListener('window:resize', [])
-  onResize(){
+  onResize() {
     this.updateSettings();
   }
 
-  updateSettings(){
+  updateSettings() {
     if (window.innerWidth <= 783) {
       this.profilePicture = 'assets/img/breit2.png';
       this.enableHover = false;
@@ -39,5 +41,9 @@ export class AboveTheFoldComponent {
       this.profilePicture = 'assets/img/breit.png';
       this.enableHover = true;
     }
+  }
+
+  toggleOverlay(){
+    this.isOverlayOpen = !this.isOverlayOpen;
   }
 }

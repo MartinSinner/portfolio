@@ -4,10 +4,10 @@
     <div class="aboutMeIcons">
 
         <div class="iconContainer">
-            <img src="assets/about-me/location.png" alt="icon">
-
-
-            <p class="title"><span>I am</span> located in Stuttgart..|</p>
+            <div class="iconTitle">
+                <img src="assets/about-me/location.png" alt="icon">
+                <p class="title"><span>I am</span> located in Stuttgart..|</p>
+            </div>
 
             <p class="description">I love coding in a place that inspires creativity – and sometimes, that
                 place is my kitchen at 2am.
@@ -15,10 +15,11 @@
         </div>
 
         <div class="iconContainer">
-            <img src="assets/about-me/bank.png" alt="">
+            <div class="iconTitle">
+                <img src="assets/about-me/bank.png" alt="">
+                <p class="title"><span>I am</span> flexible in my work style..|</p>
+            </div>
 
-
-            <p class="title"><span>I am</span> flexible in my work style..|</p>
             <p class="description">Whether it’s tools, timing, or teamwork – I’m quick to adapt and always
                 solution-oriented. Coding can be chaotic, but I stay calm and focused when it counts
             </p>
@@ -26,17 +27,18 @@
         </div>
 
         <div class="iconContainer">
-            <img src="assets/about-me/remote.png" alt="">
-
-            <p class="title"><span>I am</span> open to work remote..|</p>
+            <div class="iconTitle">
+                <img src="assets/about-me/remote.png" alt="">
+                <p class="title"><span>I am</span> open to work remote..|</p>
+            </div>
 
             <p class="description">Whether it's from home, a co-working space, or a coffee shop – as long as
                 there's Wi-Fi, I'm in my zone</p>
         </div>
 
         <div class="letsTalkButton">
-        <img [src]="buttonHover ? 'assets/about-me/letstalkhover.svg' : 'assets/about-me/letstalk.svg'" alt="letsTalk"
-            (mouseenter)="buttonHover = true" (mouseleave)="buttonHover = false">
+            <img [src]="buttonHover ? 'assets/about-me/letstalkhover.svg' : 'assets/about-me/letstalk.svg'"
+                alt="letsTalk" (mouseenter)="buttonHover = true" (mouseleave)="buttonHover = false">
         </div>
 
     </div>
