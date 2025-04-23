@@ -81,3 +81,19 @@
     }
 
 }
+
+@media (max-width: 784px) {
+    .skillContainer{
+        flex-direction: column;
+        margin-top: 8px;
+
+        >img {
+            height: clamp(60px, 18vw, 100px) !important;
+        }
+    }
+
+    .skillIconsContainer {
+        row-gap: clamp(5px, 0vw, 50px) !important;
+        column-gap: clamp(8px, 4vw, 120px) !important;
+    }
+}

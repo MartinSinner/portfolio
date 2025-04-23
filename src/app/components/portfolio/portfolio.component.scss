@@ -31,7 +31,7 @@
         font-weight: 500;
         font-family: 'Josefin';
         color: #89BCD9;
-        padding: 30px 30px; //padding 16px 22px ->
+        padding: 30px 30px;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
         transition: background-color 0.6s ease, color 0.6s ease;
@@ -54,14 +54,14 @@
 
 .projectDescription {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     background-color: #2D383F;
-    height: clamp(70vh, 85vh, 90vh);
-    padding-left: 100px;
-    padding-right: 100px;
+    height: 100%;
+    padding: 50px 100px;
+
     color: #F8F5EC;
-    padding-top: 80px;
+
 
 }
 
@@ -71,22 +71,31 @@
     flex-direction: column;
     align-items: center;
     max-width: 600px;
-    gap: 30px;
+    gap: 80px;
     flex: 1;
 }
 
 .descriptionRow {
     display: flex;
     align-items: flex-start;
-    gap: 24px;
+    flex-direction: column;
+    font-family: 'Josefin';
+    gap: 18px;
+
+    >p {
+        font-size: 20px;
+        font-weight: 300;
+    }
 }
 
 .descriptionContainer {
-    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-family: 'Josefin';
 
     >h3 {
-        font-size: clamp(20px, 2vw, 28px);
+        font-size: clamp(20px, 4vw, 28px);
         font-weight: 400;
 
     }
@@ -104,10 +113,6 @@
     font-family: 'Josefin';
     gap: 20px !important;
 
-    >h3 {
-        font-weight: 400;
-    }
-
     >img {
         width: clamp(300px, 35vw, 700px);
         height: auto;
@@ -115,6 +120,15 @@
         object-fit: cover;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         border: 1px solid #444;
+    }
+}
+
+.technologiesRow {
+    display: flex;
+    flex-direction: column;
+
+    >h3 {
+        font-weight: 400;
     }
 }
 
@@ -135,6 +149,18 @@
 .smallIcon {
     width: 40px;
     height: auto;
+}
+
+.technologyText {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+
+    >p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #F8F5EC;
+    }
 }
 
 
@@ -182,6 +208,14 @@
     }
 }
 
+.largeScreenButtons {
+    display: flex;
+}
+
+.smallScreenButtons {
+    display: none;
+}
+
 .fadeIn {
     animation: fadeMorph 0.6s ease-in-out both;
 }
@@ -215,9 +249,174 @@
         }
     }
 
+
     .projectDescription {
         padding-left: 30px;
         padding-right: 30px;
     }
 
+    .projectDescriptionLeft {
+        gap: 50px;
+    }
+
+    .descriptionContainer {
+        >h3 {
+            font-size: clamp(20px, 2vw, 28px);
+        }
+
+    }
+
+    .descriptionRow {
+        >p {
+            font-size: 18px;
+        }
+    }
+
+}
+
+@media (max-width: 784px) {
+    .projectTitle {
+        margin-left: 4px;
+        gap: clamp(16px, 7vw, 64px);
+
+        >p {
+            font-size: clamp(18px, 3vw, 24px);
+            padding: clamp(12px, 5vw, 20px) clamp(8px, 1vw, 24px);
+        }
+    }
+
+    .projectDescription {
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 100vh;
+        gap: 20px;
+        padding-bottom: 100px;
+    }
+
+    .projectDescriptionRight {
+        justify-content: space-between;
+        gap: 18px !important;
+    }
+
+    .projectName {
+        font-size: 34px;
+        color: #89BCD9;
+    }
+
+    .descriptionContainer {
+        >h3 {
+            color: #89BCD9;
+        }
+    }
+
+
+    .technologiesRow {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        >h2 {
+            font-size: 30px;
+        }
+
+        >h3 {
+            font-weight: 350;
+        }
+
+    }
+
+    .largeScreenButtons {
+        display: none;
+    }
+    
+    .smallScreenButtons {
+        display: flex;
+    }
+
+    .technologyIcon {
+        display: none;
+    }
+
+    .technologyText {
+        display: flex;
+        flex-direction: row;
+
+        >p {
+            font-weight: 350;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .portfolioSection {
+        >h1 {
+            font-size: 32px
+        }
+    }
+
+    .projectContainer {
+        margin-top: 50px;
+    }
+
+    .projectTitle {
+        white-space: nowrap;
+        gap: 0;
+
+        >p {
+            font-size: clamp(16px, 2vw, 24px);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: clamp(6px, 5vw, 20px) clamp(6px, 1vw, 25px);
+        }
+    }
+
+    .projectDescription {
+        height: 120vh;
+    }
+
+    .projectDescriptionRight {
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 18px !important;
+    }
+
+    .descriptionContainer {
+        >p {
+            margin-left: -50px;
+        }
+    }
+
+.actionButtons {
+    >button {
+        padding: 13px 20px 13px 20px;
+        font-size: 16px;
+
+        &:last-child {
+            border: 1px solid #89BCD9;
+        }
+    }
+}
+   
+}
+
+@media (max-width: 375px) {
+    .projectDescription {
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .projectTitle > p {
+        font-size: clamp(14px, 2vw, 20px); 
+        padding: 10px; 
+    }
+
+    .actionButtons > button {
+        padding: 10px 15px; 
+        font-size: 14px; 
+    }
+
+    .technologiesRow {
+        gap: 10px;
+    }
 }

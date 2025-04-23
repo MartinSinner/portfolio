@@ -3,12 +3,13 @@
 
     <div class="projectContainer">
         <div class="projectTitle">
-            <p 
-            *ngFor="let project of projectData; let i = index" 
-            (click)="setActiveProject(i)"
-            [class.active]="i === activeIndex"
-            >
-                {{ i + 1}}. {{project.title}}
+            <p *ngFor="let project of projectData; let i = index" (click)="setActiveProject(i)"
+                [class.active]="i === activeIndex">
+                <span *ngIf="isSmallScreen; else fullTitle">{{ i + 1}}. Project</span>
+                <ng-template #fullTitle> {{ i + 1}}. {{project.title}}</ng-template>
+
+
+
             </p>
         </div>
 
@@ -17,27 +18,47 @@
 
                 <div *ngFor="let section of projectData[activeIndex].sections" class="descriptionRow">
 
-                    <img src="assets/projects/ellipse8.png" alt="">
+                    
                     <div class="descriptionContainer">
+                        <img src="assets/projects/ellipse8.png" alt="">
                         <h3>{{ section.heading }}</h3>
-                        <p>{{ section.text }}</p>
                     </div>
+                    <p>{{ section.text }}</p>
+                </div>
+
+                <div *ngIf="isSmallScreen" class="actionButtons smallScreenButtons">
+                    <button>Live Test</button>
+                    <button>GitHub</button>
                 </div>
             </div>
 
             <div class="projectDescriptionRight">
-                <h3>Technologies</h3>
-                <div class="technologyIcon">
-                    <img *ngFor="let tech of projectData[activeIndex].technologies" 
-                    [src]="'assets/projects/' + tech"
-                    [ngClass]="{ 'smallIcon': tech === 'wordpress.png'}">
+                <h2 class="projectName" *ngIf="isSmallScreen">{{ projectData[activeIndex].title }}</h2>
+
+                <div class="technologiesRow">
+                    <h3>Technologies:</h3>
+                    <div class="technologyText" *ngIf="isSmallScreen">
+                        <p *ngFor="let tech of projectData[activeIndex].technologies">
+                            <span *ngIf="tech === 'html.png'">HTML,</span>
+                            <span *ngIf="tech === 'css.png'">CSS,</span>
+                            <span *ngIf="tech === 'javascript.png'">JavaScript</span>
+                            <span *ngIf="tech === 'wordpress.png'">WordPress</span>
+                        </p>
+                    </div>
                 </div>
 
-                
-                    <img [src]="'assets/projects/' + projectData[activeIndex].image">
-                
+                <div class="technologyIcon" *ngIf="!isSmallScreen">
 
-                <div class="actionButtons">
+                    <img *ngFor="let tech of projectData[activeIndex].technologies" [src]="'assets/projects/' + tech"
+                        [ngClass]="{ 'smallIcon': tech === 'wordpress.png'}">
+                </div>
+
+
+
+                <img [src]="'assets/projects/' + projectData[activeIndex].image">
+
+
+                <div class="actionButtons largeScreenButtons">
                     <button>Live Test</button>
                     <button>GitHub</button>
                 </div>

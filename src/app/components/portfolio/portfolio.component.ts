@@ -24,7 +24,7 @@ export class PortfolioComponent {
           text: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
         },
         {
-          heading: 'How I have organised my work process',
+          heading: 'How I have organised my work',
           text: 'How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing'
         },
         {
@@ -48,7 +48,7 @@ export class PortfolioComponent {
           text: 'Jump’n’Run browser game where the player collects coins, defeats enemies and completes levels with custom animations and sound effects.'
         },
         {
-          heading: 'How I have organised my work process',
+          heading: 'How I have organised my work',
           text: 'The project was developed using object-oriented programming. I created and structured multiple JS classes to represent the world, enemies and interactions.'
         },
         {
@@ -72,7 +72,7 @@ export class PortfolioComponent {
           text: 'Single Page Application using REST API to display Pokémon details. Users can browse, view stats and learn about evolutions.'
         },
         {
-          heading: 'How I have organised my work process',
+          heading: 'How I have organised my work',
           text: 'I fetched data from the PokéAPI, used asynchronous JavaScript and created a responsive card layout. The UI was optimized for both mobile and desktop.'
         },
         {
@@ -114,6 +114,16 @@ export class PortfolioComponent {
 
   fade = false;
   activeIndex = 0;
+  isSmallScreen = false;
+
+  ngOnInit() {
+    this.checkScreenSize();
+    window.addEventListener('resize', this.checkScreenSize.bind(this));
+  }
+
+  checkScreenSize(){
+  this.isSmallScreen = window.innerWidth <= 784
+  }
 
   setActiveProject(index: number) {
     this.fade = false;
