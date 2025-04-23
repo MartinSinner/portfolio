@@ -38,7 +38,13 @@ export class ReferenceComponent {
 
   activeIndex = 0;
 
-  setActiveProject(index: number) {
-      this.activeIndex = index;
+  
+
+  setHoveredIndex(index: number | null): void {
+    if (window.innerWidth >= 475) {
+      this.hoveredIndex = index;
+    } else {
+      this.hoveredIndex = null;
+    }
   }
 }

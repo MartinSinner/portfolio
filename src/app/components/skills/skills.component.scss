@@ -97,3 +97,20 @@
         column-gap: clamp(8px, 4vw, 120px) !important;
     }
 }
+
+@media (max-width: 400px) {
+    .skillAddition {
+        >img {
+            width: 315px;
+            height: 315px;
+        }
+    }
+
+    .currentlyLearning {
+        max-width: 250px;
+
+        >p {
+            font-size: 14px;
+        }
+    }
+}

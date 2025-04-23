@@ -1,10 +1,14 @@
 <div class="referenceSection">
 
-    <h1>Need a teamplayer? Here what my colleagues said about me</h1>
+    <h1 class="teamplayerHeading">Need a teamplayer? Here what my colleagues said about me</h1>
+
+    <h1 class="teamplayerHeadingSmall">Need a teamplayer? </h1>
+    <h2 class="colleaguesHeadingSmall">Here what my colleagues said about me</h2>
+
     <div class="referenceWrapper">
         <div class="referenceCard" *ngFor="let ref of reference; let i = index" 
-        (mouseenter)="hoveredIndex = i"
-        (mouseleave)="hoveredIndex = null">
+        (mouseenter)="setHoveredIndex(i)"
+        (mouseleave)="setHoveredIndex(null)">
 
             <img [ngClass]="{ 'hovered': hoveredIndex === i }"
                 [src]="hoveredIndex === i ? 'assets/reference/hovershape.png' : 'assets/reference/defaultshape.png'"
