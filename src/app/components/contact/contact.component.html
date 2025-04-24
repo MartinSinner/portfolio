@@ -1,14 +1,13 @@
 <div id="contact" class="contactMeSection">
-    
-    <div class="arrowUp">
-        <img 
-        [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
-        (mouseenter)="hover = true" (mouseleave)="hover=false"
-        >
+
+    <div class="arrowUpDesktop">
+        <img [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
+            (mouseenter)="hover = true" (mouseleave)="hover=false">
     </div>
+
     <h1>Contact me</h1>
 
-    
+
 
     <div class="contactInformation">
 
@@ -36,53 +35,53 @@
 
             <div class="contactNameMail">
                 <div class="formGroup">
+
                     <label for="name" [ngClass]="{'error' : showNameError}">Your name</label>
-                    <input type="text" 
-                    type="text" 
-                    [(ngModel)]="name" 
-                    [ngClass]="{'error' : showNameError}"
-                    (input)="onInputChange('name')">
+
+                    <input type="text" type="text" [(ngModel)]="name" [ngClass]="{'error' : showNameError}"
+                        (input)="onInputChange('name')" placeholder="Your name">
+
                 </div>
 
 
                 <div class="formGroup">
                     <label for="" [ngClass]="{'error' : showMailError}">Your Email</label>
-                    <input 
-                    type="text" 
-                    [(ngModel)]="email" 
-                    [ngClass]="{'error' : showMailError}"
-                    (input)="onInputChange('email')"
-                    >
+                    <input type="text" [(ngModel)]="email" [ngClass]="{'error' : showMailError}"
+                        (input)="onInputChange('email')" placeholder="Your Email">
                 </div>
 
             </div>
 
             <div class="contactMessage">
                 <label for="" [ngClass]="{'error' : showMessageError}">Your Message</label>
-                <textarea 
-                type="text" 
-                [(ngModel)]="message" 
-                [ngClass]="{'error' : showMessageError}"
-                (input)="onInputChange('message')"></textarea>
+                <textarea type="text" [(ngModel)]="message" [ngClass]="{'error' : showMessageError}"
+                    (input)="onInputChange('message')" placeholder="Your Message"></textarea>
             </div>
 
             <div class="contactPivacyPolicy"
-                [ngClass]="{'hovered' : hover, 'checked' : privacyAccepted, 'error' : showError}"
-                (mouseenter)="hover = true" (mouseleave)="hover = false" (click)="acceptPrivacy()">
+                [ngClass]="{'hovered' : hoverPolicy, 'checked' : privacyAccepted, 'error' : showError}"
+                (mouseenter)="hoverPolicy = true" (mouseleave)="hoverPolicy = false" (click)="acceptPrivacy()">
 
                 <img [src]="
                 showError ? 'assets/contact/property-error.png' :
                 privacyAccepted ? 'assets/contact/property-checked.png' :
-                hover ? 'assets/contact/property-hover.png' :
+                hoverPolicy ? 'assets/contact/property-hover.png' :
                 'assets/contact/property-default.png' " alt="privacy checkbox">
                 <p>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</p>
                 <p class="errorText" *ngIf="showError">Please accept the privacy policy</p>
             </div>
 
-            
+
 
             <div class="contactMeButton">
                 <button (click)="submitForm()">Send</button>
             </div>
+
+        </div>
+
+        <div class="arrowUpMobile">
+            <img [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
+                (mouseenter)="hover = true" (mouseleave)="hover=false">
         </div>
     </div>
+</div>

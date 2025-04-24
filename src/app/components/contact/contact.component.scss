@@ -16,13 +16,21 @@
     scroll-margin-top: 100px;
 }
 
-.arrowUp {
+.arrowUpDesktop {
     position: absolute;
     display: flex;
-    right: clamp(30px, 10vw, 180px);    
+    right: clamp(30px, 10vw, 180px);
     top: 10px;
 
-    &:hover{
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.arrowUpMobile {
+    display: none;
+
+    &:hover {
         cursor: pointer;
     }
 }
@@ -70,10 +78,13 @@
     font-family: 'Josefin';
     gap: 24px;
 
+
 }
 
 .contactNameMail {
     display: flex;
+    width: 100%;
+    box-sizing: border-box;
     flex-direction: row;
     gap: 24px;
 }
@@ -104,13 +115,16 @@
         }
 
         &::placeholder {
-            color: #6c8fa0;
+            color: transparent;
         }
     }
 }
 
 
 .contactMessage {
+    width: 100%;
+    box-sizing: border-box;
+
     >label {
         display: flex;
         flex-direction: column;
@@ -122,7 +136,9 @@
 
     >textarea {
         margin-top: 12px;
-        width: 911px !important;
+        width: 100%;
+        max-width: 911px;
+        min-width: 280px;
         height: 164px !important;
         border-radius: 30px;
         background-color: #262E34;
@@ -140,8 +156,7 @@
         }
 
         &::placeholder {
-            color: #6c8fa0;
-            opacity: 0.7;
+            color: transparent;
         }
     }
 
@@ -196,14 +211,19 @@ label.error {
     width: 100%;
     margin-top: 24px;
 
+
     >button {
         padding: 13px 30px;
         border-radius: 30px;
         background-color: #262E34;
-        border: solid 2px #8F9190;
+        border: solid 1.5px #8F9190;
         color: #8F9190;
+        font-size: 14px;
+        font-weight: 400;
+
     }
 }
+
 
 @media (max-width:1125px) {
     .contactInformation {
@@ -211,7 +231,7 @@ label.error {
     }
 
     .contactForm {
-        align-items: center;
+        align-items: flex-start;
     }
 
     .formGroup {
@@ -224,6 +244,83 @@ label.error {
         >textarea {
             width: 748px !important;
         }
-        
+
     }
+}
+
+@media (max-width: 783px) {
+    .arrowUpDesktop {
+        display: none;
+    }
+
+    .arrowUpMobile {
+        display: flex;
+        position: static;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactInformation {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 100px 60px;
+    }
+
+    .contactNameMail {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .formGroup {
+        padding: 0 24px;
+
+        >input {
+            width: 100%;
+
+        }
+    }
+
+    .contactMessage {
+        padding: 0 24px;
+
+        >textarea {
+            width: 100% !important;
+        }
+    }
+
+    .contactPivacyPolicy {
+        padding: 0 24px;
+        line-height: 20px;
+    }
+
+    .contactMeButton {
+        padding: 0 24px;
+    }
+
+}
+
+
+@media (max-width: 475px) {
+
+    .formGroup>label,
+    .contactMessage>label {
+        display: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        font-family: 'Josefin';
+        color: #797d7d !important;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .contactMeButton {
+        margin-top: 6px;
+    }
+
+  .contactPivacyPolicy {
+    padding: 0 20px;
+  }
+
 }
