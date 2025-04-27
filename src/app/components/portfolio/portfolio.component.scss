@@ -27,7 +27,7 @@
     margin-left: 100px;
 
     >p {
-        font-size: 30px;
+        font-size: clamp(24px, 2vw, 30px);
         font-weight: 500;
         font-family: 'Josefin';
         color: #89BCD9;
@@ -50,16 +50,15 @@
 }
 
 
-
-
 .projectDescription {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     background-color: #2D383F;
     min-height: 800px;
+    gap: 80px;
     height: auto;
-    padding: 50px 85px;
+    padding: 50px 130px;
     color: #F8F5EC;
 
 
@@ -77,6 +76,21 @@
 }
 
 
+.projectDescriptionRight {
+    font-family: 'Josefin';
+    gap: 20px !important;
+
+    >img {
+        width: clamp(300px, 35vw, 700px);
+        height: auto;
+        border-radius: 35px;
+        max-height: 450px;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid #444;
+    }
+}
+
 
 .descriptionRow {
     display: flex;
@@ -84,7 +98,7 @@
     flex-direction: column;
     font-family: 'Josefin';
     gap: 18px;
-   
+
 
     >p {
         font-size: 20px;
@@ -115,20 +129,7 @@
     }
 }
 
-.projectDescriptionRight {
-    font-family: 'Josefin';
-    gap: 20px !important;
 
-    >img {
-        width: clamp(300px, 35vw, 700px);
-        height: auto;
-        border-radius: 30px;
-        max-height: 450px;
-        object-fit: cover;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        border: 1px solid #444;
-    }
-}
 
 .technologiesRow {
     display: flex;
@@ -251,16 +252,25 @@
         margin-left: 60px;
 
         >p {
-            font-size: 24px;
+            font-size: clamp(22px, 2vw, 24px);
             padding: 16px 20px;
         }
     }
 
 
-    // .projectDescription {
-    //     padding-left: 30px;
-    //     padding-right: 30px;
-    // }
+    .projectDescription {
+        padding: 50px 100px;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .projectDescriptionRight {
+
+        >img {
+            width: clamp(300px, 40vw, 700px);
+
+        }
+    }
 
     .projectDescriptionLeft {
         gap: 50px;
@@ -278,10 +288,38 @@
             font-size: 18px;
         }
     }
-
 }
 
-@media (max-width: 784px) {
+@media (max-width: 1000px) {
+    .projectDescription {
+        padding: 50px 30px;
+        min-height: 700px;
+        height: 700px;
+    }
+
+    .descriptionContainer {
+        margin-left: 0;
+    }
+
+    .descriptionRow {
+        gap: 6px;
+    }
+
+
+    .projectDescriptionRight {
+
+        >img {
+            width: clamp(300px, 44vw, 700px);
+
+        }
+    }
+
+    .projectDescriptionLeft {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 830px) {
     .projectTitle {
         margin-left: 4px;
         gap: clamp(16px, 7vw, 64px);
@@ -292,14 +330,17 @@
         }
     }
 
+
     .projectDescription {
         align-items: center;
         flex-direction: column-reverse;
-        justify-content: center;
-        height: 100vh;
+        justify-content: flex-start;
+        min-height: auto; 
+        height: auto; 
         gap: 20px;
         padding-bottom: 100px;
     }
+
 
     .projectDescriptionRight {
         justify-content: space-between;
@@ -336,7 +377,7 @@
     .largeScreenButtons {
         display: none;
     }
-    
+
     .smallScreenButtons {
         display: flex;
     }
@@ -394,33 +435,33 @@
         }
     }
 
-.actionButtons {
-    >button {
-        padding: 13px 20px 13px 20px;
-        font-size: 16px;
+    .actionButtons {
+        >button {
+            padding: 13px 20px 13px 20px;
+            font-size: 16px;
 
-        &:last-child {
-            border: 1px solid #89BCD9;
+            &:last-child {
+                border: 1px solid #89BCD9;
+            }
         }
     }
-}
-   
+
 }
 
 @media (max-width: 375px) {
     .projectDescription {
-        height: auto; 
-        padding: 20px; 
+        height: auto;
+        padding: 20px;
     }
 
-    .projectTitle > p {
-        font-size: clamp(14px, 2vw, 20px); 
-        padding: 10px; 
+    .projectTitle>p {
+        font-size: clamp(14px, 2vw, 20px);
+        padding: 10px;
     }
 
-    .actionButtons > button {
-        padding: 10px 15px; 
-        font-size: 14px; 
+    .actionButtons>button {
+        padding: 10px 15px;
+        font-size: 14px;
     }
 
     .technologiesRow {

@@ -64,49 +64,43 @@ export class PortfolioComponent {
     },
 
     {
-      title: 'Pokedex',
-      sections: [
-        {
-          heading: 'About the project',
-          text: 'Single Page Application using REST API to display Pokémon details. Users can browse, view stats and learn about evolutions.'
-        },
-        {
-          heading: 'How I have organised my work',
-          text: 'I fetched data from the PokéAPI, used asynchronous JavaScript and created a responsive card layout. The UI was optimized for both mobile and desktop.'
-        },
-        {
-          heading: 'What I have learnt',
-          text: 'The Pokedex was a solo project that helped me understand how to handle APIs, display data dynamically and improve my JS logic.'
-        },
-
-      ],
-
-      technologies: ['html.png', 'css.png', 'javascript.png'],
-      image: 'pokedex.png',
-      liveLink: '/join-live',
-      githubLink: '/join-github'
-    },
-    {
       title: 'Pinto Cases',
       sections: [
         {
           heading: 'About the project',
-          text: 'Modernisierung der bestehenden Webseite eines Herstellers für maßgefertigte Transportkoffer. Umsetzung mit WordPress unter Berücksichtigung von Nutzerführung, Bildsprache und Mobiloptimierung.'
+          text: 'Modernization of a custom transport case website using WordPress, with focus on user experience, modern visuals, and mobile optimization.'
         },
         {
           heading: 'My responsibilities',
-          text: 'Ich war verantwortlich für Design, Seitenstruktur, das Einfügen neuer Inhalte sowie die Bildauswahl. Dabei habe ich mit dem Kunden direkt kommuniziert und Feedbackschleifen umgesetzt.'
+          text: 'I redesigned the layout, integrated new content, selected images, and handled direct client communication and feedback rounds.'
         },
         {
           heading: 'What I have learnt',
-          text: 'Der Umgang mit WordPress, Page Buildern und Kundenfeedback war besonders lehrreich. Ich konnte dabei meine Kommunikations- und Umsetzungsfähigkeiten im realen Projektkontext stärken.'
+          text: 'I improved my skills in WordPress, page builders, and client collaboration. The project ended with positive feedback and a written client reference.'
         },
       ],
       technologies: ['wordpress.png'],
-      image: 'pinto-cases.png',
+      image: 'pinto-cases.svg',
       liveLink: 'https://pinto-cases.de/',
       githubLink: ''
-    }
+    },
+    
+    {
+      title: 'Ongoing Project',
+      sections: [
+        {
+          heading: 'About the project',
+          text: 'DaBubble is a real-time messaging web application developed with Angular, TypeScript, and Firebase. It will allow users to authenticate, send and receive live messages, and manage conversations across devices.'
+        },
+        
+
+      ],
+
+      technologies: ['Angular.png', 'ts.png', 'firebase.png'],
+      image: 'soon.svg',
+      liveLink: '',
+      githubLink: ''
+    },
 
 
   ]
@@ -121,7 +115,7 @@ export class PortfolioComponent {
   }
 
   checkScreenSize() {
-    this.isSmallScreen = window.innerWidth <= 784
+    this.isSmallScreen = window.innerWidth <= 830
   }
 
   setActiveProject(index: number) {
