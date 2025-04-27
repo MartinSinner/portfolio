@@ -14,10 +14,12 @@ export class SkillsComponent {
   shapeHovered = false;
 
   isSmallScreen = false;
+  isSmallScreenButton = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
       if (isPlatformBrowser(this.platformId)) {
         this.isSmallScreen = window.innerWidth <= 475;
+        this.isSmallScreenButton = window.innerWidth <= 783;
       }
     }
   
@@ -25,6 +27,7 @@ export class SkillsComponent {
     onResize() {
       if (isPlatformBrowser(this.platformId)) {
         this.isSmallScreen = window.innerWidth <= 475;
+        this.isSmallScreenButton = window.innerWidth <= 783;
       }
     }
 }

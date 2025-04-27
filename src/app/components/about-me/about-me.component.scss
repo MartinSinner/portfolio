@@ -120,4 +120,19 @@
     }
 }
 
+ @media (max-width: 475px){
+    .whyMeContainer {
+        margin-top: 200px;
+        
+        >h1 {
+            font-size: 38px;
+        }
+    }
+
+    .aboutMeIcons {
+        margin-top: 50px;
+    }
+    
+ }
+
 

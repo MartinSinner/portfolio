@@ -56,7 +56,15 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
 
+.ctaTextMobile {
+    display: none;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-family: 'Josefin';
+    font-size: 20px;
+    color: #89BCD9;
 }
 
 .contactMail,
@@ -301,6 +309,24 @@ label.error {
 
 
 @media (max-width: 475px) {
+    .contactMeSection {
+        margin-top: 60px;
+
+        >h1 {
+            font-size: 38px;
+
+        }
+    }
+
+    .contactInformation {
+        margin: 50px 60px;
+        gap: 24px;
+    }
+
+    .ctaTextMobile {
+        display: flex;
+        margin-bottom: 35px;
+    }
 
     .formGroup>label,
     .contactMessage>label {
@@ -319,12 +345,13 @@ label.error {
         margin-top: 6px;
     }
 
-  .contactPivacyPolicy {
-    padding: 0 20px;
-  }
+    .contactPivacyPolicy {
+        padding: 0 20px;
+    }
 
-  .arrowUpMobile >img {
-    width: 30px;
-    height: 60px;
-  }
+    .arrowUpMobile>img {
+        width: 30px;
+        height: 60px;
+        margin-top: 100px;
+    }
 }

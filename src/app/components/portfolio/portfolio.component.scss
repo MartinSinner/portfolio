@@ -399,7 +399,7 @@
 @media (max-width: 475px) {
     .portfolioSection {
         >h1 {
-            font-size: 32px
+            font-size: 38px
         }
     }
 
@@ -409,10 +409,10 @@
 
     .projectTitle {
         white-space: nowrap;
-        gap: 0;
+        gap: 5px;
 
         >p {
-            font-size: clamp(16px, 2vw, 24px);
+            font-size: clamp(16px, 5vw, 24px);
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             padding: clamp(6px, 5vw, 20px) clamp(6px, 1vw, 25px);
@@ -420,7 +420,10 @@
     }
 
     .projectDescription {
-        height: 120vh;
+        height: 100%;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
 
     .projectDescriptionRight {
@@ -437,8 +440,9 @@
 
     .actionButtons {
         >button {
-            padding: 13px 20px 13px 20px;
-            font-size: 16px;
+            padding: 13px 30px 13px 30px;
+            font-size: 14px;
+            gap: 36px;
 
             &:last-child {
                 border: 1px solid #89BCD9;
@@ -459,10 +463,6 @@
         padding: 10px;
     }
 
-    .actionButtons>button {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
 
     .technologiesRow {
         gap: 10px;
