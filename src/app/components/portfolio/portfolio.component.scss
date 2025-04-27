@@ -57,7 +57,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: #2D383F;
-    height: 100%;
+    min-height: 800px;
+    height: auto;
     padding: 50px 85px;
     color: #F8F5EC;
 
@@ -69,10 +70,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     max-width: 600px;
     gap: 80px;
     flex: 1;
 }
+
+
 
 .descriptionRow {
     display: flex;
@@ -119,6 +123,7 @@
         width: clamp(300px, 35vw, 700px);
         height: auto;
         border-radius: 30px;
+        max-height: 450px;
         object-fit: cover;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         border: 1px solid #444;

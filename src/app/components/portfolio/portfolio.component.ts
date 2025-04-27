@@ -58,7 +58,7 @@ export class PortfolioComponent {
       ],
 
       technologies: ['html.png', 'css.png', 'javascript.png'],
-      image: 'elpoloscreen.svg',
+      image: 'pololoco.svg',
       liveLink: '/polo-live',
       githubLink: '/polo-github'
     },
