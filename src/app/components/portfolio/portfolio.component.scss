@@ -58,8 +58,7 @@
     justify-content: space-between;
     background-color: #2D383F;
     height: 100%;
-    padding: 50px 100px;
-
+    padding: 50px 85px;
     color: #F8F5EC;
 
 
@@ -81,10 +80,12 @@
     flex-direction: column;
     font-family: 'Josefin';
     gap: 18px;
+   
 
     >p {
         font-size: 20px;
         font-weight: 300;
+        line-height: 28px;
     }
 }
 
@@ -93,6 +94,7 @@
     align-items: center;
     gap: 12px;
     font-family: 'Josefin';
+    margin-left: -40px;
 
     >h3 {
         font-size: clamp(20px, 4vw, 28px);
@@ -250,10 +252,10 @@
     }
 
 
-    .projectDescription {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+    // .projectDescription {
+    //     padding-left: 30px;
+    //     padding-right: 30px;
+    // }
 
     .projectDescriptionLeft {
         gap: 50px;

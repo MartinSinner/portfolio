@@ -21,21 +21,21 @@ export class PortfolioComponent {
       sections: [
         {
           heading: 'About the project',
-          text: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
+          text: 'Join is a Kanban-inspired task manager for web and mobile, featuring task creation, drag-and-drop organization, guest access, and user registration. Data is managed via Firebase.'
         },
         {
           heading: 'How I have organised my work',
-          text: 'How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing'
+          text: 'I focused on modular, reusable code and clear naming conventions. Ensuring responsive design from the start was a key priority.'
         },
         {
           heading: 'My group work experience',
-          text: 'How many people were in the team and what was your role? Describe your tasks in 1–2 sentences. It is nice to mention a good teamwork and cooperation.'
+          text: 'In a team of four developers, I built the Add Task feature—including form handling, validation, and Firebase integration. We collaborated remotely via Git and launched the project after four weeks.'
         },
 
       ],
 
       technologies: ['html.png', 'css.png', 'javascript.png'],
-      image: 'join.jpg',
+      image: 'join.svg',
       liveLink: '/join-live',
       githubLink: '/join-github'
     },
@@ -45,17 +45,16 @@ export class PortfolioComponent {
       sections: [
         {
           heading: 'About the project',
-          text: 'Jump’n’Run browser game where the player collects coins, defeats enemies and completes levels with custom animations and sound effects.'
+          text: 'El Pollo Loco is a 2D jump\'n\'run browser game built with JavaScript and HTML5 Canvas. Players collect coins, defeat enemies, and battle a final boss. The game features custom animations, sound effects, and works smoothly on desktop, tablet, and mobile (including fullscreen mode).'
         },
         {
           heading: 'How I have organised my work',
-          text: 'The project was developed using object-oriented programming. I created and structured multiple JS classes to represent the world, enemies and interactions.'
+          text: 'I used object-oriented JavaScript to build modular classes for the world, enemies, and interactions—making the code clean, reusable, and scalable.'
         },
         {
           heading: 'What I have learnt',
-          text: 'Bla bla bla'
-        },
-
+          text: 'I deepened my skills in object-oriented programming, Canvas rendering, and responsive game development.'
+        }
       ],
 
       technologies: ['html.png', 'css.png', 'javascript.png'],
@@ -121,8 +120,8 @@ export class PortfolioComponent {
     window.addEventListener('resize', this.checkScreenSize.bind(this));
   }
 
-  checkScreenSize(){
-  this.isSmallScreen = window.innerWidth <= 784
+  checkScreenSize() {
+    this.isSmallScreen = window.innerWidth <= 784
   }
 
   setActiveProject(index: number) {

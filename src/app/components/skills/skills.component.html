@@ -5,16 +5,16 @@
 
     <div class="skillContainer">
         <div class="skillIconsContainer">
-            <img src="assets/skills/angular.png" alt="">
-            <img src="assets/skills/ts.png" alt="">
-            <img src="assets/skills/js.png" alt="">
-            <img src="assets/skills/html.png" alt="">
-            <img src="assets/skills/css.png" alt="">
-            <img src="assets/skills/firebase.png" alt="">
-            <img src="assets/skills/git.png" alt="">
-            <img src="assets/skills/api.png" alt="">
-            <img src="assets/skills/material.png" alt="">
-            <img src="assets/skills/scrum.png" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/angular.svg':'assets/skills/angular.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/ts.svg':'assets/skills/ts.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/js.svg':'assets/skills/js.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/html.svg':'assets/skills/html.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/css.svg':'assets/skills/css.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/firebase.svg':'assets/skills/firebase.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/git.svg':'assets/skills/git.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/api.svg':'assets/skills/api.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/material.svg':'assets/skills/material.png'" alt="">
+            <img [src]="isSmallScreen ? 'assets/skills/responsive/scrum.svg':'assets/skills/scrum.png'" alt="">
 
         </div>
 
@@ -26,14 +26,13 @@
                 alt="ellipse">
 
                 <div class="currentlyLearning">
-                    <p class="learningTitle">I am currently learning</p>
+                    <p class="learningTitle">Up next: React and Vue.</p>
                     <div class="learningIcons">
                         <img src="assets/skills/react -vue.png" alt="">
                     </div>
                     <p class="learningText">
-                        I'm currently diving into React and Vue – not because I have to,
-                        but because I want to. Learning new technologies keeps me motivated,
-                        sharp, and ready to tackle any frontend challenge.
+                        React and Vue are next on my learning journey—planned once I finish my current projects.
+                        Staying curious and growing my skills keeps me sharp and motivated for future frontend challenges.
                     </p>
                 </div>
             </div>

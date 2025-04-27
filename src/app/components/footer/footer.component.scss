@@ -39,3 +39,75 @@ footer {
         }
     }
 }
+
+@media (max-width: 783px) {
+    footer {
+        flex-direction: column; 
+        height: auto; 
+        gap: 6px; 
+        padding: 20px; 
+    }
+
+    .logoContainer {
+        order: 1; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+
+        >img {
+            width: 64px !important;
+            height: 46px !important;
+            
+            opacity: 80%;
+        }
+
+        >p {
+            font-size: 16px !important;
+            
+            
+        }
+
+        >div {
+            font-family: 'Josefin';
+            font-size: 16px !important; 
+            color: #262E34;
+            font-weight: 350 !important;
+        }
+    
+    }
+
+    .socialMediaFooter {
+        order: 2; 
+        display: flex;
+        justify-content: center;
+        gap: 16px; 
+        margin-top: 28px;
+
+        >img {
+            width: 36px;
+        }
+    }
+
+    .contactInfo {
+        order: 3; 
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        gap: 24px; 
+        opacity: 80%;
+    }
+}
+
+@media (max-width: 475px) {
+    .logoContainer > img {
+        width: 58px !important;
+        height: 40px !important;
+    }
+    .contactInfo > p {
+        font-size: 16px;
+    }
+
+    .socialMediaFooter > img {
+        width: 30px;
+    }
+}

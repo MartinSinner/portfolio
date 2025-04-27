@@ -13,15 +13,15 @@
 
     <div class="socialMediaFooter">
         <img 
-        [src]="gitHovered ? 'assets/footer/githubfooterres.png' : 'assets/footer/githubfooter.png'" alt="github"
+        [src]="isSmallScreen ? 'assets/footer/gitwhite.svg' : (gitHovered ? 'assets/footer/githubfooterres.png' : 'assets/footer/githubfooter.png')" alt="github"
         (mouseenter)="gitHovered = true" (mouseleave)="gitHovered = false">
 
         <img 
-        [src]="mailHovered ? 'assets/footer/mailfooterres.png' : 'assets/footer/mailfooter.png'" alt="github"
+        [src]="isSmallScreen ? 'assets/footer/mailwhite.svg' :(mailHovered ? 'assets/footer/mailfooterres.png' : 'assets/footer/mailfooter.png')" alt="github"
         (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false">
 
         <img 
-        [src]="linkedinHovered ? 'assets/footer/infooterres.png' : 'assets/footer/infooter.png'" alt="github"
+        [src]="isSmallScreen ? 'assets/footer/linkwhite.svg' :(linkedinHovered ? 'assets/footer/infooterres.png' : 'assets/footer/infooter.png')" alt="github"
         (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
 
     </div>

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID  } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
@@ -11,4 +12,19 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
 
   shapeHovered = false;
+
+  isSmallScreen = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+      if (isPlatformBrowser(this.platformId)) {
+        this.isSmallScreen = window.innerWidth <= 475;
+      }
+    }
+  
+    @HostListener('window:resize', [])
+    onResize() {
+      if (isPlatformBrowser(this.platformId)) {
+        this.isSmallScreen = window.innerWidth <= 475;
+      }
+    }
 }
