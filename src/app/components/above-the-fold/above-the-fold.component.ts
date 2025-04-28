@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
+import { LanguageService } from '../../services/language.service';
+
 
 @Component({
   selector: 'app-above-the-fold',
@@ -24,9 +26,20 @@ export class AboveTheFoldComponent {
   shapeHovered = false;
   profilePicture = 'assets/img/breit.png';
 
+  currentLanguage: string = 'en';
+
+
+  constructor(public languageService: LanguageService) {}
+
+  
   ngOnInit() {
     this.updateSettings();
+
+    this.languageService.currentLanguage$.subscribe(language => {
+      this.currentLanguage = language;
+    });
   }
+  
 
   @HostListener('window:resize', [])
   onResize() {

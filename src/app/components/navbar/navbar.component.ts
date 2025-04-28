@@ -1,15 +1,30 @@
+import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  activeLink: string = '';
   isScrolled = false;
+  currentLanguage: string = 'en';
 
+
+  constructor(public languageService: LanguageService) {
+
+    this.languageService.currentLanguage$.subscribe(language => {
+      this.currentLanguage = language;
+    })
+  }
+
+  switchLanguage(lang: 'en' | 'de') {
+    this.languageService.setLanguage(lang);
+  }
 
   ngOnInit() {
     window.addEventListener('scroll', this.checkScroll, true);
@@ -18,4 +33,8 @@ export class NavbarComponent {
   checkScroll = () => {
     this.isScrolled = window.scrollY > 750; 
   };
+
+  setActiveLink(link : string){
+    this.activeLink = link;
+  }
 } 

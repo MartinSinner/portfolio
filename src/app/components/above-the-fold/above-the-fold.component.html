@@ -4,7 +4,7 @@
         <div class="logoContainer">
             <img src="assets/hero/logo-icon.svg" alt="">
             <p>M.Sinner</p>
-            <div>developer</div>
+            <div>{{ languageService.translate('developer') }}</div>
         </div>
 
         <div class="burgerBar" (click)="toggleOverlay()">
@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="nameContainer">
-                    <p>Martin Sinner</p>
-                    <div>FRONTEND DEVELOPER</div>
+                    <p>{{ languageService.translate('name') }}</p>
+                    <div>{{ languageService.translate('role') }}</div>
                 </div>
 
 
