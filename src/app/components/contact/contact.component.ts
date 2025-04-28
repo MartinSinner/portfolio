@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -23,9 +23,25 @@ export class ContactComponent {
   showError = false;
   hover = false;
   hoverPolicy = false;
+
+  isSmallScreen = false;
   
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+      this.isSmallScreen = window.innerWidth <= 783;
+  }
 
+  ngOnInit() {
+      this.onResize(); // Initial check
+  }
+
+  // Modify mouseenter/mouseleave handling
+  onHoverPolicy(isHovering: boolean) {
+      if (!this.isSmallScreen) {
+          this.hoverPolicy = isHovering;
+      }
+  }
 
   acceptPrivacy() {
     this.privacyAccepted = !this.privacyAccepted;

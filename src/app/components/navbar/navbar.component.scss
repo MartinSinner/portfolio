@@ -90,6 +90,12 @@ nav.scrolled {
             font-size: 28px;
             font-weight: 200 !important;
             color: #262E34;
+
+            &:hover {
+                color: inherit !important;
+                cursor: default !important;
+                transform: none !important;
+            }
         }
     }
 

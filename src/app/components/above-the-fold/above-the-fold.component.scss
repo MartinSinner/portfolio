@@ -200,11 +200,7 @@
 
             transition: transform 0.3s ease-out, filter 0.3s ease-out;
 
-            &:hover {
-                transform: scale(1.1);
-                filter: brightness(1.2);
-                cursor: pointer;
-            }
+          
         }
     }
 
@@ -275,6 +271,16 @@
             width: 38px;
             height: 89px;
         }
+    }
+
+    .burgerBar img:hover,
+    .logoContainer img:hover,
+    .arrowDown img:hover,
+    .socialMediaContainer a img:hover,
+    .backgroundShape.hovered {
+        transform: none !important;
+        filter: none !important;
+        cursor: default !important;
     }
 }
 
@@ -373,3 +379,4 @@
         }
     }
 }
+

@@ -111,7 +111,18 @@
 
     .skillAddition {
         gap: 50px;
+
+        >img {
+            &.hovered {
+                filter: none !important;
+                transform: none !important;
+            }
+            &:hover {
+                transform: none !important;
+                cursor: default !important;
+            }
     }
+}
 
     .letsTalkButton {
         background-color: #89BCD9;
@@ -209,3 +220,4 @@
         font-size: 14px;
     }
 }
+

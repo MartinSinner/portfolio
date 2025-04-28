@@ -22,7 +22,7 @@
             <div class="skillAddition">
                 <img
                 [ngClass]="{ 'hovered': shapeHovered }"  
-                [src]="shapeHovered ? 'assets/skills/ellipse-hover.png' : 'assets/skills/ellipse-default.png'"
+                [src]="!isSmallScreenButton && shapeHovered ? 'assets/skills/ellipse-hover.png' : 'assets/skills/ellipse-default.png'"
                 alt="ellipse">
 
                 <div class="currentlyLearning">

@@ -41,7 +41,7 @@ export class ReferenceComponent {
   
 
   setHoveredIndex(index: number | null): void {
-    if (window.innerWidth >= 475) {
+    if (window.innerWidth >= 783) {
       this.hoveredIndex = index;
     } else {
       this.hoveredIndex = null;

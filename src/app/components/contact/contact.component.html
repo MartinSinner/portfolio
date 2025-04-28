@@ -61,7 +61,7 @@
 
             <div class="contactPivacyPolicy"
                 [ngClass]="{'hovered' : hoverPolicy, 'checked' : privacyAccepted, 'error' : showError}"
-                (mouseenter)="hoverPolicy = true" (mouseleave)="hoverPolicy = false" (click)="acceptPrivacy()">
+                (mouseenter)="onHoverPolicy(true)" (mouseleave)="onHoverPolicy(false)" (click)="acceptPrivacy()">
 
                 <img [src]="
                 showError ? 'assets/contact/property-error.png' :
@@ -81,8 +81,7 @@
         </div>
 
         <div class="arrowUpMobile">
-            <img [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
-                (mouseenter)="hover = true" (mouseleave)="hover=false">
+            <img src="assets/contact/arrow-up.png" alt="arrow-up">
         </div>
     </div>
 </div>
