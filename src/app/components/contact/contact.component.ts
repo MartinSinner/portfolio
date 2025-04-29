@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { LanguageService } from '../../services/language.service';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -25,18 +28,27 @@ export class ContactComponent {
   hoverPolicy = false;
 
   isSmallScreen = false;
-  
+  currentLanguage: string = 'en';
+
+ constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
+
+    this.languageService.currentLanguage$.subscribe(language => {
+      this.currentLanguage = language;
+    })
+  }
+
 
   @HostListener('window:resize', ['$event'])
   onResize() {
+    if(isPlatformBrowser(this.platformId)){
       this.isSmallScreen = window.innerWidth <= 783;
+    }
   }
 
   ngOnInit() {
-      this.onResize(); // Initial check
+      this.onResize(); 
   }
 
-  // Modify mouseenter/mouseleave handling
   onHoverPolicy(isHovering: boolean) {
       if (!this.isSmallScreen) {
           this.hoverPolicy = isHovering;

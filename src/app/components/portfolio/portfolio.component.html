@@ -1,12 +1,12 @@
 <div id="projects" class="portfolioSection">
-    <h1>My Projects</h1>
+    <h1>{{languageService.translate('myProjectsTitle')}}</h1>
 
     <div class="projectContainer">
         <div class="projectTitle">
             <p *ngFor="let project of projectData; let i = index" (click)="setActiveProject(i)"
                 [class.active]="i === activeIndex">
-                <span *ngIf="isSmallScreen; else fullTitle">{{ i + 1}}. Project</span>
-                <ng-template #fullTitle> {{ i + 1}}. {{project.title}}</ng-template>
+                <span *ngIf="isSmallScreen; else fullTitle">{{ i + 1}}. {{languageService.translate('myProjectsCount')}}</span>
+                <ng-template #fullTitle> {{ i + 1}}. {{project.title[currentLanguage]}}</ng-template>
 
 
 
@@ -21,19 +21,19 @@
                     
                     <div class="descriptionContainer">
                         <img src="assets/projects/ellipse8.png" alt="">
-                        <h3>{{ section.heading }}</h3>
+                        <h3>{{section.heading[currentLanguage]}}</h3>
                     </div>
-                    <p>{{ section.text }}</p>
+                    <p>{{ section.text[currentLanguage] }}</p>
                 </div>
 
-                <div *ngIf="isSmallScreen && projectData[activeIndex].title !== 'Ongoing Project'" class="actionButtons smallScreenButtons">
+                <div *ngIf="isSmallScreen && projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'" class="actionButtons smallScreenButtons">
                     <button>Live Test</button>
                     <button>GitHub</button>
                 </div>
             </div>
 
             <div class="projectDescriptionRight">
-                <h2 class="projectName" *ngIf="isSmallScreen">{{ projectData[activeIndex].title }}</h2>
+                <h2 class="projectName" *ngIf="isSmallScreen">{{ projectData[activeIndex].title[currentLanguage] }}</h2>
 
                 <div class="technologiesRow">
                     <h3>Technologies:</h3>
@@ -62,7 +62,7 @@
                 <img [src]="'assets/projects/' + projectData[activeIndex].image">
 
 
-                <div *ngIf="projectData[activeIndex].title !== 'Ongoing Project'" class="actionButtons largeScreenButtons">
+                <div *ngIf="projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'" class="actionButtons largeScreenButtons">
                     <button>Live Test</button>
                     <button>GitHub</button>
                 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
     buttonHover = false;
+    currentLanguage: string = 'en';
+
+    constructor(public languageService: LanguageService) {
+
+      this.languageService.currentLanguage$.subscribe(language => {
+        this.currentLanguage = language;
+      })
+    }
 }

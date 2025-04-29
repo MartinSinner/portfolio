@@ -1,39 +1,34 @@
 <div id="whyMe" class="whyMeContainer">
-    <h1>Why me</h1>
+    <h1>{{languageService.translate('whyMeTitle')}}</h1>
 
     <div class="aboutMeIcons">
 
         <div class="iconContainer">
             <div class="iconTitle">
                 <img src="assets/about-me/rocket.png" alt="icon">
-                <p class="title"><span>Determined</span> & Driven</p>
+                <p class="title"><span>{{languageService.translate('whyMe1TitleSpan')}}</span> {{languageService.translate('whyMe1TitleRest')}}</p>
             </div>
 
-            <p class="description">Tough coding challenges motivate me—like building my JavaScript game „El Pollo Loco“.
-                Giving up isn't my style; I'll debug until 2am if that's what it takes.
-            </p>
+            <p class="description">{{languageService.translate('whyMe1Text')}}</p>
         </div>
 
         <div class="iconContainer">
             <div class="iconTitle">
                 <img src="assets/about-me/creative.png" alt="">
-                <p class="title"><span>Creative</span> & Detail-oriented</p>
+                <p class="title"><span>{{languageService.translate('whyMe2TitleSpan')}}</span> {{languageService.translate('whyMe2TitleRest')}}</p>
             </div>
 
-            <p class="description">Designing pixel-perfect layouts isn’t just work—it's my passion. From Angular apps to
-                WordPress redesigns, details matter until they're exactly right.
-            </p>
+            <p class="description">{{ languageService.translate('whyMe2Text') }}</p>
 
         </div>
 
         <div class="iconContainer">
             <div class="iconTitle">
                 <img src="assets/about-me/thriving.png" alt="">
-                <p class="title"><span>Thriving</span>  Under Pressure</p>
+                <p class="title"><span>{{ languageService.translate('whyMe3TitleSpan') }}</span>  {{ languageService.translate('whyMe3TitleRest') }}</p>
             </div>
 
-            <p class="description">Deadlines sharpen my focus. When our Firebase project hit tricky Git conflicts, I
-                didn't panic—I adapted quickly. Honestly, pressure brings out my best.</p>
+            <p class="description">{{ languageService.translate('whyMe3Text') }}</p>
         </div>
 
         <div class="letsTalkButton">

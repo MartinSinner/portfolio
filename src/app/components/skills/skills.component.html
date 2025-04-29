@@ -1,6 +1,6 @@
 <div id="skills" class="skillSection">
 
-    <h1>My Skills</h1>
+    <h1>{{languageService.translate('mySkillsTitle')}}</h1>
 
 
     <div class="skillContainer">
@@ -26,14 +26,13 @@
                 alt="ellipse">
 
                 <div class="currentlyLearning">
-                    <p class="learningTitle">Up next: React and Vue.</p>
+                    <p class="learningTitle">{{languageService.translate('upNext')}}</p>
                     <img src="assets/skills/ellipse-default.png" alt="">
                     <div class="learningIcons">
                         <img src="assets/skills/react -vue.png" alt="">
                     </div>
                     <p class="learningText">
-                        React and Vue are next on my learning journey—planned once I finish my current projects.
-                        Staying curious and growing my skills keeps me sharp and motivated for future frontend challenges.
+                        {{languageService.translate('description')}}
                     </p>
                 </div>
                 <button *ngIf="isSmallScreenButton" class="letsTalkButton">Let's Talk</button>

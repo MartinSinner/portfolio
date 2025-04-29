@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Inject, PLATFORM_ID  } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-skills',
@@ -16,18 +17,27 @@ export class SkillsComponent {
   isSmallScreen = false;
   isSmallScreenButton = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-      if (isPlatformBrowser(this.platformId)) {
-        this.isSmallScreen = window.innerWidth <= 475;
-        this.isSmallScreenButton = window.innerWidth <= 783;
-      }
+  currentLanguage: string = 'en';
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public languageService: LanguageService
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isSmallScreen = window.innerWidth <= 475;
+      this.isSmallScreenButton = window.innerWidth <= 783;
     }
-  
-    @HostListener('window:resize', [])
-    onResize() {
-      if (isPlatformBrowser(this.platformId)) {
-        this.isSmallScreen = window.innerWidth <= 475;
-        this.isSmallScreenButton = window.innerWidth <= 783;
-      }
+
+    this.languageService.currentLanguage$.subscribe(language => {
+      this.currentLanguage = language;
+    });
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isSmallScreen = window.innerWidth <= 475;
+      this.isSmallScreenButton = window.innerWidth <= 783;
     }
+  }
 }

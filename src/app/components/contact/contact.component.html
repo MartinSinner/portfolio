@@ -5,22 +5,22 @@
             (mouseenter)="hover = true" (mouseleave)="hover=false">
     </div>
 
-    <h1>Contact me</h1>
+    <h1>{{languageService.translate('contactTitle')}}</h1>
 
 
 
     <div class="contactInformation">
 
         <!-- <div class="contactText"> -->
-        <p>If you're looking for someone who doesn't quit until the job is done and isn't afraid to dive deep into complex problems – let's talk.<br>
+        <p>{{languageService.translate('contactIntro1')}}<br>
             <br>
-            Whether it's about projects, collaborations, or new challenges: I'm open to opportunities that value creativity, precision, and determination.</p>
+            {{languageService.translate('contactIntro2')}}</p>
         <!-- </div> -->
 
         <div class="contactDates">
             <div class="contactMail">
                 <img src="assets/contact/mailicondefault.png" alt="">
-                <p>E-mail: martin.sinner.dev&#64;gmail.com</p>
+                <p>{{languageService.translate('emailLabel')}} martin.sinner.dev&#64;gmail.com</p>
             </div>
 
             <div class="contactPhone">
@@ -37,7 +37,7 @@
             <div class="contactNameMail">
                 <div class="formGroup">
 
-                    <label for="name" [ngClass]="{'error' : showNameError}">Your name</label>
+                    <label for="name" [ngClass]="{'error' : showNameError}">{{languageService.translate('yourName')}}</label>
 
                     <input type="text" type="text" [(ngModel)]="name" [ngClass]="{'error' : showNameError}"
                         (input)="onInputChange('name')" placeholder="Your name">
@@ -46,7 +46,7 @@
 
 
                 <div class="formGroup">
-                    <label for="" [ngClass]="{'error' : showMailError}">Your Email</label>
+                    <label for="" [ngClass]="{'error' : showMailError}">{{languageService.translate('yourEmail')}}</label>
                     <input type="text" [(ngModel)]="email" [ngClass]="{'error' : showMailError}"
                         (input)="onInputChange('email')" placeholder="Your Email">
                 </div>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="contactMessage">
-                <label for="" [ngClass]="{'error' : showMessageError}">Your Message</label>
+                <label for="" [ngClass]="{'error' : showMessageError}">{{languageService.translate('yourMessage')}}</label>
                 <textarea type="text" [(ngModel)]="message" [ngClass]="{'error' : showMessageError}"
                     (input)="onInputChange('message')" placeholder="Your Message"></textarea>
             </div>
@@ -68,14 +68,14 @@
                 privacyAccepted ? 'assets/contact/property-checked.png' :
                 hoverPolicy ? 'assets/contact/property-hover.png' :
                 'assets/contact/property-default.png' " alt="privacy checkbox">
-                <p>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</p>
-                <p class="errorText" *ngIf="showError">Please accept the privacy policy</p>
+                <p>{{languageService.translate('privacyNotice1')}}<span>{{languageService.translate('privacyNotice2')}}</span> {{languageService.translate('privacyNotice3')}}</p>
+                <p class="errorText" *ngIf="showError">{{languageService.translate('privacyAccept')}}</p>
             </div>
 
 
 
             <div class="contactMeButton">
-                <button (click)="submitForm()">Send</button>
+                <button (click)="submitForm()">{{languageService.translate('sendButton')}}</button>
             </div>
 
         </div>

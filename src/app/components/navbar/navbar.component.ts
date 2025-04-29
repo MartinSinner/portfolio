@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 import { Component } from '@angular/core';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +18,7 @@ export class NavbarComponent {
   currentLanguage: string = 'en';
 
 
-  constructor(public languageService: LanguageService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
 
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
@@ -27,8 +30,11 @@ export class NavbarComponent {
   }
 
   ngOnInit() {
-    window.addEventListener('scroll', this.checkScroll, true);
+    if (isPlatformBrowser(this.platformId)) {
+      window.addEventListener('scroll', this.checkScroll, true);
+    }
   }
+  
 
   checkScroll = () => {
     this.isScrolled = window.scrollY > 750; 
