@@ -1,0 +1,140 @@
+.legalPrivacyContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+
+    .desktopView {
+        position: fixed;
+        top: 92px;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    .content {
+      flex: 1;
+    }
+  
+    app-navbar {
+      position: fixed;
+      top: 92px;
+      width: 100%;
+      z-index: 100;
+    }
+  }
+
+
+  .headerMobile {
+    display: none;
+  }
+
+  
+
+
+
+  @media (max-width: 1035px){
+    .legalPrivacyContainer {
+
+        app-navbar{
+            top: 85px !important;
+        }
+    }
+    
+  }
+
+  
+  @media (max-width: 925px){
+    .legalPrivacyContainer {
+
+        app-navbar{
+            top: 80px !important;
+        }
+    }
+    
+  }
+
+  
+  
+  @media (max-width: 860px){
+    .legalPrivacyContainer {
+
+        app-navbar{
+            top: 74px !important;
+        }
+    }
+    
+  }
+
+
+   
+  @media (max-width: 783px){
+    .legalPrivacyContainer {
+
+        app-navbar{
+            display: none;
+        }
+
+        app-footer {
+          margin-top: -50px !important;
+        }
+    }
+
+    .headerMobile {
+        display: flex;  
+        justify-content: space-between;
+        align-items: center;
+        padding: 36px 24px;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+
+       .logoContainer {
+            display: flex;
+            align-items: center;
+            gap: 0px;
+            margin-left: 8px !important;
+            margin-bottom: 22px;
+
+            >p {
+              font-size: 16px !important;
+              margin-top: clamp(4px, 1vw, 6px);
+            }
+
+            >div {
+                color: #89BCD9 !important;
+                font-size: 16px !important;
+                font-weight: 300 !important;
+                font-family: 'Josefin';
+                margin-top: 1px;
+            }
+
+            >img {
+              width: 60px !important;
+              height: auto !important;
+            }
+        }
+
+        .backArrow {
+            cursor: pointer;
+            padding: 10px;
+            
+            &:hover {
+                opacity: 0.8;
+            }
+
+            img {
+                width: 80px;
+                height: auto;
+            }
+        }
+    }
+
+    
+
+    
+
+    
+    
+  }
+

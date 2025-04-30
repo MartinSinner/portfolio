@@ -1,12 +1,39 @@
-<div class="desktopView">
-    <app-navbar></app-navbar>
+<div class="mainContent" *ngIf="!isLegalOrPrivacy()">
+    <div class="desktopView">
+        <app-navbar></app-navbar>
+    </div>
+    <app-above-the-fold></app-above-the-fold>
+    <app-about-me></app-about-me>
+    <app-skills></app-skills>
+    <app-portfolio></app-portfolio>
+    <app-project-card></app-project-card>
+    <app-reference></app-reference>
+    <app-contact></app-contact>
 </div>
-<app-above-the-fold></app-above-the-fold>
-<app-about-me></app-about-me>
-<app-skills></app-skills>
-<app-portfolio></app-portfolio>
-<app-project-card></app-project-card>
-<app-reference></app-reference>
-<app-contact></app-contact>
-<app-footer></app-footer>
-<router-outlet />
+
+<div class="legalPrivacyContainer" *ngIf="isLegalOrPrivacy()">
+    <!-- Desktop Navbar -->
+    <app-navbar></app-navbar>  
+
+     <!-- Mobile Header -->
+    <div class="headerMobile">
+        <div class="logoContainer"  (click)="navigateToHome()">
+            <img src="assets/hero/logo-icon.svg" alt="">
+            <p>M.Sinner</p>
+            <div>developer</div>
+        </div>
+
+        <div class="backArrow" (click)="navigateToHome()">
+            <img src="assets/hero/arrow.png" alt="back to home">
+        </div>
+    </div>
+
+    
+
+    <div class="content">
+        <router-outlet />
+    </div>
+    <app-footer></app-footer>
+</div>
+
+<app-footer *ngIf="!isLegalOrPrivacy()"></app-footer>

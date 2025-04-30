@@ -1,0 +1,91 @@
+.legalNotice {
+    font-family: 'Josefin', sans-serif;
+    color: #F8F5EC;
+    padding: 4rem 2rem;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto;
+  
+    h1, h2, h3 {
+      color: #89BCD9;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+  
+    h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      border-bottom: 2px solid #89BCD9;
+      padding-bottom: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+      border-left: 4px solid #89BCD9;
+      padding-left: 1rem;
+    }
+  
+    h3 {
+      font-size: 1.4rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #F8F5EC;
+    }
+  
+    a {
+      color: #89BCD9;
+      text-decoration: underline;
+      transition: 0.3s;
+  
+      &:hover {
+        color: lighten(#89BCD9, 10%);
+      }
+    }
+  
+    ul {
+      padding-left: 2rem;
+      list-style-type: disc;
+  
+      li {
+        margin-bottom: 0.8rem;
+      }
+    }
+  
+    // Responsive Styles
+    @media (max-width: 1024px) {
+      padding: 1rem 1.5rem;
+  
+      h1 {
+        font-size: 2.2rem;
+      }
+  
+      h2 {
+        font-size: 1.6rem;
+      }
+  
+      p {
+        font-size: 1rem;
+      }
+    }
+  
+    @media (max-width: 600px) {
+      padding: 2rem 1rem;
+  
+      h1 {
+        font-size: 1.8rem;
+      }
+  
+      h2 {
+        font-size: 1.4rem;
+      }
+  
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  

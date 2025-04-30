@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, RouterOutlet } from '@angular/router';
 import { AboveTheFoldComponent } from './components/above-the-fold/above-the-fold.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -9,21 +9,26 @@ import { ProjectCardComponent } from './components/portfolio/project-card/projec
 import { ReferenceComponent } from './components/reference/reference.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
-    AboveTheFoldComponent, 
-    NavbarComponent, 
-    AboutMeComponent, 
-    SkillsComponent, 
-    PortfolioComponent, 
-    ProjectCardComponent, 
+    RouterOutlet,
+    AboveTheFoldComponent,
+    NavbarComponent,
+    AboutMeComponent,
+    SkillsComponent,
+    PortfolioComponent,
+    ProjectCardComponent,
     ReferenceComponent,
     ContactComponent,
     FooterComponent,
+    CommonModule
   ],
 
   templateUrl: './app.component.html',
@@ -31,4 +36,27 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'portfolio';
+  isOverlayOpen = false;
+
+  constructor(private router: Router) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      window.scrollTo(0, 0);
+    });
+   }
+
+  navigateToHome() {
+    this.router.navigate(['/']);
+}
+
+  isLegalOrPrivacy(): boolean {
+    const currentRoute = this.router.url;
+    return currentRoute === '/legal-notice' || currentRoute === '/privacy-policy';
+  }
+
+  toggleOverlay() {
+    this.isOverlayOpen = !this.isOverlayOpen;
+  }
+
 }

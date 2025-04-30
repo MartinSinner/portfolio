@@ -4,11 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { LanguageService } from '../../services/language.service';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule, 
+    FormsModule,
+    RouterModule
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

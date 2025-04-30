@@ -18,6 +18,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 12px;
+
+    >p:first-child {
+        cursor: pointer;
+        
+        &:hover {
+            text-decoration: underline;
+            color: #F8F5EC;
+        }
+    }
 }
 
 .logoContainer {

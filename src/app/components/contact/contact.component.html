@@ -14,7 +14,8 @@
         <!-- <div class="contactText"> -->
         <p>{{languageService.translate('contactIntro1')}}<br>
             <br>
-            {{languageService.translate('contactIntro2')}}</p>
+            {{languageService.translate('contactIntro2')}}
+        </p>
         <!-- </div> -->
 
         <div class="contactDates">
@@ -30,14 +31,15 @@
         </div>
     </div>
     <div class="ctaTextMobile">Let us work together!</div>
-    
+
     <div class="contactFormContact">
         <div class="contactForm">
 
             <div class="contactNameMail">
                 <div class="formGroup">
 
-                    <label for="name" [ngClass]="{'error' : showNameError}">{{languageService.translate('yourName')}}</label>
+                    <label for="name"
+                        [ngClass]="{'error' : showNameError}">{{languageService.translate('yourName')}}</label>
 
                     <input type="text" type="text" [(ngModel)]="name" [ngClass]="{'error' : showNameError}"
                         (input)="onInputChange('name')" placeholder="Your name">
@@ -46,7 +48,8 @@
 
 
                 <div class="formGroup">
-                    <label for="" [ngClass]="{'error' : showMailError}">{{languageService.translate('yourEmail')}}</label>
+                    <label for=""
+                        [ngClass]="{'error' : showMailError}">{{languageService.translate('yourEmail')}}</label>
                     <input type="text" [(ngModel)]="email" [ngClass]="{'error' : showMailError}"
                         (input)="onInputChange('email')" placeholder="Your Email">
                 </div>
@@ -54,7 +57,8 @@
             </div>
 
             <div class="contactMessage">
-                <label for="" [ngClass]="{'error' : showMessageError}">{{languageService.translate('yourMessage')}}</label>
+                <label for=""
+                    [ngClass]="{'error' : showMessageError}">{{languageService.translate('yourMessage')}}</label>
                 <textarea type="text" [(ngModel)]="message" [ngClass]="{'error' : showMessageError}"
                     (input)="onInputChange('message')" placeholder="Your Message"></textarea>
             </div>
@@ -68,7 +72,10 @@
                 privacyAccepted ? 'assets/contact/property-checked.png' :
                 hoverPolicy ? 'assets/contact/property-hover.png' :
                 'assets/contact/property-default.png' " alt="privacy checkbox">
-                <p>{{languageService.translate('privacyNotice1')}}<span>{{languageService.translate('privacyNotice2')}}</span> {{languageService.translate('privacyNotice3')}}</p>
+                <p>{{languageService.translate('privacyNotice1')}}
+                    <span [routerLink]="['/privacy-policy']">{{languageService.translate('privacyNotice2')}}</span>
+                    {{languageService.translate('privacyNotice3')}}
+                </p>
                 <p class="errorText" *ngIf="showError">{{languageService.translate('privacyAccept')}}</p>
             </div>
 
