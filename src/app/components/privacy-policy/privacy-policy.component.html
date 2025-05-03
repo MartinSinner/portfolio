@@ -1,67 +1,480 @@
 <div class="privacyPolicy">
-    <h1>Datenschutzerklärung</h1>
-  
-    <h2>1. Datenschutz auf einen Blick</h2>
-    <h3>Allgemeine Hinweise</h3>
-    <p>
-      Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.
-      Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
-    </p>
-  
-    <h3>Datenerfassung auf dieser Website</h3>
-    <p><strong>Verantwortlich für die Datenverarbeitung:</strong><br>
-      Martin Sinner<br>
-      Gartenstraße 131<br>
-      71522 Backnang<br>
-      E-Mail: <a href="mailto:martin.sinner.dev@gmail.com">martin.sinner.dev&#64;gmail.com</a>
-    </p>
-  
-    <p><strong>Wie erfassen wir Ihre Daten?</strong><br>
-      Daten werden zum einen dadurch erhoben, dass Sie sie uns mitteilen, z. B. über das Kontaktformular.<br>
-      Andere Daten werden automatisch beim Besuch der Website durch das IT-System erfasst (z. B. Browser, Betriebssystem, Uhrzeit).
-    </p>
-  
-    <p><strong>Wofür nutzen wir Ihre Daten?</strong><br>
-      Zur fehlerfreien Bereitstellung der Website und zur Analyse des Nutzerverhaltens.
-    </p>
-  
-    <p><strong>Welche Rechte haben Sie?</strong><br>
-      Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei der Aufsichtsbehörde.
-    </p>
-  
-    <h2>2. Hosting</h2>
-    <p>
-      Diese Website wird gehostet bei:<br>
-      ALL-INKL.COM – Neue Medien Münnich<br>
-      Hauptstraße 68, 02742 Friedersdorf<br>
-      <a href="https://all-inkl.com/datenschutzinformationen/" target="_blank">Zur Datenschutzerklärung von ALL-INKL</a>
-    </p>
-  
-    <h2>3. Allgemeine Hinweise</h2>
-    <p>
-      Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften.
-      Ein lückenloser Schutz der Daten im Internet ist jedoch nicht möglich.
-    </p>
-  
-    <h2>4. Ihre Rechte</h2>
-    <ul>
-      <li>Auskunft (Art. 15 DSGVO)</li>
-      <li>Berichtigung (Art. 16 DSGVO)</li>
-      <li>Löschung (Art. 17 DSGVO)</li>
-      <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-      <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-      <li>Beschwerderecht (Art. 77 DSGVO)</li>
-    </ul>
-  
-    <h2>5. SSL- bzw. TLS-Verschlüsselung</h2>
-    <p>
-      Diese Website nutzt SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an „https://“ und dem Schloss-Symbol in der Adresszeile.
-    </p>
-  
-    <h2>6. Kontaktformular</h2>
-    <p>
-      Die von Ihnen über das Kontaktformular übermittelten Daten werden zur Bearbeitung der Anfrage gespeichert.
-      Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-    </p>
-  </div>
-  
+  <h1 *ngIf="currentLanguage === 'de'">Datenschutzerklärung</h1>
+  <h1 *ngIf="currentLanguage === 'en'">Privacy Policy</h1>
+
+  <h2 *ngIf="currentLanguage === 'de'">1. Datenschutz auf einen Blick</h2>
+  <h2 *ngIf="currentLanguage === 'en'">1. Data Protection at a Glance</h2>
+
+  <h3 *ngIf="currentLanguage === 'de'">Allgemeine Hinweise</h3>
+  <h3 *ngIf="currentLanguage === 'en'">General Information</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn
+    Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden
+    können.
+    Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
+    Datenschutzerklärung.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    The following information provides a simple overview of what happens to your personal data when you visit this
+    website.
+    Personal data is any data that can be used to personally identify you. For detailed information on data protection,
+    please refer to our privacy policy listed below.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Datenerfassung auf dieser Website</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Data Collection on This Website</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem
+    Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    <strong>Who is responsible for data collection on this website?</strong><br>
+    The data processing on this website is carried out by the website operator. Their contact details can be found in
+    the
+    section "Note on the Responsible Body" in this privacy policy.
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    <strong>Wie erfassen wir Ihre Daten?</strong><br>
+    Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten
+    handeln, die Sie in ein Kontaktformular eingeben.<br><br>
+    Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme
+    erfasst.
+    Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
+    Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    <strong>How do we collect your data?</strong><br>
+    Some data is collected when you provide it to us. This could, for example, be data you enter into a contact
+    form.<br><br>
+    Other data is collected automatically or with your consent when you visit the website. This data is primarily
+    technical
+    (e.g., internet browser, operating system, or time of the page visit). It is collected automatically as soon as you
+    enter the site.
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    <strong>Wofür nutzen wir Ihre Daten?</strong><br>
+    Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten
+    können zur Analyse Ihres Nutzerverhaltens verwendet werden.
+    Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die übermittelten Daten auch für
+    Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    <strong>What do we use your data for?</strong><br>
+    Part of the data is collected to ensure the website is provided without errors. Other data can be used to analyze
+    your user behavior.
+    If contracts are concluded or initiated via the website, the submitted data will also be used for offers, orders, or
+    other inquiries.
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    <strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong><br>
+    Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten
+    personenbezogenen Daten zu erhalten.
+    Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.
+    Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die
+    Zukunft widerrufen.
+    Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen
+    Daten zu verlangen.
+    Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.<br><br>
+    Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    <strong>What rights do you have regarding your data?</strong><br>
+    You have the right to receive information free of charge at any time about the origin, recipient, and purpose of
+    your stored personal data.
+    You also have the right to request the correction or deletion of this data. If you have given consent to data
+    processing, you can revoke this consent at any time for the future.
+    Additionally, you have the right to request the restriction of the processing of your personal data under certain
+    circumstances.
+    Furthermore, you have the right to lodge a complaint with the competent supervisory authority.<br><br>
+    You can contact us at any time for more information on data protection.
+  </p>
+
+  <h2 *ngIf="currentLanguage === 'de'">2. Hosting</h2>
+  <h2 *ngIf="currentLanguage === 'en'">2. Hosting</h2>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    We host the content of our website with the following provider:
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">All-Inkl</h3>
+  <h3 *ngIf="currentLanguage === 'en'">All-Inkl</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Anbieter ist die ALL-INKL.COM - Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf
+    (nachfolgend „All-Inkl“). Details entnehmen Sie der Datenschutzerklärung von All-Inkl:
+    <a href="https://all-inkl.com/datenschutzinformationen/" target="_blank">
+      https://all-inkl.com/datenschutzinformationen/
+    </a>
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    The provider is ALL-INKL.COM - Neue Medien Münnich, owner René Münnich, Hauptstraße 68, 02742 Friedersdorf
+    (hereinafter “All-Inkl”). For details, please refer to All-Inkl’s privacy policy:
+    <a href="https://all-inkl.com/datenschutzinformationen/" target="_blank">
+      https://all-inkl.com/datenschutzinformationen/
+    </a>
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Die Verwendung von All-Inkl erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+    Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website.
+    Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von
+    Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies
+    oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst.
+    Die Einwilligung ist jederzeit widerrufbar.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    The use of All-Inkl is based on Art. 6 (1) lit. f GDPR. We have a legitimate interest in the most reliable
+    presentation of our website.
+    If corresponding consent has been requested, the processing is based exclusively on Art. 6 (1) lit. a GDPR and § 25
+    (1) TDDDG,
+    insofar as the consent includes the storage of cookies or access to information on the user’s end device (e.g.,
+    device fingerprinting)
+    within the meaning of the TDDDG. The consent can be revoked at any time.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Auftragsverarbeitung</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Data Processing Agreement</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen.
+    Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet,
+    dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der
+    DSGVO verarbeitet.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    We have concluded a data processing agreement (DPA) for the use of the above-mentioned service.
+    This is a contract required by data protection law that ensures this service processes the personal data of our
+    website visitors
+    only according to our instructions and in compliance with the GDPR.
+  </p>
+
+  <h2 *ngIf="currentLanguage === 'de'">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+  <h2 *ngIf="currentLanguage === 'en'">3. General Information and Mandatory Disclosures</h2>
+
+  <h3 *ngIf="currentLanguage === 'de'">Datenschutz</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Data Protection</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
+    personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser
+    Datenschutzerklärung.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    The operators of this site take the protection of your personal data very seriously. We treat your personal data
+    confidentially and in accordance with the statutory data protection regulations and this privacy policy.
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind
+    Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche
+    Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck dies geschieht.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    When you use this website, various personal data are collected. Personal data are data with which you can be
+    personally identified. This privacy policy explains what data we collect and what we use it for. It also explains
+    how and for what purpose this happens.
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail)
+    Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    We point out that data transmission on the Internet (e.g., communication by e-mail) can have security gaps. A
+    complete protection of the data from access by third parties is not possible.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Hinweis zur verantwortlichen Stelle</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Notice concerning the responsible entity</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br>
+    Martin Sinner<br>
+    Gartenstraße 131, 71522 Backnang<br>
+    Telefon: 0177 1531363<br>
+    E-Mail: <a href="mailto:martin.sinner.dev@gmail.com">martin.sinner.dev&#64;gmail.com</a>
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    The responsible party for data processing on this website is:<br>
+    Martin Sinner<br>
+    Gartenstraße 131, 71522 Backnang, Germany<br>
+    Phone: +49 177 1531363<br>
+    E-Mail: <a href="mailto:martin.sinner.dev@gmail.com">martin.sinner.dev&#64;gmail.com</a>
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die
+    Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and
+    means of processing personal data (e.g., names, e-mail addresses, etc.).
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Speicherdauer</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Storage Period</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre
+    personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes
+    Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht,
+    sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B.
+    steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall
+    dieser Gründe.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    Unless a more specific storage period has been specified in this privacy policy, your personal data will remain with
+    us until the purpose for the data processing no longer applies. If you make a legitimate request for deletion or
+    revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons
+    for storing your personal data (e.g., tax or commercial law retention periods); in the latter case, the data will be
+    deleted once these reasons no longer apply.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser
+    Website</h3>
+  <h3 *ngIf="currentLanguage === 'en'">General Notes on the Legal Basis for Data Processing on this Website</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage
+    von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1
+    DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in
+    Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die
+    Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting)
+    eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDDDG. Die Einwilligung
+    ist jederzeit widerrufbar.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    If you have consented to data processing, we process your personal data based on Art. 6(1)(a) GDPR or Art. 9(2)(a)
+    GDPR if special categories of data according to Art. 9(1) GDPR are processed. In the case of explicit consent to the
+    transfer of personal data to third countries, data processing is also based on Art. 49(1)(a) GDPR. If you have
+    consented to the storage of cookies or access to information on your device (e.g. via device fingerprinting), data
+    processing is additionally based on § 25(1) TTDDDG. Consent can be revoked at any time.
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir
+    Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur
+    Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die
+    Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO
+    erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser
+    Datenschutzerklärung informiert.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    If your data is required to fulfill a contract or to carry out pre-contractual measures, we process your data based
+    on Art. 6(1)(b) GDPR. Furthermore, we process your data if required to comply with a legal obligation based on Art.
+    6(1)(c) GDPR. Data processing may also take place based on our legitimate interest according to Art. 6(1)(f) GDPR.
+    The applicable legal basis in each case is specified in the following sections of this privacy policy.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Empfänger von personenbezogenen Daten</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Recipients of Personal Data</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen. Dabei ist teilweise
+    auch eine Übermittlung von personenbezogenen Daten an diese externen Stellen erforderlich. Wir geben
+    personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer gesetzlichen Erlaubnis erfolgt,
+    wenn wir gesetzlich hierzu verpflichtet sind (z. B. Weitergabe von Daten an Steuerbehörden), wenn wir ein
+    berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an der Weitergabe haben oder wenn eine sonstige
+    Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von Auftragsverarbeitern geben wir personenbezogene Daten
+    unserer Kunden nur auf Grundlage eines gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer
+    gemeinsamen Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    In the course of our business activities, we cooperate with various external parties. This may also involve the
+    transmission of personal data to these external parties. We only pass on personal data to external parties if it is
+    legally permitted, if we are legally obliged to do so (e.g., to tax authorities), if we have a legitimate interest
+    in the data transfer pursuant to Art. 6(1)(f) GDPR, or if another legal basis permits the transfer. When using
+    processors, we only share personal data of our customers based on a valid processing contract. In case of joint
+    processing, a joint processing agreement is concluded.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Revocation of Your Consent to Data Processing</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits
+    erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung
+    bleibt vom Widerruf unberührt.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    Many data processing operations are only possible with your explicit consent. You can revoke any previously given
+    consent at any time. The legality of the data processing carried out until the revocation remains unaffected.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen
+    Direktwerbung (Art. 21 DSGVO)</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Right to Object to Data Collection in Special Cases and to Direct Advertising
+    (Art. 21 GDPR)</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben Sie jederzeit das
+    Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen
+    Daten Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Die jeweilige
+    Rechtsgrundlage, auf denen eine Verarbeitung beruht, entnehmen Sie dieser Datenschutzerklärung. Wenn Sie Widerspruch
+    einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können
+    zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten
+    überwiegen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen
+    (Widerspruch nach Art. 21 Abs. 1 DSGVO).
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    If data processing is based on Art. 6(1)(e) or (f) GDPR, you have the right at any time to object to the processing
+    of your personal data for reasons arising from your particular situation; this also applies to profiling based on
+    these provisions. The applicable legal basis for processing can be found in this privacy policy. If you object, we
+    will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing
+    which override your interests, rights, and freedoms or the processing serves the establishment, exercise, or defense
+    of legal claims (objection pursuant to Art. 21(1) GDPR).
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Werden Ihre personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, so haben Sie das Recht, jederzeit
+    Widerspruch gegen die Verarbeitung Sie betreffender personenbezogener Daten zum Zwecke derartiger Werbung
+    einzulegen; dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht. Wenn Sie
+    widersprechen, werden Ihre personenbezogenen Daten anschließend nicht mehr zum Zwecke der Direktwerbung verwendet
+    (Widerspruch nach Art. 21 Abs. 2 DSGVO).
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    If your personal data is processed for direct advertising purposes, you have the right to object at any time to the
+    processing of your personal data for such advertising; this also applies to profiling to the extent that it is
+    related to such direct advertising. If you object, your personal data will no longer be used for direct advertising
+    purposes (objection pursuant to Art. 21(2) GDPR).
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Right to Lodge a Complaint with a Supervisory Authority</h3>
+  <p *ngIf="currentLanguage === 'de'">
+    Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde,
+    insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des
+    mutmaßlichen Verstoßes zu.
+    Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    In the event of GDPR violations, data subjects have the right to lodge a complaint with a supervisory authority,
+    particularly in the Member State of their habitual residence, place of work, or the place of the alleged violation.
+    The right to lodge a complaint exists without prejudice to any other administrative or judicial remedies.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Recht auf Datenübertragbarkeit</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Right to Data Portability</h3>
+  <p *ngIf="currentLanguage === 'de'">
+    Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert
+    verarbeiten,
+    an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.
+    Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit
+    es technisch machbar ist.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    You have the right to receive data that we process automatically based on your consent or in fulfillment of a
+    contract,
+    in a common, machine-readable format. If you request the direct transfer of data to another controller, this will
+    only take place where technically feasible.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Auskunft, Berichtigung und Löschung</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Access, Rectification and Erasure</h3>
+  <p *ngIf="currentLanguage === 'de'">
+    Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über
+    Ihre gespeicherten
+    personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ggf. ein Recht auf
+    Berichtigung oder Löschung dieser Daten.
+    Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    Within the framework of the applicable legal provisions, you have the right at any time to receive free information
+    about your stored personal data,
+    its origin and recipients, and the purpose of data processing, as well as a right to correction or deletion of this
+    data, if applicable.
+    You can contact us at any time for this purpose or with further questions about personal data.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">Recht auf Einschränkung der Verarbeitung</h3>
+  <h3 *ngIf="currentLanguage === 'en'">Right to Restrict Processing</h3>
+  <p *ngIf="currentLanguage === 'de'">
+    Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+    Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in folgenden
+    Fällen:
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    You have the right to request the restriction of the processing of your personal data.
+    You can contact us at any time regarding this. The right to restrict processing applies in the following cases:
+  </p>
+
+  <ul *ngIf="currentLanguage === 'de'">
+    <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der
+      Regel Zeit zur Überprüfung.
+      Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
+      verlangen.</li>
+    <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der
+      Löschung die Einschränkung verlangen.</li>
+    <li>Wenn wir Ihre Daten nicht mehr benötigen, Sie sie aber zur Geltendmachung, Ausübung oder Verteidigung von
+      Rechtsansprüchen brauchen,
+      haben Sie das Recht, statt der Löschung die Einschränkung zu verlangen.</li>
+    <li>Wenn Sie Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung vorgenommen werden.
+      Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der
+      Verarbeitung zu verlangen.</li>
+  </ul>
+
+  <ul *ngIf="currentLanguage === 'en'">
+    <li>If you dispute the accuracy of your personal data stored with us, we usually need time to verify this.
+      During the verification period, you have the right to request the restriction of processing your personal data.
+    </li>
+    <li>If the processing of your personal data was/is unlawful, you may request restriction instead of erasure.</li>
+    <li>If we no longer need your personal data, but you require it to exercise, defend, or assert legal claims,
+      you may request the restriction instead of deletion.</li>
+    <li>If you have objected to processing under Art. 21(1) GDPR, a balance must be made between your and our interests.
+      As long as it is not yet clear whose interests prevail, you have the right to request restriction of the
+      processing of your personal data.</li>
+  </ul>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben,
+    dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung,
+    Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder
+    juristischen Person
+    oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats
+    verarbeitet werden.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    If you have restricted the processing of your personal data,
+    such data – aside from being stored – may only be processed with your consent or for the establishment,
+    exercise, or defense of legal claims or for the protection of the rights of another natural or legal person
+    or for reasons of important public interest of the European Union or a Member State.
+  </p>
+
+  <h3 *ngIf="currentLanguage === 'de'">SSL- bzw. TLS-Verschlüsselung</h3>
+  <h3 *ngIf="currentLanguage === 'en'">SSL or TLS Encryption</h3>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel
+    Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung.
+    Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://"
+    wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    This site uses SSL or TLS encryption for security reasons and to protect the transmission of confidential content,
+    such as inquiries or orders you send to us as the site operator.
+    You can recognize an encrypted connection by the address line of the browser changing from "http://" to "https://"
+    and by the lock icon in your browser's address bar.
+  </p>
+
+  <p *ngIf="currentLanguage === 'de'">
+    Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln,
+    nicht von Dritten mitgelesen werden.
+  </p>
+  <p *ngIf="currentLanguage === 'en'">
+    When SSL or TLS encryption is activated, the data you transmit to us cannot be read by third parties.
+  </p>
+
+  <p>
+    <strong *ngIf="currentLanguage === 'de'">Quelle:</strong>
+    <strong *ngIf="currentLanguage === 'en'">Source:</strong>
+    <a href="https://www.e-recht24.de" target="_blank">https://www.e-recht24.de</a>
+  </p>

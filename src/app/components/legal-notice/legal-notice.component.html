@@ -1,35 +1,63 @@
 <section class="legalNotice">
-    <div class="container">
-      <h1>Impressum</h1>
-  
-      <p><strong>Angaben gemäß § 5 TMG</strong></p>
-      <p>
-        Martin Sinner<br>
-        Gartenstraße 131<br>
-        71522 Backnang<br>
-      </p>
-  
-      <p><strong>Kontakt</strong></p>
-      <p>
-        E-Mail: <a href="mailto:martin.sinner.dev@gmail.com">martin.sinner.dev&#64;gmail.com</a><br>
-        Telefon: Wird auf Anfrage bereitgestellt
-      </p>
-  
-      <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong></p>
-      <p>
-        Martin Sinner<br>
-        Gartenstraße 131<br>
-        71522 Backnang
-      </p>
-  
-      <p><strong>Haftungsausschluss</strong></p>
-      <p>
-        Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-      </p>
-  
-      <p><strong>Urheberrecht</strong></p>
-      <p>
-        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-      </p>
-    </div>
-  </section>
+  <div class="container">
+
+    <h1 *ngIf="currentLanguage === 'de'">Impressum</h1>
+    <h1 *ngIf="currentLanguage === 'en'">Legal Notice</h1>
+
+    <p><strong *ngIf="currentLanguage === 'de'">Angaben gemäß § 5 TMG</strong>
+       <strong *ngIf="currentLanguage === 'en'">Information according to § 5 TMG</strong>
+    </p>
+    <p>
+      Martin Sinner<br>
+      Gartenstraße 131<br>
+      71522 Backnang<br>
+    </p>
+
+    <p><strong *ngIf="currentLanguage === 'de'">Kontakt</strong>
+       <strong *ngIf="currentLanguage === 'en'">Contact</strong>
+    </p>
+    <p>
+      E-Mail: <a href="mailto:martin.sinner.dev@gmail.com">martin.sinner.dev&#64;gmail.com</a><br>
+      <span *ngIf="currentLanguage === 'de'">Telefon: Wird auf Anfrage bereitgestellt</span>
+      <span *ngIf="currentLanguage === 'en'">Phone: Available upon request</span>
+    </p>
+
+    <p><strong *ngIf="currentLanguage === 'de'">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong>
+       <strong *ngIf="currentLanguage === 'en'">Responsible for content according to § 55 para. 2 RStV</strong>
+    </p>
+    <p>
+      Martin Sinner<br>
+      Gartenstraße 131<br>
+      71522 Backnang
+    </p>
+
+    <p><strong *ngIf="currentLanguage === 'de'">Haftungsausschluss</strong>
+       <strong *ngIf="currentLanguage === 'en'">Disclaimer</strong>
+    </p>
+    <p *ngIf="currentLanguage === 'de'">
+      Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links.
+      Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+    </p>
+    <p *ngIf="currentLanguage === 'en'">
+      Despite careful content control, I assume no liability for the content of external links.
+      The operators of the linked pages are solely responsible for their content.
+    </p>
+
+    <p><strong *ngIf="currentLanguage === 'de'">Urheberrecht</strong>
+       <strong *ngIf="currentLanguage === 'en'">Copyright</strong>
+    </p>
+    <p *ngIf="currentLanguage === 'de'">
+      Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
+      Beiträge Dritter sind als solche gekennzeichnet.
+      Die Vervielfältigung, Bearbeitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes
+      bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+    </p>
+    <p *ngIf="currentLanguage === 'en'">
+      The content and works created by the website operator on this site are subject to German copyright law.
+      Third-party contributions are marked as such.
+      Reproduction, editing, and any use beyond the limits of copyright require the written consent
+      of the respective author or creator.
+    </p>
+
+  </div>
+</section>

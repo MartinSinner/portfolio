@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, RouterOutlet } from '@angular/router';
 import { AboveTheFoldComponent } from './components/above-the-fold/above-the-fold.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -38,17 +39,21 @@ export class AppComponent {
   title = 'portfolio';
   isOverlayOpen = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      window.scrollTo(0, 0);
+      if (isPlatformBrowser(this.platformId)) {
+        window.scrollTo(0, 0);
+      }
     });
-   }
+  }
 
   navigateToHome() {
     this.router.navigate(['/']);
-}
+  }
 
   isLegalOrPrivacy(): boolean {
     const currentRoute = this.router.url;

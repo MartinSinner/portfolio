@@ -2,6 +2,7 @@ import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -23,7 +24,9 @@ export class FooterComponent {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    public languageService: LanguageService) {
+    public languageService: LanguageService,
+    private router: Router
+  ) {
     if (isPlatformBrowser(this.platformId)) {
       this.isSmallScreen = window.innerWidth <= 783;
     }
@@ -31,6 +34,10 @@ export class FooterComponent {
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
     })
+  }
+  
+  navigateToHome() {
+    this.router.navigate(['/']);
   }
 
   @HostListener('window:resize', [])

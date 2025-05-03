@@ -52,7 +52,7 @@ export class PortfolioComponent {
         }
       ],
       technologies: ['html.png', 'css.png', 'javascript.png'],
-      image: 'join.svg',
+      image: 'laptopjoin.svg',
       liveLink: '/join-live',
       githubLink: '/join-github'
     },
@@ -95,7 +95,7 @@ export class PortfolioComponent {
         }
       ],
       technologies: ['html.png', 'css.png', 'javascript.png'],
-      image: 'pololoco.svg',
+      image: 'laptoppololoco.svg',
       liveLink: '/polo-live',
       githubLink: '/polo-github'
     },
@@ -138,7 +138,7 @@ export class PortfolioComponent {
         }
       ],
       technologies: ['wordpress.png'],
-      image: 'pinto-cases.svg',
+      image: 'laptoppintocases.svg',
       liveLink: 'https://pinto-cases.de/',
       githubLink: ''
     },
