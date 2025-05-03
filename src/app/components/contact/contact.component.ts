@@ -111,5 +111,12 @@ export class ContactComponent {
       this.message.trim() !== '' &&
       this.privacyAccepted;
   }
+
+  scrollToTop() {
+    const heroElement = document.getElementById('hero');
+    if (heroElement) {
+        heroElement.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 }
 

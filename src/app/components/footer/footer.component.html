@@ -12,17 +12,21 @@
     </div>
 
     <div class="socialMediaFooter">
-        <img 
-        [src]="isSmallScreen ? 'assets/footer/gitwhite.svg' : (gitHovered ? 'assets/footer/githubfooterres.png' : 'assets/footer/githubfooter.png')" alt="github"
-        (mouseenter)="gitHovered = true" (mouseleave)="gitHovered = false">
+        <a href="https://github.com/MartinSinner" target="_blank">
+            <img [src]="isSmallScreen ? 'assets/footer/gitwhite.svg' : (gitHovered ? 'assets/footer/githubfooterres.png' : 'assets/footer/githubfooter.png')"
+                alt="github" (mouseenter)="gitHovered = true" (mouseleave)="gitHovered = false">
+        </a>
 
-        <img 
-        [src]="isSmallScreen ? 'assets/footer/mailwhite.svg' :(mailHovered ? 'assets/footer/mailfooterres.png' : 'assets/footer/mailfooter.png')" alt="github"
-        (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false">
 
-        <img 
-        [src]="isSmallScreen ? 'assets/footer/linkwhite.svg' :(linkedinHovered ? 'assets/footer/infooterres.png' : 'assets/footer/infooter.png')" alt="github"
-        (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
+        <a href="mailto:martin.sinner.dev@gmail.com">
+            <img [src]="isSmallScreen ? 'assets/footer/mailwhite.svg' :(mailHovered ? 'assets/footer/mailfooterres.png' : 'assets/footer/mailfooter.png')"
+                alt="email" (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false">
+        </a>
+
+        <a href="https://www.linkedin.com/in/martin-sinner" target="_blank">
+            <img [src]="isSmallScreen ? 'assets/footer/linkwhite.svg' :(linkedinHovered ? 'assets/footer/infooterres.png' : 'assets/footer/infooter.png')"
+                alt="linkedin" (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
+        </a>
 
     </div>
 </footer>

@@ -64,4 +64,11 @@ export class AboveTheFoldComponent {
   toggleOverlay() {
     this.isOverlayOpen = !this.isOverlayOpen;
   }
+
+  scrollToContact(){
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({behavior: 'smooth'})
+    }
+  }
 }

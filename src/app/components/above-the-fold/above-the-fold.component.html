@@ -1,4 +1,4 @@
-<div class="pageWrapper">
+<div id="hero" class="pageWrapper">
 
     <div class="headerMobile">
         <div class="logoContainer">
@@ -57,7 +57,7 @@
 
                 <div class="arrowDown">
                     <img [src]="arrowHovered ? 'assets/hero/arrow-down-hover.png':'assets/hero/arrow-down.png'"
-                        alt="arrow-down" (mouseenter)="arrowHovered=true" (mouseleave)="arrowHovered=false">
+                        alt="arrow-down" (mouseenter)="arrowHovered=true" (mouseleave)="arrowHovered=false" (click)="scrollToContact()">
                 </div>
             </div>
         </div>

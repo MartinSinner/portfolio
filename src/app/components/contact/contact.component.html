@@ -2,7 +2,7 @@
 
     <div class="arrowUpDesktop">
         <img [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
-            (mouseenter)="hover = true" (mouseleave)="hover=false">
+            (mouseenter)="hover = true" (mouseleave)="hover=false" (click)="scrollToTop()">
     </div>
 
     <h1>{{languageService.translate('contactTitle')}}</h1>
@@ -11,12 +11,12 @@
 
     <div class="contactInformation">
 
-        <!-- <div class="contactText"> -->
+        
         <p>{{languageService.translate('contactIntro1')}}<br>
             <br>
             {{languageService.translate('contactIntro2')}}
         </p>
-        <!-- </div> -->
+  
 
         <div class="contactDates">
             <div class="contactMail">
@@ -100,7 +100,7 @@
         </div>
 
         <div class="arrowUpMobile">
-            <img src="assets/contact/arrow-up.png" alt="arrow-up">
+            <img src="assets/contact/arrow-up.png" alt="arrow-up" (click)="scrollToTop()">
         </div>
     </div>
 </div>
