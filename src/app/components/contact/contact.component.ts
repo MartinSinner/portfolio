@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-contact',
   standalone: true,
   imports: [
-    CommonModule, 
+    CommonModule,
     FormsModule,
     RouterModule
   ],
@@ -21,6 +21,10 @@ export class ContactComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+
+  emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  isEmailValid = true;
+  showSuccess = false;
 
 
   showNameError = false;
@@ -35,7 +39,7 @@ export class ContactComponent {
   isSmallScreen = false;
   currentLanguage: string = 'en';
 
- constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
 
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
@@ -45,19 +49,19 @@ export class ContactComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    if(isPlatformBrowser(this.platformId)){
+    if (isPlatformBrowser(this.platformId)) {
       this.isSmallScreen = window.innerWidth <= 783;
     }
   }
 
   ngOnInit() {
-      this.onResize(); 
+    this.onResize();
   }
 
   onHoverPolicy(isHovering: boolean) {
-      if (!this.isSmallScreen) {
-          this.hoverPolicy = isHovering;
-      }
+    if (!this.isSmallScreen) {
+      this.hoverPolicy = isHovering;
+    }
   }
 
   acceptPrivacy() {
@@ -66,39 +70,46 @@ export class ContactComponent {
     if (this.privacyAccepted) {
       this.showError = false;
     }
+  }
 
+  validateEmail() {
+    this.isEmailValid = this.emailPattern.test(this.email);
+    return this.isEmailValid;
   }
 
   submitForm() {
-    this.showNameError = !this.name.trim();
-    this.showMailError = !this.email.trim();
-    this.showMessageError = !this.message.trim();
+    this.showSuccess = true;
+    this.resetForm();
 
-    const hasInputErrors = this.showNameError || this.showMailError || this.showMessageError;
-    const hasPrivacyError = !this.privacyAccepted;
+    setTimeout(() => {
+      this.showSuccess = false;
+    }, 3000);
+  }
 
-    if (hasInputErrors || hasPrivacyError) {
-      this.showError = true;
-
-      setTimeout(() => {
-        this.showError = false;
-        this.showNameError = false;
-        this.showMailError = false;
-        this.showMessageError = false;
-
-      }, 4000);
-      return;
-    }
-
+  resetForm() {
+    this.name = '';
+    this.email = '';
+    this.message = '';
+    this.privacyAccepted = false;
     this.showError = false;
   }
 
 
   onInputChange(field: 'name' | 'email' | 'message') {
     if (field === 'name') this.showNameError = !this.name.trim();
-    if (field === 'email') this.showMailError = !this.email.trim();
+    if (field === 'email') {
+      this.showMailError = !this.email.trim() || !this.validateEmail();
+    }
     if (field === 'message') this.showMessageError = !this.message.trim();
+  }
 
+
+  isFormValid(): boolean {
+    return this.name.trim() !== '' &&
+      this.email.trim() !== '' &&
+      this.validateEmail() &&
+      this.message.trim() !== '' &&
+      this.privacyAccepted;
   }
 }
 

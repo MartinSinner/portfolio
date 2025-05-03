@@ -197,10 +197,19 @@
 .errorText {
     color: #E44C36 !important;
     font-size: 14px;
-    margin-top: 55px;
-    margin-left: 32px;
+
     position: absolute;
     font-family: 'Josefin';
+
+    &.emailError {
+        margin-top: 8px;
+        margin-left: 16px;
+    }
+
+    &.privacyError {
+        margin-top: 40px;
+        margin-left: 32px;
+    }
 }
 
 input.error,
@@ -218,18 +227,56 @@ label.error {
     justify-content: flex-end;
     width: 100%;
     margin-top: 24px;
+    position: relative;
+
 
 
     >button {
+        font-family: 'Josefin';
         padding: 13px 30px;
         border-radius: 30px;
         background-color: #262E34;
         border: solid 1.5px #8F9190;
         color: #8F9190;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 500;
+        transition: transform 0.3s ease-out, filter 0.3s ease-out;
 
+        &.enabled {
+            border: solid 1px #89BCD9;
+            color: #89BCD9;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #89BCD9;
+                color: #262E34;
+                transform: scale(1.1);
+                filter: brightness(1.2);
+            }
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+        }
     }
+}
+
+
+.successMessage {
+    position: absolute;
+    top: -40px;
+    right: 24px;
+    background-color: #89BCD9;
+    color: #262E34;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'Josefin';
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -266,6 +313,10 @@ label.error {
         position: static;
         justify-content: center;
         align-items: center;
+    }
+
+    .contactForm {
+        gap: 36px;
     }
 
     .contactInformation {
@@ -305,6 +356,15 @@ label.error {
         padding: 0 24px;
     }
 
+}
+
+@media(max-width: 580px) {
+    .errorText {
+
+        &.privacyError {
+            margin-top: 64px;
+        }
+    }
 }
 
 

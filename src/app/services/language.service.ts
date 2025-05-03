@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class LanguageService {
   private currentLanguage = new BehaviorSubject<'en' | 'de'>('en');
   currentLanguage$ = this.currentLanguage.asObservable();
-  
+
 
   private translations = {
     //Hero
@@ -56,7 +56,7 @@ export class LanguageService {
       en: 'Tough coding challenges motivate me—like building my JavaScript game “El Pollo Loco”. Giving up isn\'t my style; I\'ll debug until 2am if that\'s what it takes.',
       de: 'Herausfordernde Programmieraufgaben motivieren mich – wie beim Bau meines JavaScript-Spiels „El Pollo Loco“. Aufgeben ist nicht mein Stil – wenn’s sein muss, debugge ich bis 2 Uhr nachts.',
     },
-    
+
     whyMe2TitleSpan: {
       en: 'Creative',
       de: 'Kreativ',
@@ -69,7 +69,7 @@ export class LanguageService {
       en: 'Designing pixel-perfect layouts isn’t just work—it’s my passion. From Angular apps to WordPress redesigns, details matter until they\'re exactly right.',
       de: 'Pixelgenaue Layouts zu gestalten ist für mich nicht nur Arbeit – es ist meine Leidenschaft. Ob Angular-Apps oder WordPress-Redesigns: Jedes Detail zählt, bis alles passt.',
     },
-    
+
     whyMe3TitleSpan: {
       en: 'Thriving',
       de: 'Stark',
@@ -99,7 +99,7 @@ export class LanguageService {
     },
 
     //Projects 
-    myProjectsTitle:{
+    myProjectsTitle: {
       en: 'My Projects',
       de: 'Meine Projekte',
     },
@@ -124,7 +124,7 @@ export class LanguageService {
       en: 'Here what my colleagues said about me',
       de: 'Das sagen meine Kollegen über mich',
     },
-    
+
     referenceDavidName: {
       en: 'David Gerlitz',
       de: 'David Gerlitz',
@@ -137,7 +137,7 @@ export class LanguageService {
       en: 'Martin is a reliable and supportive team player. He contributes great ideas, works solution-oriented, and ensures a pleasant collaboration.',
       de: 'Martin ist ein zuverlässiger und unterstützender Teamplayer. Er bringt großartige Ideen ein, arbeitet lösungsorientiert und sorgt für eine angenehme Zusammenarbeit.',
     },
-    
+
     referencePatrickName: {
       en: 'Patrick Glißmann',
       de: 'Patrick Glißmann',
@@ -150,7 +150,7 @@ export class LanguageService {
       en: 'Working with Martin was consistently positive. He is especially characterized by his reliable way of working and his strong willingness to learn and adopt new concepts.',
       de: 'Die Zusammenarbeit mit Martin war durchweg positiv. Besonders hervorzuheben ist seine zuverlässige Arbeitsweise und seine starke Bereitschaft, neue Konzepte zu lernen und umzusetzen.',
     },
-    
+
     referenceRuiName: {
       en: 'Rui Pinto',
       de: 'Rui Pinto',
@@ -212,6 +212,14 @@ export class LanguageService {
     emailLabel: {
       en: 'E-mail:',
       de: 'E-Mail:'
+    },
+    invalidEmail: {
+      'en': 'Please enter a valid email address',
+      'de': 'Bitte geben Sie eine gültige E-Mail-Adresse ein'
+    },
+    messageSent: {
+      'en': 'Message sent successfully!',
+      'de': 'Nachricht erfolgreich gesendet!'
     },
     //Footer
     legalNotice: {

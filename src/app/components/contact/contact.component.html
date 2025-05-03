@@ -52,6 +52,10 @@
                         [ngClass]="{'error' : showMailError}">{{languageService.translate('yourEmail')}}</label>
                     <input type="text" [(ngModel)]="email" [ngClass]="{'error' : showMailError}"
                         (input)="onInputChange('email')" placeholder="Your Email">
+
+                        <p class="errorText emailError" *ngIf="showMailError">
+                            {{languageService.translate('invalidEmail')}}
+                        </p>
                 </div>
 
             </div>
@@ -76,13 +80,21 @@
                     <span [routerLink]="['/privacy-policy']">{{languageService.translate('privacyNotice2')}}</span>
                     {{languageService.translate('privacyNotice3')}}
                 </p>
-                <p class="errorText" *ngIf="showError">{{languageService.translate('privacyAccept')}}</p>
+                <p class="errorText privacyError" *ngIf="showError">{{languageService.translate('privacyAccept')}}</p>
             </div>
 
 
 
             <div class="contactMeButton">
-                <button (click)="submitForm()">{{languageService.translate('sendButton')}}</button>
+                <div class="successMessage" *ngIf="showSuccess">
+                    {{languageService.translate('messageSent')}}
+                </div>
+                
+                <button [ngClass]="{'enabled': isFormValid()}" 
+                        [disabled]="!isFormValid()" 
+                        (click)="submitForm()">
+                    {{languageService.translate('sendButton')}}
+                </button>
             </div>
 
         </div>

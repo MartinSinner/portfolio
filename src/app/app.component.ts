@@ -6,7 +6,6 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { ProjectCardComponent } from './components/portfolio/project-card/project-card.component';
 import { ReferenceComponent } from './components/reference/reference.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -25,7 +24,6 @@ import { filter } from 'rxjs/operators';
     AboutMeComponent,
     SkillsComponent,
     PortfolioComponent,
-    ProjectCardComponent,
     ReferenceComponent,
     ContactComponent,
     FooterComponent,

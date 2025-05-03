@@ -82,14 +82,25 @@
     font-family: 'Josefin';
     gap: 20px !important;
 
-    >img {
-        width: clamp(300px, 35vw, 700px);
-        height: auto;
-        border-radius: 35px;
-        max-height: 450px;
-        object-fit: cover;
+    .imageContainer {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 35px;
         border: 1px solid #444;
+
+        >img {
+            width: clamp(300px, 35vw, 700px);
+            height: auto;
+            border-radius: 35px;
+            max-height: 450px;
+            object-fit: cover;
+            transition: transform 0.3s ease-out, filter 0.3s ease-out;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+
+            }
+        }
     }
 }
 
@@ -187,7 +198,7 @@
         border-radius: 30px;
         font-size: 18px;
         font-weight: 400;
-        transition: transform 0.3s ease-out, filter 0.3s ease-out
+        transition: transform 0.3s ease-out, filter 0.3s ease-out;
     }
 
     >button:first-child {
@@ -404,43 +415,52 @@
 
         &:hover {
             transform: none !important;
-            color: #89BCD9 !important; 
+            color: #89BCD9 !important;
             cursor: default !important;
         }
     }
 
+
+    .imageContainer {
+        >img {
+            transition: none !important;
+
+            &:hover {
+                cursor: default !important;
+                transform: none !important;
+                filter: none !important;
+            }
+        }
+    }
 
     .actionButtons {
 
         >button {
             transition: none !important;
         }
-        
+
         >button:first-child {
-        
+
             &:first-child:hover {
                 background-color: #89BCD9 !important;
                 cursor: default !important;
                 transform: none !important;
                 filter: none !important;
-                
-    
+
+
             }
         }
-            >button:last-child {
-    
-                &:last-child:hover {
-                    background-color: #2D383F !important;
-                    cursor: default !important;
-                    transform: none !important;
-                    filter: none !important;
-                }
-            }
-        
-    }
-    
 
-   
+        >button:last-child {
+
+            &:last-child:hover {
+                background-color: #2D383F !important;
+                cursor: default !important;
+                transform: none !important;
+                filter: none !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 475px) {
