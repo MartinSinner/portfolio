@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 import { Component } from '@angular/core';
 import { Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser} from '@angular/common';
 
 
 @Component({
@@ -18,7 +18,9 @@ export class NavbarComponent {
   currentLanguage: string = 'en';
 
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, 
+  public languageService: LanguageService
+) {
 
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
@@ -42,5 +44,17 @@ export class NavbarComponent {
 
   setActiveLink(link : string){
     this.activeLink = link;
+  }
+
+  scrollTo(section: string, event: MouseEvent) {
+    event.preventDefault();
+    this.activeLink = section;
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    const el = document.getElementById(section);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 } 

@@ -24,6 +24,10 @@ body {
   overflow-x: hidden;
 }
 
+[id] {
+  scroll-margin-top: 100px; 
+}
+
 // ::-webkit-scrollbar {
 //     // width: 12px;
 //     // height: 12px;

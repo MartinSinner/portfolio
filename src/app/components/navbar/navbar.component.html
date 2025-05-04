@@ -2,22 +2,39 @@
     <img src="assets/navbar/navbar-mobile.svg" alt="navbar-mobile">
     <div class="navbar">
         <div class="navItem">
-            <a href="#whyMe" (click)="setActiveLink('whyMe')" [ngClass]="{'active': activeLink === 'whyMe'}">{{ languageService.translate('whyMe') }}</a>
-            <img *ngIf="activeLink === 'whyMe'" src="assets/navbar/ellipsenav.png" alt="active" class="navBackground">
+            <a  
+            (click)="scrollTo('whyMe', $event)"
+            [ngClass]="{'active': activeLink === 'whyMe'}">
+            {{ languageService.translate('whyMe') }}
+        </a>
+            
         </div>
+
         <div class="navItem">
-            <a href="#skills" (click)="setActiveLink('skills')" [ngClass]="{'active': activeLink === 'skills'}">{{ languageService.translate('skills') }}</a>
-            <img *ngIf="activeLink === 'skills'" src="assets/navbar/ellipsenav.png" alt="active" class="navBackground">
+            <a 
+            (click)="scrollTo('skills', $event)"
+            [ngClass]="{'active': activeLink === 'skills'}">
+            {{ languageService.translate('skills') }}
+        </a>
         </div>
+
         <div class="navItem">
-            <a href="#projects" (click)="setActiveLink('projects')" [ngClass]="{'active': activeLink === 'projects'}">{{ languageService.translate('projects') }}</a>
-            <img *ngIf="activeLink === 'projects'" src="assets/navbar/ellipsenav.png" alt="active"
-                class="navBackground">
+            <a 
+            (click)="scrollTo('projects', $event)"
+            [ngClass]="{'active': activeLink === 'projects'}">
+            {{ languageService.translate('projects') }}
+        
+        </a>
         </div>
+
         <div class="navItem">
-            <a href="#contact" (click)="setActiveLink('contact')" [ngClass]="{'active': activeLink === 'contact'}">{{ languageService.translate('contact') }}</a>
-            <img *ngIf="activeLink === 'contact'" src="assets/navbar/ellipsenav.png" alt="active" class="navBackground">
+            <a 
+            (click)="scrollTo('contact', $event)"
+            [ngClass]="{'active': activeLink === 'contact'}">
+                {{ languageService.translate('contact') }}</a>
         </div>
+
+
         <div class="languageSwitch">
             <div class="langItem">
                 <p (click)="switchLanguage('de')" [ngClass]="{'active': currentLanguage === 'de'}">DE</p>
@@ -40,21 +57,36 @@
 
     <div class="navbar">
         <div class="navItem">
-            <a href="#whyMe" (click)="setActiveLink('whyMe')" [ngClass]="{'active': activeLink === 'whyMe'}">{{ languageService.translate('whyMe') }}</a>
-            <img *ngIf="activeLink === 'whyMe'" src="assets/navbar/ellipsenav.png" alt="active" class="navBackground">
+            <a  
+            (click)="scrollTo('whyMe', $event)"
+            [ngClass]="{'active': activeLink === 'whyMe'}">
+            {{ languageService.translate('whyMe') }}
+        </a>
+            
         </div>
+
         <div class="navItem">
-            <a href="#skills" (click)="setActiveLink('skills')" [ngClass]="{'active': activeLink === 'skills'}">{{ languageService.translate('skills') }}</a>
-            <img *ngIf="activeLink === 'skills'" src="assets/navbar/ellipsenav.png" alt="active" class="navBackground">
+            <a 
+            (click)="scrollTo('skills', $event)"
+            [ngClass]="{'active': activeLink === 'skills'}">
+            {{ languageService.translate('skills') }}
+        </a>
         </div>
+
         <div class="navItem">
-            <a href="#projects" (click)="setActiveLink('projects')" [ngClass]="{'active': activeLink === 'projects'}">{{ languageService.translate('projects') }}</a>
-            <img *ngIf="activeLink === 'projects'" src="assets/navbar/ellipsenav.png" alt="active"
-                class="navBackground">
+            <a 
+            (click)="scrollTo('projects', $event)"
+            [ngClass]="{'active': activeLink === 'projects'}">
+            {{ languageService.translate('projects') }}
+        
+        </a>
         </div>
+
         <div class="navItem">
-            <a href="#contact" (click)="setActiveLink('contact')" [ngClass]="{'active': activeLink === 'contact'}">{{ languageService.translate('contact') }}</a>
-            <img *ngIf="activeLink === 'contact'" src="assets/navbar/ellipsenav.png" alt="active" class="navBackground">
+            <a 
+            (click)="scrollTo('contact', $event)"
+            [ngClass]="{'active': activeLink === 'contact'}">
+                {{ languageService.translate('contact') }}</a>
         </div>
     </div>
 
