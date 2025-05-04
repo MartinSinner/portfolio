@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -39,7 +40,7 @@ export class ContactComponent {
   isSmallScreen = false;
   currentLanguage: string = 'en';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
+  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
 
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
@@ -78,13 +79,25 @@ export class ContactComponent {
   }
 
   submitForm() {
-    this.showSuccess = true;
-    this.resetForm();
-
-    setTimeout(() => {
-      this.showSuccess = false;
-    }, 3000);
+    const payload = {
+      name: this.name,
+      email: this.email,
+      message: this.message,
+    };
+  
+    this.http.post('https://portfolio-mail-backend-exd0.onrender.com/send', payload).subscribe({
+      next: (response) => {
+        this.showSuccess = true;
+        this.resetForm();
+        setTimeout(() => (this.showSuccess = false), 3000);
+      },
+      error: (error) => {
+        console.error('Fehler beim Senden:', error);
+      },
+    });
   }
+  
+  
 
   resetForm() {
     this.name = '';

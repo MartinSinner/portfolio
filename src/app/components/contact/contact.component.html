@@ -1,15 +1,15 @@
-<div id="contact" class="contactMeSection">
+<div id="contact" class="contactMeSection" data-aos="fade-up">
 
-    <div class="arrowUpDesktop">
+    <div class="arrowUpDesktop" data-aos="zoom-in">
         <img [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
             (mouseenter)="hover = true" (mouseleave)="hover=false" (click)="scrollToTop()">
     </div>
 
-    <h1>{{languageService.translate('contactTitle')}}</h1>
+    <h1 data-aos="fade-up" data-aos-delay="100">{{languageService.translate('contactTitle')}}</h1>
 
 
 
-    <div class="contactInformation">
+    <div class="contactInformation" data-aos="fade-up" data-aos-delay="200">
 
         
         <p>{{languageService.translate('contactIntro1')}}<br>
@@ -18,7 +18,7 @@
         </p>
   
 
-        <div class="contactDates">
+        <div class="contactDates" data-aos="fade-up" data-aos-delay="300">
             <div class="contactMail">
                 <img src="assets/contact/mailicondefault.png" alt="">
                 <p>{{languageService.translate('emailLabel')}} martin.sinner.dev&#64;gmail.com</p>
@@ -30,9 +30,9 @@
             </div>
         </div>
     </div>
-    <div class="ctaTextMobile">Let us work together!</div>
+    <div class="ctaTextMobile" data-aos="fade-up" data-aos-delay="400">Let us work together!</div>
 
-    <div class="contactFormContact">
+    <div class="contactFormContact" data-aos="fade-up" data-aos-delay="500">
         <div class="contactForm">
 
             <div class="contactNameMail">
@@ -99,7 +99,7 @@
 
         </div>
 
-        <div class="arrowUpMobile">
+        <div class="arrowUpMobile" data-aos-delay="600">
             <img src="assets/contact/arrow-up.png" alt="arrow-up" (click)="scrollToTop()">
         </div>
     </div>

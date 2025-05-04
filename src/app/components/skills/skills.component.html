@@ -1,10 +1,10 @@
 <div id="skills" class="skillSection">
 
-    <h1>{{languageService.translate('mySkillsTitle')}}</h1>
+    <h1 data-aos="fade-down">{{languageService.translate('mySkillsTitle')}}</h1>
 
 
-    <div class="skillContainer">
-        <div class="skillIconsContainer">
+    <div class="skillContainer" data-aos="fade-up" data-aos-delay="100">
+        <div class="skillIconsContainer" data-aos="zoom-in" data-aos-delay="200">
             <img [src]="isSmallScreen ? 'assets/skills/responsive/angular.svg':'assets/skills/angular.png'" alt="">
             <img [src]="isSmallScreen ? 'assets/skills/responsive/ts.svg':'assets/skills/ts.png'" alt="">
             <img [src]="isSmallScreen ? 'assets/skills/responsive/js.svg':'assets/skills/js.png'" alt="">
@@ -18,12 +18,12 @@
 
         </div>
 
-        <div (mouseenter)="shapeHovered = true" (mouseleave)="shapeHovered = false">
+        <div data-aos="fade-left" data-aos-delay="300" (mouseenter)="shapeHovered = true"
+            (mouseleave)="shapeHovered = false">
             <div class="skillAddition">
-                <img
-                [ngClass]="{ 'hovered': shapeHovered }"  
-                [src]="!isSmallScreenButton && shapeHovered ? 'assets/skills/ellipse-hover.png' : 'assets/skills/ellipse-default.png'"
-                alt="ellipse">
+                <img [ngClass]="{ 'hovered': shapeHovered }"
+                    [src]="!isSmallScreenButton && shapeHovered ? 'assets/skills/ellipse-hover.png' : 'assets/skills/ellipse-default.png'"
+                    alt="ellipse">
 
                 <div class="currentlyLearning">
                     <p class="learningTitle">{{languageService.translate('upNext')}}</p>

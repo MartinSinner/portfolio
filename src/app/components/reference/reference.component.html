@@ -1,14 +1,15 @@
 <div class="referenceSection">
 
-    <h1 class="teamplayerHeading">{{languageService.translate('referenceTitle')}}</h1>
+    <h1 class="teamplayerHeading" data-aos="fade-down">{{languageService.translate('referenceTitle')}}</h1>
 
-    <h1 class="teamplayerHeadingSmall">{{languageService.translate('referenceTitleMobile')}}</h1>
-    <h2 class="colleaguesHeadingSmall">{{languageService.translate('referenceTitleTwoMobile')}}</h2>
+    <h1 class="teamplayerHeadingSmall" data-aos="fade-right" data-aos-delay="100">
+        {{languageService.translate('referenceTitleMobile')}}</h1>
+    <h2 class="colleaguesHeadingSmall" data-aos="fade-left" data-aos-delay="200">
+        {{languageService.translate('referenceTitleTwoMobile')}}</h2>
 
-    <div class="referenceWrapper">
-        <div class="referenceCard" *ngFor="let ref of [0, 1, 2]; let i = index" 
-        (mouseenter)="setHoveredIndex(i)"
-        (mouseleave)="setHoveredIndex(null)">
+    <div class="referenceWrapper" data-aos="fade-up" data-aos-delay="300">
+        <div class="referenceCard" *ngFor="let ref of [0, 1, 2]; let i = index" (mouseenter)="setHoveredIndex(i)"
+            (mouseleave)="setHoveredIndex(null)" data-aos="zoom-in-up" [attr.data-aos-delay]="(i + 1) * 150">
 
             <img [ngClass]="{ 'hovered': hoveredIndex === i }"
                 [src]="hoveredIndex === i ? 'assets/reference/hovershape.png' : 'assets/reference/defaultshape.png'"
@@ -16,11 +17,17 @@
 
 
             <div class="referenceInfo">
-                <h3> {{ i === 0 ? languageService.translate('referenceDavidName') : i === 1 ? languageService.translate('referencePatrickName') : languageService.translate('referenceRuiName') }}</h3>
+                <h3> {{ i === 0 ? languageService.translate('referenceDavidName') : i === 1 ?
+                    languageService.translate('referencePatrickName') : languageService.translate('referenceRuiName') }}
+                </h3>
                 <p class="refProject">
                     <span>Project </span>
-                    <span>{{ i === 0 ? languageService.translate('referenceDavidProject') : i === 1 ? languageService.translate('referencePatrickProject') : languageService.translate('referenceRuiProject') }}</span>
-                <p class="refDescription">{{ i === 0 ? languageService.translate('referenceDavidText') : i === 1 ? languageService.translate('referencePatrickText') : languageService.translate('referenceRuiText') }}</p>
+                    <span>{{ i === 0 ? languageService.translate('referenceDavidProject') : i === 1 ?
+                        languageService.translate('referencePatrickProject') :
+                        languageService.translate('referenceRuiProject') }}</span>
+                <p class="refDescription">{{ i === 0 ? languageService.translate('referenceDavidText') : i === 1 ?
+                    languageService.translate('referencePatrickText') : languageService.translate('referenceRuiText') }}
+                </p>
             </div>
         </div>
 

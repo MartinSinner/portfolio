@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
+import * as AOS from 'aos';
 
 
 
@@ -53,8 +54,15 @@ export class AppComponent {
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.titleService.setTitle('Martin Sinner – Portfolio');
+  
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 500,  
+        once: true       
+      });
+    }
   }
 
   navigateToHome() {

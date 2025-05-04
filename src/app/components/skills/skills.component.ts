@@ -24,7 +24,7 @@ export class SkillsComponent {
     public languageService: LanguageService
   ) {
     if (isPlatformBrowser(this.platformId)) {
-      this.isSmallScreen = window.innerWidth <= 475;
+      this.isSmallScreen = window.innerWidth <= 500;
       this.isSmallScreenButton = window.innerWidth <= 783;
     }
 
@@ -36,7 +36,7 @@ export class SkillsComponent {
   @HostListener('window:resize', [])
   onResize() {
     if (isPlatformBrowser(this.platformId)) {
-      this.isSmallScreen = window.innerWidth <= 475;
+      this.isSmallScreen = window.innerWidth <= 500;
       this.isSmallScreenButton = window.innerWidth <= 783;
     }
   }

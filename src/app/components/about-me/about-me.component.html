@@ -1,9 +1,9 @@
 <div id="whyMe" class="whyMeContainer">
-    <h1>{{languageService.translate('whyMeTitle')}}</h1>
+    <h1 data-aos="fade-down">{{languageService.translate('whyMeTitle')}}</h1>
 
     <div class="aboutMeIcons">
 
-        <div class="iconContainer">
+        <div class="iconContainer" data-aos="fade-right">
             <div class="iconTitle">
                 <img src="assets/about-me/rocket.png" alt="icon">
                 <p class="title"><span>{{languageService.translate('whyMe1TitleSpan')}}</span> {{languageService.translate('whyMe1TitleRest')}}</p>
@@ -12,7 +12,7 @@
             <p class="description">{{languageService.translate('whyMe1Text')}}</p>
         </div>
 
-        <div class="iconContainer">
+        <div class="iconContainer" data-aos="fade-up" data-aos-delay="100">
             <div class="iconTitle">
                 <img src="assets/about-me/creative.png" alt="">
                 <p class="title"><span>{{languageService.translate('whyMe2TitleSpan')}}</span> {{languageService.translate('whyMe2TitleRest')}}</p>
@@ -22,7 +22,7 @@
 
         </div>
 
-        <div class="iconContainer">
+        <div class="iconContainer"  data-aos="fade-left" data-aos-delay="200">
             <div class="iconTitle">
                 <img src="assets/about-me/thriving.png" alt="">
                 <p class="title"><span>{{ languageService.translate('whyMe3TitleSpan') }}</span>  {{ languageService.translate('whyMe3TitleRest') }}</p>
@@ -31,8 +31,8 @@
             <p class="description">{{ languageService.translate('whyMe3Text') }}</p>
         </div>
 
-        <!-- Hier Bild gegen Button austauschen -->
-        <div class="letsTalkButton">
+        <!-- Hier Bild wechseln zu button  -->
+        <div class="letsTalkButton" data-aos="zoom-in" data-aos-delay="300">
             <img [src]="buttonHover ? 'assets/about-me/letstalkhover.svg' : 'assets/about-me/letstalk.svg'"
                 alt="letsTalk" (mouseenter)="buttonHover = true" (mouseleave)="buttonHover = false">
         </div> 

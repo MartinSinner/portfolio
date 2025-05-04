@@ -1,11 +1,12 @@
 <div id="projects" class="portfolioSection">
-    <h1>{{languageService.translate('myProjectsTitle')}}</h1>
+    <h1 data-aos="fade-down">{{languageService.translate('myProjectsTitle')}}</h1>
 
-    <div class="projectContainer">
-        <div class="projectTitle">
+    <div class="projectContainer" data-aos="fade-up" data-aos-delay="100">
+        <div class="projectTitle" data-aos="fade-right" data-aos-delay="200">
             <p *ngFor="let project of projectData; let i = index" (click)="setActiveProject(i)"
                 [class.active]="i === activeIndex">
-                <span *ngIf="isSmallScreen; else fullTitle">{{ i + 1}}. {{languageService.translate('myProjectsCount')}}</span>
+                <span *ngIf="isSmallScreen; else fullTitle">{{ i + 1}}.
+                    {{languageService.translate('myProjectsCount')}}</span>
                 <ng-template #fullTitle> {{ i + 1}}. {{project.title[currentLanguage]}}</ng-template>
 
 
@@ -13,12 +14,13 @@
             </p>
         </div>
 
-        <div class="projectDescription" [ngClass]="{ 'fadeIn': fade }">
+        <div class="projectDescription" [ngClass]="{ 'fadeIn': fade }" data-aos="fade-left" data-aos-delay="300">
             <div class="projectDescriptionLeft">
 
-                <div *ngFor="let section of projectData[activeIndex].sections" class="descriptionRow">
+                <div *ngFor="let section of projectData[activeIndex].sections" class="descriptionRow" data-aos="fade-up"
+                    data-aos-delay="350">
 
-                    
+
                     <div class="descriptionContainer">
                         <img src="assets/projects/ellipse8.png" alt="">
                         <h3>{{section.heading[currentLanguage]}}</h3>
@@ -26,13 +28,15 @@
                     <p>{{ section.text[currentLanguage] }}</p>
                 </div>
 
-                <div *ngIf="isSmallScreen && projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'" class="actionButtons smallScreenButtons">
+                <div *ngIf="isSmallScreen && projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'"
+                    class="actionButtons smallScreenButtons"
+                    data-aos="zoom-in" data-aos-delay="400">
                     <button>Live Test</button>
                     <button>GitHub</button>
                 </div>
             </div>
 
-            <div class="projectDescriptionRight">
+            <div class="projectDescriptionRight" data-aos="fade-up" data-aos-delay="400">
                 <h2 class="projectName" *ngIf="isSmallScreen">{{ projectData[activeIndex].title[currentLanguage] }}</h2>
 
                 <div class="technologiesRow">
@@ -59,14 +63,16 @@
 
 
 
-                <div class="imageContainer">
+                <div class="imageContainer" data-aos="zoom-in" data-aos-delay="450">
                     <img [src]="'assets/projects/' + projectData[activeIndex].image"
-                    (click)="openProjectLink(projectData[activeIndex].liveLink)"
-                    [style.cursor]="projectData[activeIndex].liveLink ? 'pointer' : 'default'">
+                        (click)="openProjectLink(projectData[activeIndex].liveLink)"
+                        [style.cursor]="projectData[activeIndex].liveLink ? 'pointer' : 'default'">
                 </div>
 
 
-                <div *ngIf="projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'" class="actionButtons largeScreenButtons">
+                <div *ngIf="projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'"
+                    class="actionButtons largeScreenButtons"
+                    data-aos="zoom-in-up" data-aos-delay="500">
                     <button (click)="openProjectLink(projectData[activeIndex].liveLink)">Live Test</button>
                     <button (click)="openProjectLink(projectData[activeIndex].githubLink)">GitHub</button>
                 </div>
