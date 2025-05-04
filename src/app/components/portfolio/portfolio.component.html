@@ -29,8 +29,8 @@
                     class="actionButtons smallScreenButtons"
                     data-aos="zoom-in" data-aos-delay="400">
 
-                    <button>Live Test</button>
-                    <button>GitHub</button>
+                    <button (click)="openProjectLink(projectData[activeIndex].liveLink)">Live Test</button>
+                    <button (click)="openProjectLink(projectData[activeIndex].githubLink)">GitHub</button>
                 </div>
             </div>
 

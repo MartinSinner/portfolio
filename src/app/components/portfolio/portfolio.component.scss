@@ -443,13 +443,13 @@
 
         >button {
             transition: none !important;
+            cursor: pointer !important;
         }
 
         >button:first-child {
 
             &:first-child:hover {
                 background-color: #89BCD9 !important;
-                cursor: default !important;
                 transform: none !important;
                 filter: none !important;
             }
@@ -459,7 +459,6 @@
 
             &:last-child:hover {
                 background-color: #2D383F !important;
-                cursor: default !important;
                 transform: none !important;
                 filter: none !important;
             }

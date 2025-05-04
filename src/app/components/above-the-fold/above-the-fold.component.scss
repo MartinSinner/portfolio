@@ -156,6 +156,13 @@
     }
 }
 
+@media (max-width:900px) {
+    .backgroundShape{
+        margin-bottom: clamp(-5px, -5vw, -26px);
+    }
+   
+}
+
 
 @media (max-width:783px) {
     .heroSection {
