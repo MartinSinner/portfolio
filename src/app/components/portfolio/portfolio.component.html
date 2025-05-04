@@ -60,13 +60,15 @@
 
 
                 <div class="imageContainer">
-                    <img [src]="'assets/projects/' + projectData[activeIndex].image">
+                    <img [src]="'assets/projects/' + projectData[activeIndex].image"
+                    (click)="openProjectLink(projectData[activeIndex].liveLink)"
+                    [style.cursor]="projectData[activeIndex].liveLink ? 'pointer' : 'default'">
                 </div>
 
 
                 <div *ngIf="projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'" class="actionButtons largeScreenButtons">
-                    <button>Live Test</button>
-                    <button>GitHub</button>
+                    <button (click)="openProjectLink(projectData[activeIndex].liveLink)">Live Test</button>
+                    <button (click)="openProjectLink(projectData[activeIndex].githubLink)">GitHub</button>
                 </div>
             </div>
         </div>

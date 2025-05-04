@@ -12,6 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
+
 
 
 @Component({
@@ -37,8 +39,10 @@ export class AppComponent {
   title = 'portfolio';
   isOverlayOpen = false;
 
-  constructor(private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private titleService: Title
   ) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -47,6 +51,10 @@ export class AppComponent {
         window.scrollTo(0, 0);
       }
     });
+  }
+
+  ngOnInit() {
+    this.titleService.setTitle('Martin Sinner – Portfolio');
   }
 
   navigateToHome() {

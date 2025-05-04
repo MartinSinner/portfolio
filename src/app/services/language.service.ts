@@ -82,6 +82,10 @@ export class LanguageService {
       en: 'Deadlines sharpen my focus. When our Firebase project hit tricky Git conflicts, I didn\'t panic—I adapted quickly. Honestly, pressure brings out my best.',
       de: 'Deadlines schärfen meinen Fokus. Als wir bei einem Firebase-Projekt komplexe Git-Konflikte hatten, bin ich ruhig geblieben – und habe schnell Lösungen gefunden. Druck bringt oft das Beste in mir hervor.',
     },
+    letsTalk: {
+      en: "Let's talk!",
+      de: 'Los geht\'s!'
+  },
 
     //Skills
     mySkillsTitle: {
@@ -95,7 +99,7 @@ export class LanguageService {
     },
     description: {
       en: `React and Vue are next on my learning journey—planned once I finish my current projects. Staying curious and growing my skills keeps me sharp and motivated for future frontend challenges.`,
-      de: `React und Vue stehen als Nächstes auf meinem Lernplan – sobald ich aktuelle Projekte abgeschlossen habe. Neugierig zu bleiben und mein Wissen zu erweitern, hält mich fit und motiviert für kommende Herausforderungen im Frontend.`
+      de: `React und Vue stehen als Nächstes auf meinem Lernplan – sobald ich laufende Projekte abgeschlossen habe. Neugierig zu bleiben und mein Wissen zu erweitern, hält mich fit und motiviert für neue Frontend-Herausforderungen.`
     },
 
     //Projects 
@@ -117,7 +121,7 @@ export class LanguageService {
 
     referenceTitleMobile: {
       en: 'Need a teamplayer?',
-      de: 'Braucht ihr einen Teamplayer?',
+      de: 'Teamplayer gesucht?',
     },
 
     referenceTitleTwoMobile: {
@@ -161,7 +165,7 @@ export class LanguageService {
     },
     referenceRuiText: {
       en: 'Martin modernized my website and gave it a completely fresh look. Working with him was straightforward, his ideas for implementation were great – I am really happy with the result.',
-      de: 'Martin hat meine Website modernisiert und ihr einen komplett frischen Look gegeben. Die Zusammenarbeit war unkompliziert, seine Ideen zur Umsetzung waren großartig – ich bin mit dem Ergebnis sehr zufrieden.',
+      de: 'Martin hat meine Website modernisiert und ihr einen frischen Look verliehen. Die Zusammenarbeit war einfach, seine Ideen super – ich bin sehr zufrieden.',
     },
 
     //Contact

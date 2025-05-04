@@ -53,8 +53,8 @@ export class PortfolioComponent {
       ],
       technologies: ['html.png', 'css.png', 'javascript.png'],
       image: 'laptopjoin.svg',
-      liveLink: '/join-live',
-      githubLink: '/join-github'
+      liveLink: 'https://martin-sinner.com/join/html/login.html',
+      githubLink: 'https://github.com/MartinSinner/join'
     },
 
     {
@@ -96,8 +96,8 @@ export class PortfolioComponent {
       ],
       technologies: ['html.png', 'css.png', 'javascript.png'],
       image: 'laptoppololoco.svg',
-      liveLink: '/polo-live',
-      githubLink: '/polo-github'
+      liveLink: 'https://martin-sinner.com/el-pollo-loco/index.html',
+      githubLink: 'https://github.com/MartinSinner/el_pollo_loco'
     },
 
     {
@@ -192,6 +192,12 @@ export class PortfolioComponent {
       this.fade = true;
     }, 10);
   }
+
+  openProjectLink(url: string) {
+    if (url) {
+        window.open(url, '_blank');
+    }
+}
 
 }
 
