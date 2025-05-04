@@ -12,30 +12,34 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
+
+
 export class NavbarComponent {
   activeLink: string = '';
   isScrolled = false;
   currentLanguage: string = 'en';
 
-
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     public languageService: LanguageService
   ) {
-
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
     })
   }
 
+
   switchLanguage(lang: 'en' | 'de') {
     this.languageService.setLanguage(lang);
   }
+
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('scroll', this.checkScroll, true);
     }
   }
+
 
   scrollToTop() {
     if (isPlatformBrowser(this.platformId)) {
@@ -44,14 +48,17 @@ export class NavbarComponent {
     }
   }
 
+
   checkScroll = () => {
     this.isScrolled = window.scrollY > 750;
   };
+
 
   setActiveLink(link: string) {
     this.activeLink = link;
   }
 
+  
   scrollTo(section: string, event: MouseEvent) {
     event.preventDefault();
     this.activeLink = section;

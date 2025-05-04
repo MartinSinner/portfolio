@@ -11,9 +11,7 @@ import { LanguageService } from '../../services/language.service';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-
   shapeHovered = false;
-
   isSmallScreen = false;
   isSmallScreenButton = false;
 
@@ -33,11 +31,20 @@ export class SkillsComponent {
     });
   }
 
+
   @HostListener('window:resize', [])
   onResize() {
     if (isPlatformBrowser(this.platformId)) {
       this.isSmallScreen = window.innerWidth <= 500;
       this.isSmallScreenButton = window.innerWidth <= 783;
+    }
+  }
+
+  
+  scrollToContact() {
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

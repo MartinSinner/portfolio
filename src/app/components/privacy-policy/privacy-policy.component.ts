@@ -13,8 +13,10 @@ import { CommonModule } from '@angular/common';
 export class PrivacyPolicyComponent {
   currentLanguage: string = 'en';
 
- constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
-
+ constructor(
+  @Inject(PLATFORM_ID) private platformId: Object, 
+  public languageService: LanguageService
+) {
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
     })

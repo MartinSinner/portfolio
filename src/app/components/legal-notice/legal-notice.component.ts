@@ -12,10 +12,14 @@ import { Inject, PLATFORM_ID } from '@angular/core';
   styleUrl: './legal-notice.component.scss'
 })
 
+
 export class LegalNoticeComponent {
   currentLanguage: string = 'en';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object, 
+    public languageService: LanguageService
+  ) {
 
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;

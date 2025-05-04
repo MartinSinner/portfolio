@@ -6,6 +6,7 @@
     padding-inline: clamp(50px, 4vw, 80px);
 }
 
+
 .headerMobile {
     display: none;
     justify-content: space-between;
@@ -13,18 +14,19 @@
     padding: 36px 24px;
 }
 
+
 .mainPart {
     display: flex;
     justify-content: center;
     gap: clamp(30px, 8vw, 150px);
 }
 
+
 .pictureContainer {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     margin-bottom: clamp(72px, 5vw, 90px);
-
 
     >.backgroundShape {
         width: clamp(280px, 40vw, 600px);
@@ -42,18 +44,19 @@
     }
 }
 
+
 .imageWrapper {
     display: contents;
 }
+
 
 .profilePicture {
     width: clamp(500px, 50vw, 700px);
     height: auto;
     position: absolute;
     z-index: 2;
-
-
 }
+
 
 .introductionContainer {
     display: flex;
@@ -61,8 +64,8 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-
 }
+
 
 .logoContainer {
     display: flex;
@@ -72,7 +75,6 @@
     flex-direction: column;
     color: #F8F5EC;
     margin-bottom: clamp(12px, 2vw, 24px);
-
 
     >img {
         width: clamp(40px, 5vw, 56px);
@@ -154,6 +156,7 @@
     }
 }
 
+
 @media (max-width:783px) {
     .heroSection {
         justify-content: center;
@@ -173,8 +176,6 @@
         >.logoContainer {
             display: flex !important;
             margin-left: 8px !important;
-
-
 
             >img {
                 width: 70px !important;
@@ -197,10 +198,7 @@
         >img {
             width: 45px;
             height: 45px;
-
             transition: transform 0.3s ease-out, filter 0.3s ease-out;
-
-          
         }
     }
 
@@ -273,6 +271,7 @@
         }
     }
 
+
     .burgerBar img:hover,
     .logoContainer img:hover,
     .arrowDown img:hover,
@@ -293,8 +292,6 @@
             display: flex !important;
             margin-left: 8px !important;
 
-
-
             >img {
                 width: 60px !important;
             }
@@ -309,12 +306,14 @@
         }
     }
 
+
     .burgerBar {
         >img {
             width: 40px;
             height: 40px;
         }
     }
+
 
     .pictureContainer {
         width: 320px;
@@ -334,6 +333,7 @@
         }
     }
 
+
     .nameContainer {
         text-align: center;
 
@@ -347,9 +347,8 @@
     }
 }
 
+
 @media (max-width:380px) {
-
-
     .pictureContainer {
         >.profilePicture {
             top: -17px;
@@ -367,6 +366,7 @@
         }
     }
 
+    
     .nameContainer {
         text-align: center;
 

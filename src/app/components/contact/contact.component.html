@@ -1,5 +1,4 @@
 <div id="contact" class="contactMeSection" data-aos="fade-up">
-
     <div class="arrowUpDesktop" data-aos="zoom-in">
         <img [src]="hover ? 'assets/contact/arrow-up-hover.png' : 'assets/contact/arrow-up.png'" alt="arrow-up"
             (mouseenter)="hover = true" (mouseleave)="hover=false" (click)="scrollToTop()">
@@ -7,16 +6,11 @@
 
     <h1 data-aos="fade-up" data-aos-delay="100">{{languageService.translate('contactTitle')}}</h1>
 
-
-
     <div class="contactInformation" data-aos="fade-up" data-aos-delay="200">
-
-        
         <p>{{languageService.translate('contactIntro1')}}<br>
             <br>
             {{languageService.translate('contactIntro2')}}
         </p>
-  
 
         <div class="contactDates" data-aos="fade-up" data-aos-delay="300">
             <div class="contactMail">
@@ -30,41 +24,38 @@
             </div>
         </div>
     </div>
-    <div class="ctaTextMobile" data-aos="fade-up" data-aos-delay="400">Let us work together!</div>
+
+    <div class="ctaTextMobile" data-aos="fade-up" data-aos-delay="400">{{languageService.translate('ctaText')}}</div>
 
     <div class="contactFormContact" data-aos="fade-up" data-aos-delay="500">
         <div class="contactForm">
 
             <div class="contactNameMail">
                 <div class="formGroup">
-
                     <label for="name"
                         [ngClass]="{'error' : showNameError}">{{languageService.translate('yourName')}}</label>
 
                     <input type="text" type="text" [(ngModel)]="name" [ngClass]="{'error' : showNameError}"
-                        (input)="onInputChange('name')" placeholder="Your name">
-
+                        (input)="onInputChange('name')" [placeholder]="languageService.translate('yourName')">
                 </div>
-
 
                 <div class="formGroup">
                     <label for=""
                         [ngClass]="{'error' : showMailError}">{{languageService.translate('yourEmail')}}</label>
                     <input type="text" [(ngModel)]="email" [ngClass]="{'error' : showMailError}"
-                        (input)="onInputChange('email')" placeholder="Your Email">
+                        (input)="onInputChange('email')" [placeholder]="languageService.translate('yourEmail')">
 
-                        <p class="errorText emailError" *ngIf="showMailError">
-                            {{languageService.translate('invalidEmail')}}
-                        </p>
+                    <p class="errorText emailError" *ngIf="showMailError">
+                        {{languageService.translate('invalidEmail')}}
+                    </p>
                 </div>
-
             </div>
-
+            
             <div class="contactMessage">
                 <label for=""
                     [ngClass]="{'error' : showMessageError}">{{languageService.translate('yourMessage')}}</label>
                 <textarea type="text" [(ngModel)]="message" [ngClass]="{'error' : showMessageError}"
-                    (input)="onInputChange('message')" placeholder="Your Message"></textarea>
+                    (input)="onInputChange('message')" [placeholder]="languageService.translate('yourMessage')"></textarea>
             </div>
 
             <div class="contactPivacyPolicy"
@@ -76,10 +67,12 @@
                 privacyAccepted ? 'assets/contact/property-checked.png' :
                 hoverPolicy ? 'assets/contact/property-hover.png' :
                 'assets/contact/property-default.png' " alt="privacy checkbox">
+
                 <p>{{languageService.translate('privacyNotice1')}}
                     <span [routerLink]="['/privacy-policy']">{{languageService.translate('privacyNotice2')}}</span>
                     {{languageService.translate('privacyNotice3')}}
                 </p>
+
                 <p class="errorText privacyError" *ngIf="showError">{{languageService.translate('privacyAccept')}}</p>
             </div>
 
@@ -89,14 +82,11 @@
                 <div class="successMessage" *ngIf="showSuccess">
                     {{languageService.translate('messageSent')}}
                 </div>
-                
-                <button [ngClass]="{'enabled': isFormValid()}" 
-                        [disabled]="!isFormValid()" 
-                        (click)="submitForm()">
+
+                <button [ngClass]="{'enabled': isFormValid()}" [disabled]="!isFormValid()" (click)="submitForm()">
                     {{languageService.translate('sendButton')}}
                 </button>
             </div>
-
         </div>
 
         <div class="arrowUpMobile" data-aos-delay="600">

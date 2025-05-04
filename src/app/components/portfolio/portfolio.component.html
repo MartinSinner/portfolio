@@ -8,9 +8,6 @@
                 <span *ngIf="isSmallScreen; else fullTitle">{{ i + 1}}.
                     {{languageService.translate('myProjectsCount')}}</span>
                 <ng-template #fullTitle> {{ i + 1}}. {{project.title[currentLanguage]}}</ng-template>
-
-
-
             </p>
         </div>
 
@@ -20,17 +17,18 @@
                 <div *ngFor="let section of projectData[activeIndex].sections" class="descriptionRow" data-aos="fade-up"
                     data-aos-delay="350">
 
-
                     <div class="descriptionContainer">
                         <img src="assets/projects/ellipse8.png" alt="">
                         <h3>{{section.heading[currentLanguage]}}</h3>
                     </div>
+
                     <p>{{ section.text[currentLanguage] }}</p>
                 </div>
 
                 <div *ngIf="isSmallScreen && projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'"
                     class="actionButtons smallScreenButtons"
                     data-aos="zoom-in" data-aos-delay="400">
+
                     <button>Live Test</button>
                     <button>GitHub</button>
                 </div>
@@ -50,25 +48,20 @@
                             <span *ngIf="tech == 'Angular.png'">Angular</span>
                             <span *ngIf="tech == 'ts.png'">TypeScript</span>
                             <span *ngIf="tech == 'firebase.png'">Firebase</span>
-
                         </p>
                     </div>
                 </div>
 
                 <div class="technologyIcon" *ngIf="!isSmallScreen">
-
                     <img *ngFor="let tech of projectData[activeIndex].technologies" [src]="'assets/projects/' + tech"
                         [ngClass]="{ 'smallIcon': tech === 'wordpress.png'}">
                 </div>
-
-
 
                 <div class="imageContainer" data-aos="zoom-in" data-aos-delay="450">
                     <img [src]="'assets/projects/' + projectData[activeIndex].image"
                         (click)="openProjectLink(projectData[activeIndex].liveLink)"
                         [style.cursor]="projectData[activeIndex].liveLink ? 'pointer' : 'default'">
                 </div>
-
 
                 <div *ngIf="projectData[activeIndex].title[currentLanguage] !== 'Ongoing Project'"
                     class="actionButtons largeScreenButtons"

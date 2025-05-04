@@ -6,7 +6,8 @@
         <div class="iconContainer" data-aos="fade-right">
             <div class="iconTitle">
                 <img src="assets/about-me/rocket.png" alt="icon">
-                <p class="title"><span>{{languageService.translate('whyMe1TitleSpan')}}</span> {{languageService.translate('whyMe1TitleRest')}}</p>
+                <p class="title"><span>{{languageService.translate('whyMe1TitleSpan')}}</span>
+                    {{languageService.translate('whyMe1TitleRest')}}</p>
             </div>
 
             <p class="description">{{languageService.translate('whyMe1Text')}}</p>
@@ -15,27 +16,30 @@
         <div class="iconContainer" data-aos="fade-up" data-aos-delay="100">
             <div class="iconTitle">
                 <img src="assets/about-me/creative.png" alt="">
-                <p class="title"><span>{{languageService.translate('whyMe2TitleSpan')}}</span> {{languageService.translate('whyMe2TitleRest')}}</p>
+                <p class="title"><span>{{languageService.translate('whyMe2TitleSpan')}}</span>
+                    {{languageService.translate('whyMe2TitleRest')}}</p>
             </div>
 
             <p class="description">{{ languageService.translate('whyMe2Text') }}</p>
 
         </div>
 
-        <div class="iconContainer"  data-aos="fade-left" data-aos-delay="200">
+        <div class="iconContainer" data-aos="fade-left" data-aos-delay="200">
             <div class="iconTitle">
                 <img src="assets/about-me/thriving.png" alt="">
-                <p class="title"><span>{{ languageService.translate('whyMe3TitleSpan') }}</span>  {{ languageService.translate('whyMe3TitleRest') }}</p>
+                <p class="title"><span>{{ languageService.translate('whyMe3TitleSpan') }}</span> {{
+                    languageService.translate('whyMe3TitleRest') }}</p>
             </div>
 
             <p class="description">{{ languageService.translate('whyMe3Text') }}</p>
         </div>
 
-        <!-- Hier Bild wechseln zu button  -->
         <div class="letsTalkButton" data-aos="zoom-in" data-aos-delay="300">
-            <img [src]="buttonHover ? 'assets/about-me/letstalkhover.svg' : 'assets/about-me/letstalk.svg'"
-                alt="letsTalk" (mouseenter)="buttonHover = true" (mouseleave)="buttonHover = false">
-        </div> 
+            <button (mouseenter)="buttonHover = true" (mouseleave)="buttonHover = false" (click)="scrollToContact()"
+                [ngClass]="{'hover': buttonHover}">
+                {{ languageService.translate('letsTalk') }}
+            </button>
+        </div>
 
 
     </div>

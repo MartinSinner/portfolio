@@ -16,16 +16,14 @@
     >.colleaguesHeadingSmall {
         display: none;
     }
-
 }
 
 
 .referenceWrapper {
     display: flex;
     gap: 24px;
-
-
 }
+
 
 .referenceCard {
     display: grid;
@@ -42,6 +40,7 @@
     }
 }
 
+
 .referenceInfo {
     position: absolute;
     top: 80px;
@@ -52,13 +51,12 @@
     color: #F8F5EC;
     text-align: center;
 
-
-
     >h3 {
         margin-bottom: 8px;
         font-size: 26px;
     }
 }
+
 
 .refProject {
     margin-bottom: 24px;
@@ -68,12 +66,12 @@
         color: #F8F5EC;
     }
 
-
     >span:last-child {
         color: #89BCD9;
         margin-left: 6px;
     }
 }
+
 
 .refDescription {
     font-size: 18px;
@@ -91,13 +89,14 @@
         }
     }
 
+
     .referenceWrapper {
         flex-direction: column;
     }
 }
 
-@media (max-width: 475px) {
 
+@media (max-width: 475px) {
     .referenceSection {
         gap: 24px;
         align-items: flex-start;
@@ -114,7 +113,6 @@
             font-weight: 400;
             font-size: 32px;
             color: #89BCD9;
-
         }
 
         >.colleaguesHeadingSmall {
@@ -122,9 +120,9 @@
             font-weight: 400;
             font-size: 18px;
             color: #F8F5EC;
-
         }
     }
+
 
     .referenceWrapper {
         display: flex;
@@ -135,6 +133,7 @@
         width: 100%;
     }
 
+
     .referenceCard {
         width: 320px;
 
@@ -144,6 +143,7 @@
             rotate: 90deg;
         }
     }
+
 
     .referenceInfo {
         top: 45px;
@@ -157,11 +157,13 @@
         }
     }
 
+
     .refDescription {
         font-size: 16px;
         padding: 0px 34px;
     }
 }
+
 
 @media (max-width: 340px) {
     .referenceCard {
@@ -177,12 +179,13 @@
         }
     }
 
+
     .referenceInfo {
         top: 40px; 
     }
 
+
     .refDescription {
         font-size: 14px;
     }
-
 }

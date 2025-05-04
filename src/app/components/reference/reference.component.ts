@@ -10,8 +10,9 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './reference.component.html',
   styleUrl: './reference.component.scss'
 })
-export class ReferenceComponent {
 
+
+export class ReferenceComponent {
   hoveredIndex: number | null = null;
   currentLanguage: string = 'en';
   activeIndex = 0;
@@ -22,8 +23,6 @@ export class ReferenceComponent {
       this.currentLanguage = language;
     })
   }
-
-  
 
   setHoveredIndex(index: number | null): void {
     if (window.innerWidth >= 783) {

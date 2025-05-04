@@ -22,16 +22,17 @@
     margin-top: 80px;
 }
 
+
 .iconContainer {
     display: grid;
-    grid-template-columns: 
-    clamp(315px, 45vw, 545px)   
-    clamp(240px, 21vw, 360px)   
-    1fr; ;
+    grid-template-columns:
+        clamp(315px, 45vw, 545px) clamp(240px, 21vw, 360px) 1fr;
+    ;
     align-items: center;
     gap: 24px;
     padding: 16px 32px;
 }
+
 
 .title {
     font-size: clamp(20px, 2.2vw, 28px);
@@ -47,6 +48,7 @@
     }
 }
 
+
 .description {
     font-family: 'Josefin';
     flex-wrap: wrap;
@@ -58,15 +60,27 @@
     line-height: 35px;
 }
 
-.letsTalkButton {
-    transition: transform 0.3s ease-out, filter 0.3s ease-out;
 
-    &:hover {
-        transform: scale(1.1);
-        filter: brightness(1.2);
+.letsTalkButton {
+    button {
+        background: #89BCD9;
+        color: #262E34;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 16px;
         cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.hover,
+        &:hover {
+            background: #F8F5EC;
+            color: #262E34;
+            transform: scale(1.1);
+        }
     }
 }
+
 
 .iconTitle {
     display: flex;
@@ -78,49 +92,50 @@
     }
 }
 
+
 @media (max-width: 783px) {
     .aboutMeIcons {
         gap: 40px;
     }
-    
+
+
     .iconContainer {
         display: flex;
         flex-direction: column;
-
-        
     }
+
 
     .iconTitle {
         display: flex;
         align-items: center;
-
-        
 
         >img {
             width: clamp(30px, 9vw, 48px) !important;
         }
     }
 
+
     .title {
-       
         font-size: clamp(18px, 5.2vw, 28px) !important;
-    
     }
+
 
     .description {
         text-align: center;
         font-size: clamp(14px, 3.8vw, 22px) !important;
     }
 
+
     .letsTalkButton {
         display: none;
     }
 }
 
- @media (max-width: 475px){
+
+@media (max-width: 475px) {
     .whyMeContainer {
         margin-top: 200px;
-        
+
         >h1 {
             font-size: 38px;
         }
@@ -129,7 +144,4 @@
     .aboutMeIcons {
         margin-top: 50px;
     }
-    
- }
-
-
+}

@@ -10,6 +10,7 @@ nav {
     z-index: 10;
 }
 
+
 nav.scrolled {
     position: fixed;
     top: 0;
@@ -18,11 +19,12 @@ nav.scrolled {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .navbar {
     display: flex;
     gap: clamp(30px, 10vw, 180px);
-
 }
+
 
 .navbar a {
     text-decoration: none;
@@ -53,10 +55,11 @@ nav.scrolled {
     }
 }
 
+
 .logoContainer {
-    // ...existing code...
     cursor: pointer;
 }
+
 
 .navItem, .langItem {
     position: relative;
@@ -71,9 +74,8 @@ nav.scrolled {
     }
 }
 
+
 .langItem > p {
-    
-    
     &:hover {
         color: #F8F5EC;
         cursor: pointer;
@@ -82,11 +84,7 @@ nav.scrolled {
     &.active {
         color: #F8F5EC;
     }
-
-    
 }
-
-
 
 
 .languageSwitch {
@@ -95,25 +93,23 @@ nav.scrolled {
     gap: 16px;
     margin-right: clamp(16px, 5vw, 64px) !important;
 
-
     >p {
         font-size: clamp(12px, 1.5vw, 18px);
         color: #262E34;
     }
 }
 
+
 .mobileNavbar {
     display: none;
 }
 
 
-
 @media (max-width: 783px) {
-    
-
     nav {
         display: none;
     }
+
 
     .mobileNavbar {
         display: flex;
@@ -125,9 +121,9 @@ nav.scrolled {
         >img {
             width: 460px;
             height: 495px;
-
         }
     }
+
 
     .navbar {
         display: flex;
@@ -137,7 +133,6 @@ nav.scrolled {
         gap: 45px;
         position: absolute;
         
-
         >a  {
             font-size: 28px;
             font-weight: 200 !important;
@@ -150,6 +145,7 @@ nav.scrolled {
             }
         }
     }
+
 
     .languageSwitch {
         font-family: 'Josefin';
@@ -172,6 +168,7 @@ nav.scrolled {
         }
     }
 
+
     .navbar {
         gap: 30px;
 
@@ -180,6 +177,7 @@ nav.scrolled {
         }
     }
 }
+
 
 @media (max-width:380px){
     .mobileNavbar {
@@ -191,7 +189,6 @@ nav.scrolled {
 
     
     .navbar {
-
         >a {
             font-size: 24px;
         }

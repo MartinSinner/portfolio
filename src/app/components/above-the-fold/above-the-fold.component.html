@@ -15,12 +15,9 @@
 
 
     <div class="heroSection">
-        
         <div class="mobileView" *ngIf="isOverlayOpen" [ngClass]="{ 'fade-in': isOverlayOpen }">
             <app-navbar></app-navbar>
         </div>
-
-
 
 
         <div class="mainPart">
@@ -57,7 +54,8 @@
 
                 <div class="arrowDown">
                     <img [src]="arrowHovered ? 'assets/hero/arrow-down-hover.png':'assets/hero/arrow-down.png'"
-                        alt="arrow-down" (mouseenter)="arrowHovered=true" (mouseleave)="arrowHovered=false" (click)="scrollToContact()">
+                        alt="arrow-down" (mouseenter)="arrowHovered=true" (mouseleave)="arrowHovered=false"
+                        (click)="scrollToContact()">
                 </div>
             </div>
         </div>
@@ -79,8 +77,5 @@
                     (mouseenter)="linkedinHovered = true" (mouseleave)="linkedinHovered = false">
             </a>
         </div>
-
-
-
     </div>
 </div>

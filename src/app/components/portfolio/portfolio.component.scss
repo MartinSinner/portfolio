@@ -18,6 +18,7 @@
     margin-top: 100px;
 }
 
+
 .projectTitle {
     display: flex;
     gap: 54px;
@@ -47,8 +48,6 @@
 }
 
 
-
-
 .projectDescription {
     display: flex;
     align-items: flex-start;
@@ -59,9 +58,8 @@
     height: auto;
     padding: 50px 130px;
     color: #F8F5EC;
-
-
 }
+
 
 .projectDescriptionLeft,
 .projectDescriptionRight {
@@ -117,6 +115,7 @@
     }
 }
 
+
 .descriptionContainer {
     display: flex;
     align-items: center;
@@ -140,7 +139,6 @@
 }
 
 
-
 .technologiesRow {
     display: flex;
     flex-direction: column;
@@ -149,6 +147,7 @@
         font-weight: 400;
     }
 }
+
 
 .technologyIcon {
     display: flex;
@@ -160,14 +159,14 @@
         max-width: 50px;
         max-height: 50px;
     }
-
-
 }
+
 
 .smallIcon {
     width: 40px;
     height: auto;
 }
+
 
 .technologyText {
     display: none;
@@ -180,7 +179,6 @@
         color: #F8F5EC;
     }
 }
-
 
 
 .actionButtons {
@@ -226,37 +224,36 @@
     }
 }
 
+
 .largeScreenButtons {
     display: flex;
 }
+
 
 .smallScreenButtons {
     display: none;
 }
 
+
 .fadeIn {
     animation: fadeMorph 0.6s ease-in-out both;
 }
+
 
 @keyframes fadeMorph {
     0% {
         opacity: 0;
         filter: blur(10px) contrast(1.2);
-
     }
 
     100% {
         opacity: 1;
         filter: blur(0) contrast(1);
-
-
     }
 }
 
 
-
 @media (max-width:1125px) {
-
     .projectTitle {
         gap: 22px;
         margin-left: 60px;
@@ -274,24 +271,25 @@
         gap: 80px;
     }
 
-    .projectDescriptionRight {
 
+    .projectDescriptionRight {
         >img {
             width: clamp(300px, 40vw, 700px);
-
         }
     }
+
 
     .projectDescriptionLeft {
         gap: 50px;
     }
 
+
     .descriptionContainer {
         >h3 {
             font-size: clamp(20px, 2vw, 28px);
         }
-
     }
+
 
     .descriptionRow {
         >p {
@@ -300,6 +298,7 @@
     }
 }
 
+
 @media (max-width: 1000px) {
     .projectDescription {
         padding: 50px 30px;
@@ -307,9 +306,11 @@
         height: 700px;
     }
 
+
     .descriptionContainer {
         margin-left: 0;
     }
+
 
     .descriptionRow {
         gap: 6px;
@@ -317,17 +318,18 @@
 
 
     .projectDescriptionRight {
-
         >img {
             width: clamp(300px, 44vw, 700px);
 
         }
     }
 
+
     .projectDescriptionLeft {
         gap: 22px;
     }
 }
+
 
 @media (max-width: 830px) {
     .projectTitle {
@@ -357,10 +359,12 @@
         gap: 18px !important;
     }
 
+
     .projectName {
         font-size: 34px;
         color: #89BCD9;
     }
+
 
     .descriptionContainer {
         >h3 {
@@ -381,20 +385,23 @@
         >h3 {
             font-weight: 350;
         }
-
     }
+
 
     .largeScreenButtons {
         display: none;
     }
 
+
     .smallScreenButtons {
         display: flex;
     }
 
+
     .technologyIcon {
         display: none;
     }
+
 
     .technologyText {
         display: flex;
@@ -405,6 +412,7 @@
         }
     }
 }
+
 
 @media (max-width: 783px) {
     .projectTitle>p {
@@ -430,6 +438,7 @@
         }
     }
 
+
     .actionButtons {
 
         >button {
@@ -443,8 +452,6 @@
                 cursor: default !important;
                 transform: none !important;
                 filter: none !important;
-
-
             }
         }
 
@@ -460,6 +467,7 @@
     }
 }
 
+
 @media (max-width: 475px) {
     .portfolioSection {
         >h1 {
@@ -467,9 +475,11 @@
         }
     }
 
+
     .projectContainer {
         margin-top: 50px;
     }
+
 
     .projectTitle {
         white-space: nowrap;
@@ -483,6 +493,7 @@
         }
     }
 
+
     .projectDescription {
         height: 100%;
         border-top-right-radius: 30px;
@@ -490,25 +501,30 @@
         border-bottom-right-radius: 30px;
     }
 
+
     .projectDescriptionRight {
         align-items: flex-start;
         justify-content: space-around;
         gap: 18px !important;
     }
 
+
     .projectDescriptionLeft {
         gap: 32px;
     }
 
+
     .descriptionRow {
         gap: 14px;
     }
+
 
     .descriptionContainer {
         >p {
             margin-left: -50px;
         }
     }
+
 
     .actionButtons {
         >button {
@@ -521,8 +537,8 @@
             }
         }
     }
-
 }
+
 
 @media (max-width: 375px) {
     .projectDescription {
@@ -530,6 +546,7 @@
         padding: 20px;
     }
 
+    
     .projectTitle>p {
         font-size: clamp(14px, 2vw, 20px);
         padding: 10px;

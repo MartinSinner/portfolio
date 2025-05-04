@@ -8,7 +8,6 @@ export class LanguageService {
   private currentLanguage = new BehaviorSubject<'en' | 'de'>('en');
   currentLanguage$ = this.currentLanguage.asObservable();
 
-
   private translations = {
     //Hero
     role: {
@@ -69,7 +68,6 @@ export class LanguageService {
       en: 'Designing pixel-perfect layouts isn’t just work—it’s my passion. From Angular apps to WordPress redesigns, details matter until they\'re exactly right.',
       de: 'Pixelgenaue Layouts zu gestalten ist für mich nicht nur Arbeit – es ist meine Leidenschaft. Ob Angular-Apps oder WordPress-Redesigns: Jedes Detail zählt, bis alles passt.',
     },
-
     whyMe3TitleSpan: {
       en: 'Thriving',
       de: 'Stark',
@@ -85,14 +83,13 @@ export class LanguageService {
     letsTalk: {
       en: "Let's talk!",
       de: 'Los geht\'s!'
-  },
+    },
 
     //Skills
     mySkillsTitle: {
       en: 'My Skills',
       de: 'Meine Skills'
     },
-
     upNext: {
       en: 'Up next: React and Vue.',
       de: 'Als Nächstes: React und Vue.'
@@ -107,7 +104,6 @@ export class LanguageService {
       en: 'My Projects',
       de: 'Meine Projekte',
     },
-
     myProjectsCount: {
       en: 'Project',
       de: 'Projekt',
@@ -123,7 +119,6 @@ export class LanguageService {
       en: 'Need a teamplayer?',
       de: 'Teamplayer gesucht?',
     },
-
     referenceTitleTwoMobile: {
       en: 'Here what my colleagues said about me',
       de: 'Das sagen meine Kollegen über mich',
@@ -181,6 +176,10 @@ export class LanguageService {
       en: `Whether it's about projects, collaborations, or new challenges: I'm open to opportunities that value creativity, precision, and determination.`,
       de: `Ob Projekte, Zusammenarbeit oder neue Herausforderungen – ich bin offen für Möglichkeiten, die Kreativität, Präzision und Entschlossenheit schätzen.`
     },
+    ctaText: {
+      en: 'Let us work together!',
+      de: 'Lass uns zusammen arbeiten!'
+    },
     yourName: {
       en: 'Your name',
       de: 'Dein Name'
@@ -225,20 +224,24 @@ export class LanguageService {
       'en': 'Message sent successfully!',
       'de': 'Nachricht erfolgreich gesendet!'
     },
+
     //Footer
     legalNotice: {
       en: 'Legal Notice',
       de: 'Impressum'
     },
-  };
+  }
+
 
   setLanguage(lang: 'en' | 'de') {
     this.currentLanguage.next(lang);
   }
 
+
   getCurrentLanguage(): string {
     return this.currentLanguage.value;
   }
+
 
   translate(key: keyof typeof this.translations) {
     const lang = this.currentLanguage.value;

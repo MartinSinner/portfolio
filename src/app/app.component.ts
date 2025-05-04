@@ -36,6 +36,8 @@ import * as AOS from 'aos';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
+
 export class AppComponent {
   title = 'portfolio';
   isOverlayOpen = false;
@@ -54,6 +56,7 @@ export class AppComponent {
     });
   }
 
+
   ngOnInit(): void {
     this.titleService.setTitle('Martin Sinner – Portfolio');
   
@@ -65,17 +68,19 @@ export class AppComponent {
     }
   }
 
+
   navigateToHome() {
     this.router.navigate(['/']);
   }
+
 
   isLegalOrPrivacy(): boolean {
     const currentRoute = this.router.url;
     return currentRoute === '/legal-notice' || currentRoute === '/privacy-policy';
   }
 
+
   toggleOverlay() {
     this.isOverlayOpen = !this.isOverlayOpen;
   }
-
 }

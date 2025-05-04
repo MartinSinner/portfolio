@@ -2,7 +2,6 @@
 
     <h1 data-aos="fade-down">{{languageService.translate('mySkillsTitle')}}</h1>
 
-
     <div class="skillContainer" data-aos="fade-up" data-aos-delay="100">
         <div class="skillIconsContainer" data-aos="zoom-in" data-aos-delay="200">
             <img [src]="isSmallScreen ? 'assets/skills/responsive/angular.svg':'assets/skills/angular.png'" alt="">
@@ -15,7 +14,6 @@
             <img [src]="isSmallScreen ? 'assets/skills/responsive/api.svg':'assets/skills/api.png'" alt="">
             <img [src]="isSmallScreen ? 'assets/skills/responsive/material.svg':'assets/skills/material.png'" alt="">
             <img [src]="isSmallScreen ? 'assets/skills/responsive/scrum.svg':'assets/skills/scrum.png'" alt="">
-
         </div>
 
         <div data-aos="fade-left" data-aos-delay="300" (mouseenter)="shapeHovered = true"
@@ -27,18 +25,21 @@
 
                 <div class="currentlyLearning">
                     <p class="learningTitle">{{languageService.translate('upNext')}}</p>
+
                     <img src="assets/skills/ellipse-default.png" alt="">
+
                     <div class="learningIcons">
                         <img src="assets/skills/react -vue.png" alt="">
                     </div>
+
                     <p class="learningText">
                         {{languageService.translate('description')}}
                     </p>
                 </div>
-                <button *ngIf="isSmallScreenButton" class="letsTalkButton">Let's Talk</button>
+
+                <button *ngIf="isSmallScreenButton" class="letsTalkButton" (click)="scrollToContact()">{{
+                    languageService.translate('letsTalk') }}</button>
             </div>
-
         </div>
-
     </div>
 </div>

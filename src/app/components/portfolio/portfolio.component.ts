@@ -21,11 +21,14 @@ export class PortfolioComponent {
   isSmallScreen = false;
 
   currentLanguage: 'en' | 'de' = 'en';
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {}
+  
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object, 
+    public languageService: LanguageService
+  ) {}
 
 
   projectData = [
-
     {
       title: { en: 'Join', de: 'Join' },
       sections: [
@@ -168,7 +171,6 @@ export class PortfolioComponent {
   ]
 
   
-
   ngOnInit() {
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
@@ -180,9 +182,11 @@ export class PortfolioComponent {
     }
   }
 
+
   checkScreenSize() {
     this.isSmallScreen = window.innerWidth <= 830
   }
+
 
   setActiveProject(index: number) {
     this.fade = false;
@@ -193,12 +197,12 @@ export class PortfolioComponent {
     }, 10);
   }
 
+
   openProjectLink(url: string) {
     if (url) {
         window.open(url, '_blank');
     }
 }
-
 }
 
 

@@ -12,9 +12,11 @@
     }
 }
 
+
 #contact {
     scroll-margin-top: 100px;
 }
+
 
 .arrowUpDesktop {
     position: absolute;
@@ -27,6 +29,7 @@
     }
 }
 
+
 .arrowUpMobile {
     display: none;
 
@@ -35,6 +38,7 @@
     }
 }
 
+
 .contactInformation {
     display: grid;
     grid-template-columns: 500px 280px 1fr;
@@ -42,8 +46,8 @@
     gap: 60px;
     color: #F8F5EC;
     font-family: 'Josefin';
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 
     >p {
         font-weight: 350;
@@ -52,11 +56,13 @@
     }
 }
 
+
 .contactDates {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 
 .ctaTextMobile {
     display: none;
@@ -66,6 +72,7 @@
     font-size: 20px;
     color: #89BCD9;
 }
+
 
 .contactMail,
 .contactPhone {
@@ -80,15 +87,15 @@
     }
 }
 
+
 .contactForm {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     font-family: 'Josefin';
     gap: 24px;
-
-
 }
+
 
 .contactNameMail {
     display: flex;
@@ -168,8 +175,8 @@
             color: transparent;
         }
     }
-
 }
+
 
 .contactPivacyPolicy {
     display: flex;
@@ -195,6 +202,7 @@
     }
 }
 
+
 .errorText {
     color: #E44C36 !important;
     font-size: 14px;
@@ -213,15 +221,18 @@
     }
 }
 
+
 input.error,
 textarea.error {
     border: 2px solid #E44C36 !important;
     outline: none;
 }
 
+
 label.error {
     color: #E44C36 !important;
 }
+
 
 .contactMeButton {
     display: flex;
@@ -229,8 +240,6 @@ label.error {
     width: 100%;
     margin-top: 24px;
     position: relative;
-
-
 
     >button {
         font-family: 'Josefin';
@@ -275,6 +284,7 @@ label.error {
     animation: fadeIn 0.3s ease-in;
 }
 
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -293,9 +303,11 @@ label.error {
         grid-template-columns: 345px 250px 1fr;
     }
 
+
     .contactForm {
         align-items: flex-start;
     }
+
 
     .formGroup {
         >input {
@@ -303,18 +315,20 @@ label.error {
         }
     }
 
+
     .contactMessage {
         >textarea {
             width: 748px !important;
         }
-
     }
 }
+
 
 @media (max-width: 783px) {
     .arrowUpDesktop {
         display: none;
     }
+
 
     .arrowUpMobile {
         display: flex;
@@ -323,9 +337,11 @@ label.error {
         align-items: center;
     }
 
+
     .contactForm {
         gap: 36px;
     }
+
 
     .contactInformation {
         display: flex;
@@ -333,10 +349,12 @@ label.error {
         margin: 100px 60px;
     }
 
+
     .contactNameMail {
         flex-direction: column;
         width: 100vw;
     }
+
 
     .formGroup {
         padding: 0 24px;
@@ -347,6 +365,7 @@ label.error {
         }
     }
 
+
     .contactMessage {
         padding: 0 24px;
 
@@ -355,16 +374,18 @@ label.error {
         }
     }
 
+
     .contactPivacyPolicy {
         padding: 0 24px;
         line-height: 20px;
     }
 
+
     .contactMeButton {
         padding: 0 24px;
     }
-
 }
+
 
 @media(max-width: 580px) {
     .errorText {
@@ -382,24 +403,27 @@ label.error {
 
         >h1 {
             font-size: 38px;
-
         }
     }
+
 
     .contactInformation {
         margin: 50px 60px;
         gap: 24px;
     }
 
+
     .ctaTextMobile {
         display: flex;
         margin-bottom: 35px;
     }
 
+
     .formGroup>label,
     .contactMessage>label {
         display: none;
     }
+
 
     input::placeholder,
     textarea::placeholder {
@@ -409,14 +433,17 @@ label.error {
         padding: 8px;
     }
 
+
     .contactMeButton {
         margin-top: 6px;
     }
+
 
     .contactPivacyPolicy {
         padding: 0 20px;
     }
 
+    
     .arrowUpMobile>img {
         width: 30px;
         height: 60px;

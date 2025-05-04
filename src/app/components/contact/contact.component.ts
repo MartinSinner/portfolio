@@ -18,6 +18,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
+
+
 export class ContactComponent {
   name: string = '';
   email: string = '';
@@ -26,7 +28,6 @@ export class ContactComponent {
   emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   isEmailValid = true;
   showSuccess = false;
-
 
   showNameError = false;
   showMailError = false;
@@ -40,8 +41,11 @@ export class ContactComponent {
   isSmallScreen = false;
   currentLanguage: string = 'en';
 
-  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) {
-
+  constructor(
+    private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public languageService: LanguageService
+  ) {
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
     })
@@ -55,15 +59,18 @@ export class ContactComponent {
     }
   }
 
+
   ngOnInit() {
     this.onResize();
   }
+
 
   onHoverPolicy(isHovering: boolean) {
     if (!this.isSmallScreen) {
       this.hoverPolicy = isHovering;
     }
   }
+
 
   acceptPrivacy() {
     this.privacyAccepted = !this.privacyAccepted;
@@ -73,10 +80,12 @@ export class ContactComponent {
     }
   }
 
+
   validateEmail() {
     this.isEmailValid = this.emailPattern.test(this.email);
     return this.isEmailValid;
   }
+
 
   submitForm() {
     const payload = {
@@ -84,7 +93,7 @@ export class ContactComponent {
       email: this.email,
       message: this.message,
     };
-  
+
     this.http.post('https://portfolio-mail-backend-exd0.onrender.com/send', payload).subscribe({
       next: (response) => {
         this.showSuccess = true;
@@ -92,12 +101,11 @@ export class ContactComponent {
         setTimeout(() => (this.showSuccess = false), 3000);
       },
       error: (error) => {
-        console.error('Fehler beim Senden:', error);
+        console.error('Error sending:', error);
       },
     });
   }
-  
-  
+
 
   resetForm() {
     this.name = '';
@@ -125,11 +133,12 @@ export class ContactComponent {
       this.privacyAccepted;
   }
 
+  
   scrollToTop() {
     const heroElement = document.getElementById('hero');
     if (heroElement) {
-        heroElement.scrollIntoView({ behavior: 'smooth' });
+      heroElement.scrollIntoView({ behavior: 'smooth' });
     }
-}
+  }
 }
 

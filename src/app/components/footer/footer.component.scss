@@ -9,6 +9,7 @@ footer {
     background-color: #89BCD9;
 }
 
+
 .contactInfo {
     margin-top: 50px;
     font-family: 'Josefin';
@@ -29,9 +30,11 @@ footer {
     }
 }
 
+
 .logoContainer {
     margin-left: 0 !important;
 }
+
 
 .socialMediaFooter {
     margin-top: 50px;
@@ -49,6 +52,7 @@ footer {
     }
 }
 
+
 @media (max-width: 783px) {
     footer {
         flex-direction: column; 
@@ -56,6 +60,7 @@ footer {
         gap: 6px; 
         padding: 20px; 
     }
+
 
     .logoContainer {
         order: 1; 
@@ -65,15 +70,12 @@ footer {
 
         >img {
             width: 64px !important;
-            height: 46px !important;
-            
+            height: 46px !important;  
             opacity: 80%;
         }
 
         >p {
-            font-size: 16px !important;
-            
-            
+            font-size: 16px !important; 
         }
 
         >div {
@@ -84,6 +86,7 @@ footer {
         }
     
     }
+
 
     .socialMediaFooter {
         order: 2; 
@@ -97,6 +100,7 @@ footer {
         }
     }
 
+
     .contactInfo {
         order: 3; 
         display: flex;
@@ -107,15 +111,19 @@ footer {
     }
 }
 
+
 @media (max-width: 475px) {
     .logoContainer > img {
         width: 58px !important;
         height: 40px !important;
     }
+
+
     .contactInfo > p {
         font-size: 16px;
     }
 
+    
     .socialMediaFooter > img {
         width: 30px;
     }

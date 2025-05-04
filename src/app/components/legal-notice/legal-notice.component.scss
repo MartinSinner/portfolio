@@ -6,12 +6,14 @@
     max-width: 1000px;
     margin: 0 auto;
   
+
     h1, h2, h3 {
       color: #89BCD9;
       margin-bottom: 1rem;
       font-weight: 600;
     }
   
+
     h1 {
       font-size: 2.8rem;
       text-align: center;
@@ -19,6 +21,7 @@
       padding-bottom: 1rem;
     }
   
+
     h2 {
       font-size: 1.8rem;
       margin-top: 4rem;
@@ -26,17 +29,20 @@
       padding-left: 1rem;
     }
   
+
     h3 {
       font-size: 1.4rem;
       margin-top: 4rem;
     }
   
+
     p {
       font-size: 1.1rem;
       margin-bottom: 1.5rem;
       color: #F8F5EC;
     }
   
+
     a {
       color: #89BCD9;
       text-decoration: underline;
@@ -47,6 +53,7 @@
       }
     }
   
+
     ul {
       padding-left: 2rem;
       list-style-type: disc;
@@ -56,7 +63,7 @@
       }
     }
   
-    // Responsive Styles
+
     @media (max-width: 1024px) {
       padding: 1rem 1.5rem;
   
@@ -73,6 +80,7 @@
       }
     }
   
+    
     @media (max-width: 600px) {
       padding: 2rem 1rem;
   

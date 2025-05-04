@@ -32,7 +32,10 @@ export class AboveTheFoldComponent {
   currentLanguage: string = 'en';
 
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, public languageService: LanguageService) { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public languageService: LanguageService
+  ) { }
 
 
   ngOnInit() {
@@ -49,6 +52,7 @@ export class AboveTheFoldComponent {
     this.updateSettings();
   }
 
+
   updateSettings() {
     if (isPlatformBrowser(this.platformId)) {
       if (window.innerWidth <= 783) {
@@ -61,14 +65,16 @@ export class AboveTheFoldComponent {
     }
   }
 
+
   toggleOverlay() {
     this.isOverlayOpen = !this.isOverlayOpen;
   }
 
-  scrollToContact(){
+  
+  scrollToContact() {
     const contactElement = document.getElementById('contact');
     if (contactElement) {
-      contactElement.scrollIntoView({behavior: 'smooth'})
+      contactElement.scrollIntoView({ behavior: 'smooth' })
     }
   }
 }

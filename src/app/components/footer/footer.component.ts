@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
+
+
 export class FooterComponent {
   gitHovered = false;
   mailHovered = false;
@@ -30,16 +32,17 @@ export class FooterComponent {
     if (isPlatformBrowser(this.platformId)) {
       this.isSmallScreen = window.innerWidth <= 783;
     }
-
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
     })
   }
-  
+
+
   navigateToHome() {
     this.router.navigate(['/']);
   }
 
+  
   @HostListener('window:resize', [])
   onResize() {
     if (isPlatformBrowser(this.platformId)) {

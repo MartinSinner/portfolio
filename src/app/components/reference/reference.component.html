@@ -15,22 +15,23 @@
                 [src]="hoveredIndex === i ? 'assets/reference/hovershape.png' : 'assets/reference/defaultshape.png'"
                 alt="reference shape">
 
-
             <div class="referenceInfo">
+
                 <h3> {{ i === 0 ? languageService.translate('referenceDavidName') : i === 1 ?
                     languageService.translate('referencePatrickName') : languageService.translate('referenceRuiName') }}
                 </h3>
+
                 <p class="refProject">
                     <span>Project </span>
                     <span>{{ i === 0 ? languageService.translate('referenceDavidProject') : i === 1 ?
                         languageService.translate('referencePatrickProject') :
                         languageService.translate('referenceRuiProject') }}</span>
+                </p>
+
                 <p class="refDescription">{{ i === 0 ? languageService.translate('referenceDavidText') : i === 1 ?
                     languageService.translate('referencePatrickText') : languageService.translate('referenceRuiText') }}
                 </p>
             </div>
         </div>
-
-
     </div>
 </div>

@@ -12,12 +12,14 @@
     }
 }
 
+
 .skillContainer {
     display: flex;
     align-items: center;
     gap: clamp(10px, 10vw, 170px);
     margin-top: 54px;
 }
+
 
 .skillIconsContainer {
     display: grid;
@@ -27,7 +29,6 @@
     height: 420px;
     justify-items: center;
     align-items: center;
-
 
     >img {
         width: auto;
@@ -42,8 +43,6 @@
     justify-items: center;
     align-items: center;
     z-index: 1;
-
-
 
     >img {
         width: 380px;
@@ -82,8 +81,8 @@
         text-align: center;
         line-height: 1.4;
     }
-
 }
+
 
 @media (max-width: 784px) {
     .skillContainer {
@@ -96,14 +95,17 @@
         }
     }
 
+
     .skillIconsContainer {
         row-gap: clamp(5px, 0vw, 50px) !important;
         column-gap: clamp(8px, 4vw, 120px) !important;
     }
 
+
     .currentlyLearning {
         top: 80px;
     }
+
 
     .skillAddition {
         gap: 50px;
@@ -113,12 +115,14 @@
                 filter: none !important;
                 transform: none !important;
             }
+
             &:hover {
                 transform: none !important;
                 cursor: default !important;
             }
+        }
     }
-}
+
 
     .letsTalkButton {
         background-color: #89BCD9;
@@ -131,12 +135,14 @@
     }
 }
 
+
 @media (max-width: 475px) {
     .skillSection {
         >h1 {
             font-size: 38px;
         }
     }
+
 
     .skillIconsContainer {
         gap: 40px 40px !important;
@@ -154,6 +160,7 @@
             grid-column: 3;
         }
     }
+
 
     .skillAddition {
         display: flex;
@@ -175,12 +182,10 @@
         .learningText {
             font-size: 16px;
             line-height: 1.5;
-            margin-right: 100px; 
+            margin-right: 100px;
         }
-
-
-
     }
+
 
     .currentlyLearning {
         width: 100%;
@@ -212,8 +217,8 @@
         }
     }
 
+    
     .letsTalkButton {
         font-size: 14px;
     }
 }
-
