@@ -1,14 +1,13 @@
 .privacyPolicy {
     font-family: 'Josefin', sans-serif;
     color: #F8F5EC;
-    padding: 4rem 2rem;
+    padding: 0rem 2rem;
     line-height: 1.8;
     max-width: 1000px;
     margin: 0 auto;
   
     h1, h2, h3 {
       color: #89BCD9;
-      margin-top: 4rem;
       margin-bottom: 1rem;
       font-weight: 600;
     }
@@ -22,12 +21,14 @@
   
     h2 {
       font-size: 1.8rem;
+      margin-top: 4rem;
       border-left: 4px solid #89BCD9;
       padding-left: 1rem;
     }
   
     h3 {
       font-size: 1.4rem;
+      margin-top: 4rem;
     }
   
     p {
