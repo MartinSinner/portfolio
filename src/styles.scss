@@ -8,7 +8,10 @@
   src: url('assets/fonts/josefin/JosefinSans-VariableFont_wght.ttf') format('woff2'),
 }
 
-
+html {
+    height: 100dvh;
+    
+}
 
 * {
   margin: 0;
@@ -18,7 +21,15 @@
   // scrollbar-color: #89BCD9 #262E34;
 }
 
+
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+}
+
+
 body {
+  height: 100dvh;
   font-family: 'Anta', sans-serif;
   background-color: #262E34;
   overflow-x: hidden;
@@ -52,7 +63,7 @@ body {
 
 .pageWrapper {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   margin-inline: auto;
   max-width: 1600px;
 

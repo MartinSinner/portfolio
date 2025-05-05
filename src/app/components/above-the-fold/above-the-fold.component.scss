@@ -1,7 +1,7 @@
 .heroSection {
     display: flex;
     background-color: #262E34;
-    height: 100vh;
+    min-height: 100dvh;
     width: 100vw;
     padding-inline: clamp(50px, 4vw, 80px);
 }
@@ -154,13 +154,6 @@
             }
         }
     }
-}
-
-@media (max-width:900px) {
-    .backgroundShape{
-        margin-bottom: clamp(-5px, -5vw, -26px);
-    }
-   
 }
 
 
@@ -386,4 +379,7 @@
         }
     }
 }
+
+
+
 
