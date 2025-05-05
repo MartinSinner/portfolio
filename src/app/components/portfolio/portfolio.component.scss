@@ -4,6 +4,14 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 100px;
+    max-width: 1920px;
+
+
+    >div {
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
     >h1 {
         font-size: 60px;
@@ -16,6 +24,7 @@
 .projectContainer {
     width: 100vw;
     margin-top: 100px;
+    max-width: 1920px;
 }
 
 
@@ -54,7 +63,9 @@
     justify-content: space-between;
     background-color: #2D383F;
     min-height: 800px;
+    max-width: 1920px;
     gap: 80px;
+    width: 100%;
     height: auto;
     padding: 50px 130px;
     color: #F8F5EC;
@@ -197,8 +208,8 @@
     }
 
     >button:first-child {
-        background-color: #89BCD9;
-        color: #262E34;
+        background-color: #89BCD9 !important;
+        color: #262E34 !important;
         border: none;
 
         &:first-child:hover {
@@ -545,7 +556,7 @@
         padding: 20px;
     }
 
-    
+
     .projectTitle>p {
         font-size: clamp(14px, 2vw, 20px);
         padding: 10px;
@@ -554,5 +565,52 @@
 
     .technologiesRow {
         gap: 10px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .projectTitle {
+        gap: 1px;
+    }
+
+    .projectDescription {
+        border-top-right-radius: 4px;
+    }
+
+    .projectDescriptionLeft,
+    .projectDescriptionRight {
+        max-width: 300px;
+    }
+
+    .descriptionContainer {
+        >img {
+            width: 25px;
+        }
+
+        >h3 {
+            font-size: 18px;
+        }
+
+        >p {
+            font-size: 16px;
+        }
+    }
+
+    .projectName {
+        font-size: 30px;
+    }
+
+
+    .technologiesRow {
+        >h3 {
+            font-size: 16px;
+        }
+    }
+
+    .technologyText {
+        >p {
+            font-size: 14px;
+        }
     }
 }

@@ -70,6 +70,10 @@ export class AboveTheFoldComponent {
     this.isOverlayOpen = !this.isOverlayOpen;
   }
 
+  closeOverlay(){
+    this.isOverlayOpen = false;
+  }
+
   
   scrollToContact() {
     const contactElement = document.getElementById('contact');

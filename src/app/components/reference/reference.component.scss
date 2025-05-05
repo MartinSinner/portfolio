@@ -4,6 +4,7 @@
     flex-direction: column;
     font-family: 'Josefin';
     gap: 56px;
+    max-width: 1920px;
 
     >.teamplayerHeading {
         font-weight: 400;
@@ -181,11 +182,16 @@
 
 
     .referenceInfo {
-        top: 40px; 
+        top: 40px;
     }
 
 
     .refDescription {
         font-size: 14px;
+    }
+
+    
+    .colleaguesHeadingSmall {
+        font-size: 16px !important;
     }
 }

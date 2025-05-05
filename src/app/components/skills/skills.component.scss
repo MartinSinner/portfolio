@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 100px;
+    max-width: 1920px;
 
     >h1 {
         font-size: 60px;
@@ -201,7 +202,7 @@
 
         .learningIcons {
             position: absolute;
-            top: 52%;
+            top: 50%;
             left: 88%;
             transform: translate(-50%, -50%);
             width: 80px;
@@ -217,8 +218,43 @@
         }
     }
 
-    
+
     .letsTalkButton {
         font-size: 14px;
+    }
+}
+
+
+@media (max-width: 365px) {
+    .skillIconsContainer {
+        gap: 25px 25px !important;
+    }
+
+
+    .skillAddition {
+        >.learningText {
+            font-size: 14px;
+        }
+    }
+
+
+    .currentlyLearning {
+        width: 90%;
+
+        >img {
+            left: 62%;
+            width: 116px;
+            height: 100px;
+        }
+
+        >.learningIcons {
+            top: 50%;
+            left: 83%;
+
+            >img {
+                width: 90px;
+                height: auto;
+            }
+        }
     }
 }

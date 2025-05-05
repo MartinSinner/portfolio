@@ -15,12 +15,14 @@
         <div class="contactDates" data-aos="fade-up" data-aos-delay="300">
             <div class="contactMail">
                 <img src="assets/contact/mailicondefault.png" alt="">
-                <p>{{languageService.translate('emailLabel')}} martin.sinner.dev&#64;gmail.com</p>
+                <p>{{languageService.translate('emailLabel')}} contact&#64;martin-sinner.com</p>
             </div>
 
             <div class="contactPhone">
                 <img src="assets/contact/phoneicondefault.png" alt="">
-                <p>Tel: 0177 1531363</p>
+                <p>Tel: 
+                    <a href="tel:+491771531363" class="phone-link">0177 1531363</a>
+                </p>
             </div>
         </div>
     </div>
@@ -50,12 +52,13 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="contactMessage">
                 <label for=""
                     [ngClass]="{'error' : showMessageError}">{{languageService.translate('yourMessage')}}</label>
                 <textarea type="text" [(ngModel)]="message" [ngClass]="{'error' : showMessageError}"
-                    (input)="onInputChange('message')" [placeholder]="languageService.translate('yourMessage')"></textarea>
+                    (input)="onInputChange('message')"
+                    [placeholder]="languageService.translate('yourMessage')"></textarea>
             </div>
 
             <div class="contactPivacyPolicy"
@@ -83,8 +86,9 @@
                     {{languageService.translate('messageSent')}}
                 </div>
 
-                <button [ngClass]="{'enabled': isFormValid()}" [disabled]="!isFormValid()" (click)="submitForm()">
-                    {{languageService.translate('sendButton')}}
+                <button [ngClass]="{'enabled': isFormValid() && !isSubmitting, 'submitting': isSubmitting}"
+                    [disabled]="!isFormValid() || isSubmitting" (click)="submitForm()">
+                    {{isSubmitting ? languageService.translate('sending') : languageService.translate('sendButton')}}
                 </button>
             </div>
         </div>

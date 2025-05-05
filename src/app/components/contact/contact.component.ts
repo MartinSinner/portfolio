@@ -37,6 +37,7 @@ export class ContactComponent {
   showError = false;
   hover = false;
   hoverPolicy = false;
+  isSubmitting = false;
 
   isSmallScreen = false;
   currentLanguage: string = 'en';
@@ -88,6 +89,9 @@ export class ContactComponent {
 
 
   submitForm() {
+    if (this.isSubmitting) return; 
+    this.isSubmitting = true;
+
     const payload = {
       name: this.name,
       email: this.email,
@@ -98,10 +102,14 @@ export class ContactComponent {
       next: (response) => {
         this.showSuccess = true;
         this.resetForm();
-        setTimeout(() => (this.showSuccess = false), 3000);
+        setTimeout(() => {
+          this.showSuccess = false;
+          this.isSubmitting = false;
+        }, 3000);
       },
       error: (error) => {
         console.error('Error sending:', error);
+        this.isSubmitting = false;
       },
     });
   }

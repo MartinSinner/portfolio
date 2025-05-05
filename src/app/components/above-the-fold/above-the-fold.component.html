@@ -16,7 +16,7 @@
 
     <div class="heroSection">
         <div class="mobileView" *ngIf="isOverlayOpen" [ngClass]="{ 'fade-in': isOverlayOpen }">
-            <app-navbar></app-navbar>
+            <app-navbar (close)="closeOverlay()"></app-navbar>
         </div>
 
 

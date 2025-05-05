@@ -212,6 +212,10 @@ export class LanguageService {
       en: 'Send',
       de: 'Senden'
     },
+    sending: {
+      en: 'Sending...',
+      de: 'Wird gesendet...'
+    },
     emailLabel: {
       en: 'E-mail:',
       de: 'E-Mail:'

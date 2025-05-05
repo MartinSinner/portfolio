@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -15,8 +15,11 @@ import { isPlatformBrowser } from '@angular/common';
 
 
 export class NavbarComponent {
+  @Output() close = new EventEmitter<void>();
+
   activeLink: string = '';
   isScrolled = false;
+  isMobileNavOpen = false;
   currentLanguage: string = 'en';
 
   constructor(
@@ -28,9 +31,17 @@ export class NavbarComponent {
     })
   }
 
+  toggleMobileNav() {
+    this.isMobileNavOpen = !this.isMobileNavOpen;
+  }
+
+  closeMobileNav() {
+    this.close.emit();
+  }
 
   switchLanguage(lang: 'en' | 'de') {
     this.languageService.setLanguage(lang);
+    this.closeMobileNav();
   }
 
 
@@ -69,5 +80,6 @@ export class NavbarComponent {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    this.closeMobileNav();
   }
 } 

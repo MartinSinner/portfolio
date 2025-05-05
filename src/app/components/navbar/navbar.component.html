@@ -1,37 +1,37 @@
-<div class="mobileNavbar">
-    <img src="assets/navbar/navbar-mobile.svg" alt="navbar-mobile">
+<div class="mobileNavbar" [class.open]="isMobileNavOpen">
+    <img src="assets/navbar/navbar-mobile.svg" alt="navbar-mobile" (click)="toggleMobileNav()">
     <div class="navbar">
         <div class="navItem">
-            <a (click)="scrollTo('whyMe', $event)" [ngClass]="{'active': activeLink === 'whyMe'}">
+            <a (click)="scrollTo('whyMe', $event); closeMobileNav()" [ngClass]="{'active': activeLink === 'whyMe'}">
                 {{ languageService.translate('whyMe') }}
             </a>
         </div>
 
         <div class="navItem">
-            <a (click)="scrollTo('skills', $event)" [ngClass]="{'active': activeLink === 'skills'}">
+            <a (click)="scrollTo('skills', $event); closeMobileNav()" [ngClass]="{'active': activeLink === 'skills'}">
                 {{ languageService.translate('skills') }}
             </a>
         </div>
 
         <div class="navItem">
-            <a (click)="scrollTo('projects', $event)" [ngClass]="{'active': activeLink === 'projects'}">
+            <a (click)="scrollTo('projects', $event); closeMobileNav()" [ngClass]="{'active': activeLink === 'projects'}">
                 {{ languageService.translate('projects') }}
             </a>
         </div>
 
         <div class="navItem">
-            <a (click)="scrollTo('contact', $event)" [ngClass]="{'active': activeLink === 'contact'}">
+            <a (click)="scrollTo('contact', $event); closeMobileNav()" [ngClass]="{'active': activeLink === 'contact'}">
                 {{ languageService.translate('contact') }}</a>
         </div>
 
         <div class="languageSwitch">
             <div class="langItem">
-                <p (click)="switchLanguage('de')" [ngClass]="{'active': currentLanguage === 'de'}">DE</p>
+                <p (click)="switchLanguage('de'); closeMobileNav()" [ngClass]="{'active': currentLanguage === 'de'}">DE</p>
                 <img *ngIf="currentLanguage === 'de'" src="assets/navbar/ellipselang.png" alt="active"
                     class="langBackground">
             </div>
             <div class="langItem">
-                <p (click)="switchLanguage('en')" [ngClass]="{'active': currentLanguage === 'en'}">EN</p>
+                <p (click)="switchLanguage('en'); closeMobileNav()" [ngClass]="{'active': currentLanguage === 'en'}">EN</p>
                 <img *ngIf="currentLanguage === 'en'" src="assets/navbar/ellipselang.png" alt="active"
                     class="langBackground">
             </div>
