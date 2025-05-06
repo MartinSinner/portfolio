@@ -1,5 +1,5 @@
 <div class="mobileNavbar" [class.open]="isMobileNavOpen">
-    <img src="assets/navbar/navbar-mobile.svg" alt="navbar-mobile" (click)="toggleMobileNav()">
+    <img src="assets/navbar/navbar-mobile.svg" alt="navbar-mobile" (click)="toggleMobileNav(); $event.stopPropagation()">
     <div class="navbar">
         <div class="navItem">
             <a (click)="scrollTo('whyMe', $event); closeMobileNav()" [ngClass]="{'active': activeLink === 'whyMe'}">

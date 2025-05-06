@@ -156,12 +156,41 @@
     }
 }
 
+.mobileView {
+    display: none;
+}
 
 @media (max-width:783px) {
     .heroSection {
         justify-content: center;
         height: auto;
 
+    }
+
+
+    .mobileView {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        align-items: flex-start;
+        padding-top: clamp(100px, 10vh, 150px);
+        z-index: 10;
+    }
+
+    .overlayClose {
+        position: absolute;
+        top: clamp(16px, 4vw, 32px);
+        right: clamp(16px, 4vw, 32px);
+        width: clamp(24px, 6vw, 40px);
+        height: auto;
+        cursor: pointer;
+        z-index: 11;
+    }
+
+    app-navbar,
+    app-navbar .mobileNavbar {
+        position: relative;
+        z-index: 12;
     }
 
 
@@ -199,6 +228,7 @@
             width: 45px;
             height: 45px;
             transition: transform 0.3s ease-out, filter 0.3s ease-out;
+            z-index: 9;
         }
     }
 
@@ -366,7 +396,7 @@
         }
     }
 
-    
+
     .nameContainer {
         text-align: center;
 
@@ -381,5 +411,20 @@
 }
 
 
+@media only screen 
+  and (max-width: 375px) 
+  and (max-height: 667px) {
+    .headerMobile {
+        padding: 24px 24px;
+    }
+  
 
-
+    .introductionContainer {
+        margin-top: -35px;
+    }
+  
+    
+    .pictureContainer {
+        margin-top: -40px;
+    }
+  }

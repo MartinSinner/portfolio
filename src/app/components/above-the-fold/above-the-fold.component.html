@@ -9,13 +9,15 @@
 
         <div class="burgerBar" (click)="toggleOverlay()">
             <img *ngIf="!isOverlayOpen" src="assets/hero/bar.png" alt="menu-icon">
-            <img *ngIf="isOverlayOpen" src="assets/hero/close.png" alt="close-icon">
         </div>
     </div>
 
 
     <div class="heroSection">
-        <div class="mobileView" *ngIf="isOverlayOpen" [ngClass]="{ 'fade-in': isOverlayOpen }">
+        <div class="mobileView" *ngIf="isOverlayOpen" (click)="closeOverlay()" [ngClass]="{ 'fade-in': isOverlayOpen }">
+            
+            <img src="assets/hero/close.png" alt="close-icon" class="overlayClose" (click)="closeOverlay()">
+            
             <app-navbar (close)="closeOverlay()"></app-navbar>
         </div>
 
